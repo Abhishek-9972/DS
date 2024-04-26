@@ -261,6 +261,8 @@ DNS lookup involves the following eight steps:
 
 Once the IP address has been resolved, the client should be able to request content from the resolved IP address. For example, the resolved IP may return a webpage to be rendered in the browser.
 
+![img.png](diagrams/A01.png)
+
 ## Server types
 
 Now, let's look at the four key groups of servers that make up the DNS infrastructure.
