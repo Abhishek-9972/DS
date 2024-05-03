@@ -1,16 +1,28 @@
 package ds.Array.a07RemoveDuplicatesFromSortedArray;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class RemoveDuplicatesFromSortedArray {
-    public int removeDuplicates(int[] nums) {
-        int counter = 0;
-        for (int i = 0; i < nums.length; i++) {
-            while (i + 1 < nums.length && nums[i] == nums[i + 1]) {
-                i++;
+        public int removeDuplicates(int[] nums) {
+
+            Map<Integer, Integer> map = new LinkedHashMap<>();
+            for(int num : nums){
+                if(map.containsKey(num)){
+                    map.put(num, map.get(num)+1);
+                }else{
+                    map.put(num,1);
+                }
             }
-            nums[counter] = nums[i];
-            counter++;
+
+            int counter = 0;
+            for(Map.Entry<Integer,Integer> m1: map.entrySet()){
+                nums[counter]= m1.getKey();
+                counter++;
+            }
+
+            return map.keySet().size();
         }
-        return counter;
     }
-}
+
 
