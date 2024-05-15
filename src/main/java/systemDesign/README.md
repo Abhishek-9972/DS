@@ -3348,6 +3348,12 @@ Instead of virtualizing the underlying hardware, containers virtualize the opera
 
 ## OAuth 2.0
 
+![img.png](diagrams/Authorization.png)
+
+https://www.youtube.com/watch?v=ZDuRmhLSLOY
+
+https://www.youtube.com/watch?v=B76BhEq1FN8
+
 OAuth 2.0, which stands for Open Authorization, is a standard designed to provide consented access to resources on behalf of the user, without ever sharing the user's credentials. OAuth 2.0 is an authorization protocol and not an authentication protocol, it is designed primarily as a means of granting access to a set of resources, for example, remote APIs or user's data.
 
 ### Concepts
