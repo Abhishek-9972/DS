@@ -1,4 +1,4 @@
-package ds.String.ReversePolishNotation;
+package ds.String.a06ReversePolishNotation;
 
 import java.util.Stack;
 
