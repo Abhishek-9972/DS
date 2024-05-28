@@ -19,12 +19,10 @@ class TimeBasedKeyValueStore {
 
     public void set(String key, String value, int timestamp) {
 
-        if(map.containsKey(key)){
+        if (map.containsKey(key)) {
 
             map.get(key).add(new Data(value, timestamp));
-        }
-
-        else{
+        } else {
 
             ArrayList<Data> arr = new ArrayList<>();
             arr.add(new Data(value, timestamp));
@@ -37,24 +35,23 @@ class TimeBasedKeyValueStore {
 
         String result = "";
 
-        if(map.containsKey(key)){
+        if (map.containsKey(key)) {
 
             List<Data> arr = map.get(key);
-            int low = 0, high = arr.size()-1;
+            int low = 0, high = arr.size() - 1;
 
-            while(low <= high){
+            while (low <= high) {
 
-                int mid = low + (high - low)/2;
+                int mid = low + (high - low) / 2;
 
                 int time = arr.get(mid).timeStamp;
 
-                if(time <= timestamp){
+                if (time == timestamp) {
+                    return arr.get(mid).val;
+                } else if (time < timestamp) {
                     result = arr.get(mid).val;
                     low = mid + 1;
-                }
-
-                else{
-
+                } else {
                     high = mid - 1;
                 }
 
@@ -65,12 +62,12 @@ class TimeBasedKeyValueStore {
     }
 }
 
-class Data{
+class Data {
 
     String val;
     int timeStamp;
 
-    public Data(String val, int timeStamp){
+    public Data(String val, int timeStamp) {
 
         this.val = val;
         this.timeStamp = timeStamp;
