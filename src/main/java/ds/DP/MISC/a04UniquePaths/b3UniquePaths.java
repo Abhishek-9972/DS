@@ -23,4 +23,11 @@ public class b3UniquePaths {
 
         return dp[m-1][n-1];
     }
+
+    public static void main(String[] args) {
+        int m = 3;
+        int n = 7;
+        b3UniquePaths b3 = new b3UniquePaths();
+        b3.uniquePaths(m, n);
+    }
 }
