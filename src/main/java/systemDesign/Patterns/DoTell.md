@@ -102,15 +102,31 @@ Object Level Storage
 
 
 
+###WebRTC
+- PeerToPeerConnection
+- If public ip is accessible connection through stun server, peer to peer conncection.
+- If there is some firewall etc, we will connect via turn server
+![img.png](images/webRtc.png)
 
 
+###UniqueIdGenerator
+![img.png](images/UniqueId.png)
+
+Twitter Snow flake Algo
+
+###TinyURL
+![img.png](images/TinyURL.png)
 
 
+###WebCrawler
+![img.png](images/WebCrawler.png)
 
+###Fanout Service
 
+Fanout on Write : Post is pushed to all friends timeline at time of publish
 
-
-
+Fanout on Read : OnDemand Model. Recent Posts are pulled when user loads his home page.
+   - Inactive Users
 
 
 
