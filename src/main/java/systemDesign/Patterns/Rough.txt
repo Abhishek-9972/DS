@@ -1,17 +1,28 @@
-LC6K
+Active Users :
 
-ES
+300M MAU
 
-Data Team
+300M MAU(Monthly Active Users)
 
-User Team
+Each user searches for 10 product per month
 
-Rate Limiter
+- 300 M * 10 Search per month
+- 3B Search /(30 * 24 hours * 60 * 60)
+- 3 * 10^9 /(30 * 10^5)
+= 1k Searches/second
+  
+= 30 * 24 hours * 60 * 60 ~ 86400 seconds ~ 10^5 
 
-Notifications
+Total Products
 
-IAS
+Assume : 1 Product requires 10MB Storage(Image + Description)
+Total Product Storage : 10M * 10MB
 
-OMS
+= 10 * 10^6 * 10 * 10^6
+= 100 * 10^12
+= 100 TB Storage required to store all product information
 
-PAYMENTS
+
+30M MAU
+
+= 30 * 10^6 * 10
