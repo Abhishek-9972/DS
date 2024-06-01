@@ -1,28 +1,25 @@
 package DS.DP.MISC.a01Jump2;
 
-import java.util.Arrays;
-
-/**
- * https://leetcode.com/problems/jump-game-ii/description/
- */
 public class Jump2 {
     public int jump(int[] nums) {
-        int n = nums.length;
-        int[] dp = new int[n];
-        Arrays.fill(dp, 10001);
-        dp[0] = 0;
-        for (int i = 0; i < n - 1; i++) {
-            for (int j = i + 1; j <= nums[i] + i; j++) {
-                if (j < n) {
-                    dp[j] = Math.min(dp[j], 1 + dp[i]);
-                }
-                if (j == n - 1) {
-                    return dp[n - 1];
-                }
+        int end = 0, reachable = 0;
+        int jump=0;
+
+        for(int i=0; i<nums.length-1; i++){
+            reachable = Math.max(reachable, i+nums[i]);
+
+            if(i==end){
+                jump++;
+                end = reachable;
             }
         }
-        return dp[n - 1];
+
+        return jump;
     }
 
+    public static void main(String[] args) {
+        int [] nums = {2,3,1,1,4};
+        Jump2 jump2 = new Jump2();
+        System.out.println(jump2.jump(nums));
+    }
 }
-

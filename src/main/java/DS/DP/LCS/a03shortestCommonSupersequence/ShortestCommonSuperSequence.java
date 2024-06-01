@@ -1,5 +1,10 @@
 package DS.DP.LCS.a03shortestCommonSupersequence;
 
+/**
+ * a = geek
+ * b = eke
+ * SCS = geeke
+ */
 public class ShortestCommonSuperSequence {
 
     public static void main(String[] args) {
