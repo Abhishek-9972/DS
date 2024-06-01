@@ -1,13 +1,13 @@
-package DS.DP.knapsack.unbounded.coinChange.coinChange1;
+package DS.DP.knapsack.unbounded.coinChange.coinChange2;
 
 // This is also same as total number of ways to reach Nth Stair
-public class CoinChange1 {
+public class CoinChange2 {
     public static void main(String[] args) {
         int set[] = {1, 2 ,3};
         int sum = 5;
         int n = set.length;
-        CoinChange1 coinChange1 = new CoinChange1();
-        int subset = coinChange1.findSubset(set, n, sum);
+        CoinChange2 coinChange2 = new CoinChange2();
+        int subset = coinChange2.findSubset(set, n, sum);
         System.out.println(subset);
     }
 

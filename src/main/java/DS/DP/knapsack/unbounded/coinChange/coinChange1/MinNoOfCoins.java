@@ -1,4 +1,4 @@
-package DS.DP.knapsack.unbounded.coinChange.coinChange2;
+package DS.DP.knapsack.unbounded.coinChange.coinChange1;
 
 // This is also same as MinNoOfJumps To reach Nth Stair
 public class MinNoOfCoins {
