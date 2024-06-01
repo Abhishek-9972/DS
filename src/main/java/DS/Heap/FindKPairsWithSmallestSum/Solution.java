@@ -22,11 +22,7 @@ class Solution {
 
 
         PriorityQueue<Pair> pq = new PriorityQueue<>(
-                new Comparator<Pair>(){
-                    public int compare(Pair p1, Pair p2){
-                        return (p1.getKey()+p1.getValue()) - (p2.getKey()+p2.getValue());
-                    }
-                });
+                (p1, p2) -> (p1.getKey()+p1.getValue()) - (p2.getKey()+p2.getValue()));
 
 
 
