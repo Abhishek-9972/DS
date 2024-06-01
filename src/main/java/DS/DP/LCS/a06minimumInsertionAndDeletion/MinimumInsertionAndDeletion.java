@@ -1,4 +1,4 @@
-package DS.DP.LCS.minimumInsertionAndDeletion;
+package DS.DP.LCS.a06minimumInsertionAndDeletion;
 
 public class MinimumInsertionAndDeletion {
     public static void main(String[] args) {

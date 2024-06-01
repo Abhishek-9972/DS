@@ -1,4 +1,4 @@
-package DS.DP.LCS.LongestPalindromicSubSequence;
+package DS.DP.LCS.a04LongestPalindromicSubSequence;
 
 import java.util.Arrays;
 

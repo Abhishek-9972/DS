@@ -1,4 +1,4 @@
-package DS.DP.LCS.longestRepeatingSubsequence;
+package DS.DP.LCS.a05longestRepeatingSubsequence;
 
 public class LongestRepeatingSubsequence {
     public static void main(String[] args) {

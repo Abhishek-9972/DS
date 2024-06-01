@@ -1,14 +1,13 @@
-package DS.DP.LCS.longestCommonSubString;
+package DS.DP.LCS.a03shortestCommonSupersequence;
 
-public class LongestCommonSubString {
-
-    int max = 0;
+public class ShortestCommonSuperSequence {
 
     public static void main(String[] args) {
-        String x = "abcdgh";
-        String y = "abedfhr";
-        LongestCommonSubString longestCommonSubString = new LongestCommonSubString();
-        System.out.println(longestCommonSubString.LCSTabulation(x, y, x.length(), y.length()));
+        String a = "AGGTAB";
+        String b = "GXTXAYB";
+        ShortestCommonSuperSequence shortestCommonSuperSequence = new ShortestCommonSuperSequence();
+        int lcs = shortestCommonSuperSequence.LCSTabulation(a, b, a.length(), b.length());
+        System.out.println((a.length()+b.length())-lcs);
     }
 
     private int LCSTabulation(String x, String y, int m, int n) {
@@ -23,12 +22,12 @@ public class LongestCommonSubString {
             for (int j = 1; j <= n; j++) {
                 if (x.charAt(i - 1) == y.charAt(j - 1)) {
                     dp[i][j] = 1 + dp[i - 1][j - 1];
-                    max = Math.max(dp[i][j], max);
                 } else {
-                    dp[i][j] = 0;
+                    dp[i][j] = Math.max(dp[i][j - 1], dp[i - 1][j]);
                 }
             }
         }
-        return max;
+        return dp[m][n];
     }
+
 }
