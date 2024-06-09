@@ -1,20 +1,4 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ![img.png](images/IMG_20190610_222730.jpg)
 ![img.png](images/IMG_20190610_222739.jpg)
 ![img.png](images/IMG_20190610_222742.jpg)
