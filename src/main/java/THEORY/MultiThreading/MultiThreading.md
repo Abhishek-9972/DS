@@ -66,3 +66,5 @@ https://www.youtube.com/watch?v=ahBC69_iyk4&list=PLhfHPmPYPPRk6yMrcbfafFGSbE2EPK
 ReadWriteLock
 ![img_1.png](images/A63.png)
 ![img.png](images/A64.png)
+
+![img.png](images/img.png)
