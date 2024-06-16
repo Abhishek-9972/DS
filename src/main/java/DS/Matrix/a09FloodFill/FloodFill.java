@@ -2,33 +2,44 @@ package DS.Matrix.a09FloodFill;
 
 /**
  * https://leetcode.com/problems/flood-fill/description/
+ *
+ * https://www.youtube.com/watch?v=hkOzrK9vZHM&list=PLFKexf2NBjmNNEsaJai9HCPh-26iSChZU&index=35
  */
 public class FloodFill {
-        public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-            int startColor = image[sr][sc];
-            int rowsLastIndex = image.length - 1;
-            int colsLastIndex = image[0].length - 1;
 
-            if (startColor == color) {
-                return image; // No need to fill if the start color is already the target color
-            } else {
-                recursiveFlood(image, sr, sc, color, startColor, rowsLastIndex, colsLastIndex);
-                return image;
-            }
+    int row=0;
+    int col=0;
+    int newC=0;
+    int startingPix=0;
+
+    public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
+        this.row=image.length;
+        this.col=image[0].length;
+        this.newC=newColor;
+        this.startingPix=image[sr][sc];
+        if(this.startingPix==newColor){
+            return image;
         }
 
-        private void recursiveFlood(int[][] image, int sr, int sc, int color, int startColor, int rowsLastIndex, int colsLastIndex) {
-            if (sr < 0 || sr > rowsLastIndex || sc < 0 || sc > colsLastIndex || image[sr][sc] != startColor) {
-                return; // Base case: pixel out of bounds or has different color
-            }
+        return dfs(sr,sc,image);
 
-            image[sr][sc] = color; // Change color of current pixel
+    }
 
-            // Recursively call flood fill on adjacent pixels
-            recursiveFlood(image, sr - 1, sc, color, startColor, rowsLastIndex, colsLastIndex); // up
-            recursiveFlood(image, sr, sc + 1, color, startColor, rowsLastIndex, colsLastIndex); // right
-            recursiveFlood(image, sr + 1, sc, color, startColor, rowsLastIndex, colsLastIndex); // down
-            recursiveFlood(image, sr, sc - 1, color, startColor, rowsLastIndex, colsLastIndex); // left
+
+    public int[][] dfs(int i,int j,int[][] image){
+
+        if(i<0|| i>=row || j<0 || j>=col || image[i][j]!=this.startingPix){
+            return image;
         }
+
+        image[i][j]=this.newC;
+
+        dfs(i,j-1,image);
+        dfs(i,j+1,image);
+        dfs(i+1,j,image);
+        dfs(i-1,j,image);
+
+        return image;
+    }
 
 }

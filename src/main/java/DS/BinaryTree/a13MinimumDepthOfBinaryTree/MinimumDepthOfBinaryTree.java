@@ -4,18 +4,15 @@ import DS.BinaryTree.a01Traversal.TreeNode;
 
 public class MinimumDepthOfBinaryTree {
     public int minDepth(TreeNode root) {
-        return findMinDepth(root);
-    }
-    int findMinDepth(TreeNode root){
-        if(root==null){
+        if (root == null) {
             return 0;
-        }else if(root.left==null && root.right==null){
-            return 1;
-        }else if(root.left==null){
-            return findMinDepth(root.right)+1;
-        }else if(root.right==null){
-            return findMinDepth(root.left)+1;
         }
-        return Math.min(findMinDepth(root.left),findMinDepth(root.right))+1;
+        int left = minDepth(root.left);
+        int right = minDepth(root.right);
+        if (left == 0 || right == 0) {
+            return 1 + Math.max(left, right);
+        } else {
+            return 1 + Math.min(left, right);
+        }
     }
 }
