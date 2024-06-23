@@ -1,4 +1,4 @@
-package DS.Trie;
+package DS.Trie.a01TrieImpl;
 
 public class TrieImpl {
     Node root;
