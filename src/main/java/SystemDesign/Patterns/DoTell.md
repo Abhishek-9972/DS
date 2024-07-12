@@ -101,7 +101,7 @@ Versioning
 S3 Storage Classes
 
 ````
-Standard General Purpose - Used for frequent Accessed data - 99.99% Availability
+Standard Genral Purpose - Used for frequent Accessed data - 99.99% Availability
 Standard Infrequent Access - Data that is les fequent accessed but requires rapid when needed, Disaster Recovery Backups
 OneZone Infrequent Access - Data that is les fequent accessed but requires rapid when needed, Data lost when AZ is destoryed
 
