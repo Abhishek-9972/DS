@@ -9,43 +9,40 @@ import java.util.*;
  */
 public class ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
-        Set<List<Integer>> result = new LinkedHashSet<>();
-
-        int l, r;
-
+        List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
+
         for (int i = 0; i < nums.length - 2; i++) {
 
+            // skip duplicate i
+            if (i > 0 && nums[i] == nums[i - 1])
+                continue;
 
-            l = i + 1;
-            r = nums.length - 1;
+            int l = i + 1;
+            int r = nums.length - 1;
+
             while (l < r) {
-                List<Integer> temp = new LinkedList<>();
-                if (nums[i] + nums[l] + nums[r] == 0) {
-                    temp.add(nums[i]);
-                    temp.add(nums[l]);
-                    temp.add(nums[r]);
-                    result.add(temp);
-                    while (l < r && nums[l] == nums[l + 1]) {
+                int sum = nums[i] + nums[l] + nums[r];
+
+                if (sum == 0) {
+                    result.add(Arrays.asList(nums[i], nums[l], nums[r]));
+
+                    // skip duplicates
+                    while (l < r && nums[l] == nums[l + 1])
                         l++;
-                    }
-                    while (l < r && nums[r] == nums[r - 1]) {
+                    while (l < r && nums[r] == nums[r - 1])
                         r--;
-                    }
 
                     l++;
                     r--;
-                } else if (nums[i] + nums[l] + nums[r] < 0)
+                } else if (sum < 0) {
                     l++;
-
-                else
+                } else {
                     r--;
+                }
             }
         }
-
-        // If we reach here, then no triplet was found
-        List<List<Integer>> output = new LinkedList<>(result);
-        return output;
+        return result;
     }
 }
 

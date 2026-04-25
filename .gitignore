@@ -1,0 +1,46 @@
+# Compiled class files
+
+*.class
+
+# Logs
+
+*.log
+
+# Maven / Gradle build directories
+
+target/
+build/
+out/
+
+# IntelliJ IDEA files
+
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IntelliJ workspace-specific
+
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries/
+.idea/libraries/
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# Temporary files
+
+*.swp
+*.swo
+*~
+
+# Generated files
+
+dependency-reduced-pom.xml
+
+# Java crash logs
+
+hs_err_pid*
