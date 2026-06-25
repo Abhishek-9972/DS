@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.Greedy.a13Jump1;
+package DS.Array.a00ArraysPatternWise.Greedy.a01Jump1;
 
 /**
  * https://leetcode.com/problems/jump-game/description/

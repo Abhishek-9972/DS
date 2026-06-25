@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.Greedy.a14Stock1;
+package DS.Array.a00ArraysPatternWise.Greedy.a02Stock1;
 
 /**
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/description/
