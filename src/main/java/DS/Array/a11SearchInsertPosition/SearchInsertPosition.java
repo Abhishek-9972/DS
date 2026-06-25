@@ -2,6 +2,9 @@ package DS.Array.a11SearchInsertPosition;
 
 /**
  * https://leetcode.com/problems/search-insert-position/description/
+ *
+ *  * Time Complexity: O(log n)
+ *  * Space Complexity: O(1)
  */
 public class SearchInsertPosition {
     public int searchInsert(int[] nums, int target) {

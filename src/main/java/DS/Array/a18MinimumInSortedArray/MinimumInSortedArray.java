@@ -2,6 +2,9 @@ package DS.Array.a18MinimumInSortedArray;
 
 /**
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
+ *
+ * Time - O(log n)
+ * Space - O(1)
  */
 public class MinimumInSortedArray {
     public int findMin(int[] nums) {

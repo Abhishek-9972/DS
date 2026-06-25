@@ -22,10 +22,7 @@ public class SubarraySum {
 
             count += map.getOrDefault(prefixSum - k, 0);
 
-            map.put(
-                    prefixSum,
-                    map.getOrDefault(prefixSum, 0) + 1
-            );
+            map.put(prefixSum, map.getOrDefault(prefixSum, 0) + 1);
         }
 
         return count;
