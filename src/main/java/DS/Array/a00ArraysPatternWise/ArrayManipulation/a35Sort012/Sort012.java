@@ -1,4 +1,4 @@
-package DS.Array.a35Sort012;
+package DS.Array.a00ArraysPatternWise.ArrayManipulation.a35Sort012;
 
 public class Sort012 {
 
