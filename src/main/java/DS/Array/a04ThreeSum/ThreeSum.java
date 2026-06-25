@@ -5,6 +5,8 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/3sum/description/
  *
+ * * Time Complexity: O(n²)
+ *  * Space Complexity: O(1)
  *
  */
 public class ThreeSum {

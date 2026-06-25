@@ -12,6 +12,9 @@ import java.util.Map;
  * Output: [0,1]
  * Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
  *
+ *
+ *  * Time Complexity: O(n)
+ *  * Space Complexity: O(n)
  */
 public class TwoSum {
 

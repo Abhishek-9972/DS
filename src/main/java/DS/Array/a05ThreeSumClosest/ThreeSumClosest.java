@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 /**
  * https://leetcode.com/problems/3sum-closest/description/
+ *
+ *  *
+ *  * Time Complexity: O(n²)
+ *  * Space Complexity: O(1)
  */
 public class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {

@@ -1,0 +1,22 @@
+# Patterns
+
+- Two Pointers
+- Sliding Window
+- Prefix Sum
+- Binary Search
+- HashMap
+- Heap
+- Stack
+- Monotonic Stack
+- Greedy
+- Dynamic Programming
+- Backtracking
+- Tree DFS
+- Tree BFS
+- Graph DFS
+- Graph BFS
+- Union Find
+- Trie
+- Bit Manipulation
+- Math & Geometry
+- Design
