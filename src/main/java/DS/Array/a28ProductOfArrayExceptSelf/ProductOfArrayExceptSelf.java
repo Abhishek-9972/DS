@@ -1,38 +1,30 @@
 package DS.Array.a28ProductOfArrayExceptSelf;
 
+/**
+ * O(n) time and O(1) extra space.
+ *
+ * https://leetcode.com/problems/product-of-array-except-self/description/
+ */
 public class ProductOfArrayExceptSelf {
     public int[] productExceptSelf(int[] nums) {
 
-        int[] res = new int[nums.length];
+        int n = nums.length;
+        int[] result = new int[n];
+        result[0] = 1;
 
-        int mul = 1;
-        boolean zeroVal = false;
-        for (int i : nums) {
-            if (i == 0) {
-                if(zeroVal){
-                    return res;
-                }
-                i = 1;
-                zeroVal = true;
-            }
-            mul = mul * i;
+        for (int i = 1; i < n; i++) {
+            result[i] = result[i - 1] * nums[i - 1];
         }
 
-        System.out.println(mul);
+        int rightProduct = 1;
 
-        for (int i = 0; i < nums.length; i++) {
-            if(zeroVal){
-                if(nums[i]==0){
-                    res[i] = mul;
-                }
-            }
+        for (int i = n - 1; i >= 0; i--) {
 
-            else{
-                res[i] = mul / nums[i];
-            }
+            result[i] *= rightProduct;
 
+            rightProduct *= nums[i];
         }
 
-        return res;
+        return result;
     }
 }
