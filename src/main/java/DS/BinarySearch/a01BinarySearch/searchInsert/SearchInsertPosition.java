@@ -1,27 +1,27 @@
 package DS.BinarySearch.a01BinarySearch.searchInsert;
 
+/**
+ * https://leetcode.com/problems/search-insert-position/description/
+ *
+ *  * Time Complexity: O(log n)
+ *  * Space Complexity: O(1)
+ */
 public class SearchInsertPosition {
+    public int searchInsert(int[] nums, int target) {
+        int st = 0;
+        int end = nums.length - 1;
 
-    public int binarySearch(int[] arr, int key) {
-        int start = 0;
-        int end = arr.length - 1;
-        while (start <= end) {
-            int mid = (start + end) / 2;
-            if (key == arr[mid]) {
+        while (st <= end) {
+            int mid = (st + end) / 2;
+            if (nums[mid] == target) {
                 return mid;
-            }
-            if (key < arr[mid]) {
-                end = mid - 1;
+            } else if (target > nums[mid]) {
+                st = mid + 1;
             } else {
-                start = mid + 1;
+                end = mid - 1;
             }
         }
-        return end+1;
-    }
-
-    public static void main(String[] args) {
-        SearchInsertPosition searchInsertPosition = new SearchInsertPosition();
-        int i = searchInsertPosition.binarySearch(new int[]{1, 3, 5, 6}, 1);
-        System.out.println(i);
+        return st;
     }
 }
+
