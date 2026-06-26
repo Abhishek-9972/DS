@@ -16,9 +16,7 @@ public class PathSum2 {
         return result;
     }
 
-    private void backtrack(TreeNode root, int targetSum,
-                           List<Integer> partial,
-                           List<List<Integer>> result) {
+    private void backtrack(TreeNode root, int targetSum, List<Integer> partial, List<List<Integer>> result) {
 
         if (root == null)
             return;

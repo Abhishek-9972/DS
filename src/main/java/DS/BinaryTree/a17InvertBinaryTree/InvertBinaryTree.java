@@ -1,4 +1,4 @@
-package DS.BinaryTree.a20InvertBinaryTree;
+package DS.BinaryTree.a17InvertBinaryTree;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 
