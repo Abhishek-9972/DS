@@ -1,4 +1,4 @@
-package DS.BinaryTree.a07MaximumDepthOfBinaryTree;
+package DS.BinaryTree.a02MaximumDepthOfBinaryTree;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

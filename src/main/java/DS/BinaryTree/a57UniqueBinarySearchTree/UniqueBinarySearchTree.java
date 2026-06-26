@@ -1,4 +1,4 @@
-package DS.BinaryTree.a02UniqueBinarySearchTree;
+package DS.BinaryTree.a57UniqueBinarySearchTree;
 
 //https://leetcode.com/problems/unique-binary-search-trees/description/
 

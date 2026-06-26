@@ -1,4 +1,4 @@
-package DS.BinaryTree.a05SymmetricTree;
+package DS.BinaryTree.a04SymmetricTree;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

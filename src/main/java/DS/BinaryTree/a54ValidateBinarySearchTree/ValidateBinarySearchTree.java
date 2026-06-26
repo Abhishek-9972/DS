@@ -1,4 +1,4 @@
-package DS.BinaryTree.a03ValidateBinarySearchTree;
+package DS.BinaryTree.a54ValidateBinarySearchTree;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

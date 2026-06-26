@@ -1,4 +1,4 @@
-package DS.BinaryTree.a13MinimumDepthOfBinaryTree;
+package DS.BinaryTree.a07MinimumDepthOfBinaryTree;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 
@@ -9,10 +9,9 @@ public class MinimumDepthOfBinaryTree {
         }
         int left = minDepth(root.left);
         int right = minDepth(root.right);
-        if (left == 0 || right == 0) {
+        if (left == 0 || right == 0)
             return 1 + Math.max(left, right);
-        } else {
-            return 1 + Math.min(left, right);
-        }
+
+        return 1 + Math.min(left, right);
     }
 }
