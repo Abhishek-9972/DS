@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.PrefixSum.a27SubarraySum;
+package DS.Array.a00ArraysPatternWise.PrefixSum.a01SubarraySum;
 
 import java.util.HashMap;
 import java.util.Map;

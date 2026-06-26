@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.PrefixSum.a28ProductOfArrayExceptSelf;
+package DS.Array.a00ArraysPatternWise.PrefixSum.a02ProductOfArrayExceptSelf;
 
 /**
  * O(n) time and O(1) extra space.

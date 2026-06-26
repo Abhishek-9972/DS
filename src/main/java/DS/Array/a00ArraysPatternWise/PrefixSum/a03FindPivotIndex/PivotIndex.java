@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.PrefixSum.a36FindPivotIndex;
+package DS.Array.a00ArraysPatternWise.PrefixSum.a03FindPivotIndex;
 
 /**
  * https://leetcode.com/problems/find-pivot-index/

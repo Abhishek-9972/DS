@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.Kadane.a17MaximumProductSubarray;
+package DS.Array.a00ArraysPatternWise.Kadane.a01MaximumProductSubarray;
 
 /**
  * https://leetcode.com/problems/maximum-product-subarray/description/

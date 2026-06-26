@@ -9,28 +9,25 @@ import java.util.List;
  */
 public class Combination {
 
-    class Solution {
-        public List<List<Integer>> combine(int n, int k) {
-            List<List<Integer>> list = new ArrayList<>();
-            int [] arr = new int[n];
-            for(int i =0; i<n; i++){
-                arr[i] = i+1;
-            }
-            Arrays.sort(arr);
-            backtrack(arr, new ArrayList<>(), 0, k, list);
-            return list;
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> result = new ArrayList<>();
+        backtrack(1, n, k, new ArrayList<>(), result);
+        return result;
+    }
+
+    private void backtrack(int start, int n, int k,
+                           List<Integer> partial,
+                           List<List<Integer>> result) {
+
+        if (partial.size() == k) {
+            result.add(new ArrayList<>(partial));
+            return;
         }
 
-        private void backtrack(int[] input, List<Integer> partial, int start, int k, List<List<Integer>> list){
-
-            if(partial.size() == k) list.add(new ArrayList<>(partial));
-            else{
-                for(int i = start; i < input.length; i++){
-                    partial.add(input[i]);
-                    backtrack(input, partial, i+1, k, list); // not i + 1 because we can reuse same elements
-                    partial.remove(partial.size() - 1);
-                }
-            }
+        for (int i = start; i <= n; i++) {
+            partial.add(i);
+            backtrack(i + 1, n, k, partial, result);
+            partial.remove(partial.size() - 1);
         }
     }
 }

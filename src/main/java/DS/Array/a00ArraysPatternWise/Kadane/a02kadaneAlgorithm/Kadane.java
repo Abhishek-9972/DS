@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.Kadane.kadaneAlgorithm;
+package DS.Array.a00ArraysPatternWise.Kadane.a02kadaneAlgorithm;
 
 // Java program to print largest contiguous array sum
 class Kadane {
