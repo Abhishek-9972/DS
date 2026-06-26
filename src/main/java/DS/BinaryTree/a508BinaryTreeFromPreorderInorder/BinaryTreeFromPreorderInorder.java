@@ -1,4 +1,4 @@
-package DS.BinaryTree.a08BinaryTreeFromPreorderInorder;
+package DS.BinaryTree.a508BinaryTreeFromPreorderInorder;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

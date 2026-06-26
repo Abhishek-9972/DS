@@ -1,4 +1,4 @@
-package DS.BinaryTree.a16FlattenBinaryTreeToLinkedList;
+package DS.BinaryTree.a516FlattenBinaryTreeToLinkedList;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

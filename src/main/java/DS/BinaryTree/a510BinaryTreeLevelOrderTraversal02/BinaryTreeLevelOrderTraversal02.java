@@ -1,4 +1,4 @@
-package DS.BinaryTree.a10BinaryTreeLevelOrderTraversal02;
+package DS.BinaryTree.a510BinaryTreeLevelOrderTraversal02;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

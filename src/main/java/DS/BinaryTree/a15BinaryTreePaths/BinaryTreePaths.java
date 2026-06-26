@@ -1,4 +1,4 @@
-package DS.BinaryTree.a24BinaryTreePaths;
+package DS.BinaryTree.a15BinaryTreePaths;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

@@ -1,4 +1,4 @@
-package DS.BinaryTree.a09BinaryTreeFromInoderPostOrder;
+package DS.BinaryTree.a509BinaryTreeFromInoderPostOrder;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 
