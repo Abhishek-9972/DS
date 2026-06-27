@@ -1,4 +1,4 @@
-package DS.BinaryTree.a27MergeTwoBinaryTrees;
+package DS.BinaryTree.a28MergeTwoBinaryTrees;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

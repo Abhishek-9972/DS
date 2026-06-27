@@ -1,4 +1,4 @@
-package DS.BinaryTree.a28SiblingNode;
+package DS.BinaryTree.a528SiblingNode;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 

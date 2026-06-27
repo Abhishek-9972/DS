@@ -1,4 +1,4 @@
-package DS.BinaryTree.a32SerializeAndDeserializeTree;
+package DS.BinaryTree.a26SerializeAndDeserializeTree;
 
 import DS.BinaryTree.a01Traversal.TreeNode;
 
@@ -25,24 +25,41 @@ public class SerializeAndDeserializeTree {
     }
 
     public TreeNode deserialize(String data) {
-        if (data == "") return null;
-        Queue<TreeNode> q = new LinkedList<>();
-        String[] values = data.split(" ");
-        TreeNode root = new TreeNode(Integer.parseInt(values[0]));
-        q.add(root);
-        for (int i = 1; i < values.length; i++) {
-            TreeNode parent = q.poll();
-            if (!values[i].equals("n")) {
-                TreeNode left = new TreeNode(Integer.parseInt(values[i]));
-                parent.left = left;
-                q.add(left);
-            }
-            if (!values[++i].equals("n")) {
-                TreeNode right = new TreeNode(Integer.parseInt(values[i]));
-                parent.right = right;
-                q.add(right);
-            }
+
+        if (data == null || data.isEmpty()) {
+            return null;
         }
+
+        String[] values = data.split(" ");
+
+        TreeNode root = new TreeNode(Integer.parseInt(values[0]));
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+
+        int index = 1;
+
+        while (!queue.isEmpty()) {
+
+            TreeNode parent = queue.poll();
+
+            // Left child
+            if (!values[index].equals("n")) {
+                TreeNode left = new TreeNode(Integer.parseInt(values[index]));
+                parent.left = left;
+                queue.add(left);
+            }
+            index++;
+
+            // Right child
+            if (!values[index].equals("n")) {
+                TreeNode right = new TreeNode(Integer.parseInt(values[index]));
+                parent.right = right;
+                queue.add(right);
+            }
+            index++;
+        }
+
         return root;
     }
 }
