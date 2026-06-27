@@ -6,7 +6,7 @@ public class CountSubsetDiff {
         int diff = 1;
         int sum = 0;
         for (int i = 0; i < arr.length; i++) {
-            sum = sum + i;
+            sum = sum + arr[i];
         }
         int s1 = (sum + diff) /2;
 
