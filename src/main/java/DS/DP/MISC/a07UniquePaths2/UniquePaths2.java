@@ -1,4 +1,4 @@
-package DS.DP.MISC.a05UniquePaths2;
+package DS.DP.MISC.a07UniquePaths2;
 
 class UniquePaths2 {
 

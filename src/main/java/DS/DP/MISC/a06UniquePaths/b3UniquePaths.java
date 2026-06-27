@@ -1,4 +1,4 @@
-package DS.DP.MISC.a04UniquePaths;
+package DS.DP.MISC.a06UniquePaths;
 
 public class b3UniquePaths {
     public int uniquePaths(int m, int n) {

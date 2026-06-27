@@ -1,4 +1,4 @@
-package DS.DP.MISC.a07HouseRobber01;
+package DS.DP.MISC.a04HouseRobber01;
 
 public class HouseRobber1 {
     public int rob(int[] nums) {

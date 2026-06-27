@@ -1,4 +1,4 @@
-package DS.DP.MISC.a08HouseRobber02;
+package DS.DP.MISC.a05HouseRobber02;
 
 public class HouseRobber2 {
 
