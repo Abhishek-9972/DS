@@ -43,6 +43,10 @@
 - Single Number I
 - Single Number II
 - Insert Delete GetRandom O(1)
+- Longest Consecutive Sequence ⭐⭐⭐⭐⭐
+- Contains Duplicate ⭐⭐⭐
+- Find Duplicate Number ⭐⭐⭐⭐⭐
+
 
 ## Heap / Priority Queue
 - Top K Frequent Elements
@@ -55,36 +59,3 @@
 
 ---
 
-# Recommended Additions
-
-## Hashing
-- Longest Consecutive Sequence ⭐⭐⭐⭐⭐
-- Contains Duplicate ⭐⭐⭐
-- Find Duplicate Number ⭐⭐⭐⭐⭐
-
-## Greedy
-- Gas Station ⭐⭐⭐⭐⭐
-- Candy ⭐⭐⭐⭐
-
-## Binary Search / Dynamic Programming
-- Longest Increasing Subsequence ⭐⭐⭐⭐⭐
-
-## Array Math
-- H-Index ⭐⭐⭐⭐
-
----
-
-# Interview Coverage
-
-| Pattern | Status |
-|----------|----------|
-| Two Pointers | ✅ Strong |
-| Prefix Sum | ✅ Good |
-| Binary Search | ✅ Good |
-| Greedy | ⚠️ Missing Gas Station, Candy |
-| Hashing | ⚠️ Missing Longest Consecutive Sequence |
-| Dynamic Programming | ⚠️ Missing Longest Increasing Subsequence |
-| Heap | ✅ Good |
-| Array Manipulation | ✅ Good |
-
-**Current Coverage: ~90% of high-frequency Array interview patterns**
