@@ -24,9 +24,12 @@
 - Find Minimum In Rotated Sorted Array
 
 ## Greedy
+- Jump1
+- Jump2
 - Best Time To Buy And Sell Stock
 - Best Time To Buy And Sell Stock II
-- Jump Game
+- GasStation
+- Candy
 
 ## Kadane / Dynamic Programming
 - Maximum Subarray
