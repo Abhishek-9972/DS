@@ -1,4 +1,4 @@
-package DS.Array.a00ArraysPatternWise.PrefixSum.a01SubarraySum;
+package DS.Array.a00ArraysPatternWise.PrefixSum.a01SubarraySumEqualsK;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * https://leetcode.com/problems/subarray-sum-equals-k/description/
  */
-public class SubarraySum {
+public class SubarraySumEqualsK {
     public int subarraySum(int[] nums, int k) {
 
         Map<Integer, Integer> map = new HashMap<>();
