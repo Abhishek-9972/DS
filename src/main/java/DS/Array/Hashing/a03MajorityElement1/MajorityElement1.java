@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a21MajorityElement1;
+package DS.Array.Hashing.a03MajorityElement1;
 
 public class MajorityElement1 {
 

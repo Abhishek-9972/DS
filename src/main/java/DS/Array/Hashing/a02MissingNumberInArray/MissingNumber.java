@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a33MissingNumberInArray;
+package DS.Array.Hashing.a02MissingNumberInArray;
 
 public class MissingNumber {
     public static int getMissingNo(int[] nums, int n)

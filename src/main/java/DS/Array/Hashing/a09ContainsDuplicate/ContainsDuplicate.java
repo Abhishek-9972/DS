@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a10ContainsDuplicate;
+package DS.Array.Hashing.a09ContainsDuplicate;
 
 import java.util.HashSet;
 import java.util.Set;

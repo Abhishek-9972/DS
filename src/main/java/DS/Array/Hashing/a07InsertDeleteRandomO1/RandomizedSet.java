@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a30InsertDeleteRandomO1;
+package DS.Array.Hashing.a07InsertDeleteRandomO1;
 
 import java.util.ArrayList;
 import java.util.HashMap;

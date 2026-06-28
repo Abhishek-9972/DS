@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a21MajorityElement2;
+package DS.Array.Hashing.a04MajorityElement2;
 
 import java.util.ArrayList;
 import java.util.List;

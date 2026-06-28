@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a16aSingleNumber1;
+package DS.Array.Hashing.a05aSingleNumber1;
 
 public class SingleNumber1 {
     public int singleNumber(int[] nums) {

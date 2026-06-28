@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a16SingleNumber2;
+package DS.Array.Hashing.a06SingleNumber2;
 
 import java.util.HashMap;
 import java.util.Map;

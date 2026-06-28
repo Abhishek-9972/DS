@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a11FindDuplicate;
+package DS.Array.Hashing.a10FindDuplicate;
 
 /**
  * https://www.youtube.com/watch?v=_n5MR8IxR6c

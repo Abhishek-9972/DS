@@ -1,4 +1,4 @@
-package DS.Array.Hashing.a09LongestConsecutiveSequence;
+package DS.Array.Hashing.a08LongestConsecutiveSequence;
 
 import java.util.HashSet;
 import java.util.Set;
