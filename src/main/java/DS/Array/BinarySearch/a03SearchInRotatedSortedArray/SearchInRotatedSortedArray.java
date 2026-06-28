@@ -1,4 +1,4 @@
-package DS.Array.BinarySearch.a09SearchInRotatedSortedArray;
+package DS.Array.BinarySearch.a03SearchInRotatedSortedArray;
 
 /**
  * https://leetcode.com/problems/search-in-rotated-sorted-array/description/

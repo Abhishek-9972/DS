@@ -1,4 +1,4 @@
-package DS.Array.ArrayManipulation.a24MergeSortedArray;
+package DS.Array.ArrayManipulation.a01MergeSortedArray;
 
 // Java program to merge two sorted arrays/
 

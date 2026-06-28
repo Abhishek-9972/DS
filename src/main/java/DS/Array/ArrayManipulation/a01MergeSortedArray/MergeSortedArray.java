@@ -1,4 +1,4 @@
-package DS.Array.ArrayManipulation.a24MergeSortedArray;
+package DS.Array.ArrayManipulation.a01MergeSortedArray;
 
 import java.util.Arrays;
 

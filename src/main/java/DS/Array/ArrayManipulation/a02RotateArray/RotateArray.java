@@ -1,4 +1,4 @@
-package DS.Array.ArrayManipulation.a26RotateArray;
+package DS.Array.ArrayManipulation.a02RotateArray;
 
 public class RotateArray {
     public void rotate(int[] nums, int k) {

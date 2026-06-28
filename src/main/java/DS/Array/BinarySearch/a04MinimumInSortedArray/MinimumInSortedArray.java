@@ -1,4 +1,4 @@
-package DS.Array.BinarySearch.a18MinimumInSortedArray;
+package DS.Array.BinarySearch.a04MinimumInSortedArray;
 
 /**
  * https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/

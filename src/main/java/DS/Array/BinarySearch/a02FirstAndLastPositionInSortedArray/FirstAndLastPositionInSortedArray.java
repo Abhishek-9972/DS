@@ -1,4 +1,4 @@
-package DS.Array.BinarySearch.a10FirstAndLastPositionInSortedArray;
+package DS.Array.BinarySearch.a02FirstAndLastPositionInSortedArray;
 
 /**
  * https://leetcode.com/problems/search-in-rotated-sorted-array/description/

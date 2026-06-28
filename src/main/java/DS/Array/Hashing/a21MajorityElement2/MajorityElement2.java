@@ -1,31 +1,59 @@
 package DS.Array.Hashing.a21MajorityElement2;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-/**
- * https://leetcode.com/problems/majority-element-ii/description/
- */
 public class MajorityElement2 {
+
     public List<Integer> majorityElement(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i : nums) {
-            if (map.containsKey(i)) {
-                map.put(i, map.get(i) + 1);
+
+        int majority1 = 0, majority2 = 0;
+        int votes1 = 0, votes2 = 0;
+
+        // First Pass - Find Potential Majority Elements
+        for (int num : nums) {
+
+            if (majority1 == num) {
+                votes1++;
+            } else if (majority2 == num) {
+                votes2++;
+            } else if (votes1 == 0) {
+                majority1 = num;
+                votes1 = 1;
+            } else if (votes2 == 0) {
+                majority2 = num;
+                votes2 = 1;
             } else {
-                map.put(i, 1);
+                votes1--;
+                votes2--;
             }
         }
-        List<Integer> list = new ArrayList<>();
-        int maxValue = nums.length / 3;
-        for (Map.Entry<Integer, Integer> m : map.entrySet()) {
-            if (m.getValue() > maxValue) {
-                list.add(m.getKey());
+
+        // Second Pass - Verify Candidates
+        votes1 = 0;
+        votes2 = 0;
+
+        for (int num : nums) {
+            if (num == majority1) {
+                votes1++;
+            } else if (num == majority2) {
+                votes2++;
             }
         }
-        return list;
+
+        List<Integer> result = new ArrayList<>();
+
+        if (votes1 > nums.length / 3) {
+            result.add(majority1);
+        }
+
+        if (votes2 > nums.length / 3) {
+            result.add(majority2);
+        }
+
+        return result;
     }
 }
+
+
 

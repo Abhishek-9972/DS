@@ -1,4 +1,4 @@
-package DS.Array.BinarySearch.a11SearchInsertPosition;
+package DS.Array.BinarySearch.a01SearchInsertPosition;
 
 /**
  * https://leetcode.com/problems/search-insert-position/description/

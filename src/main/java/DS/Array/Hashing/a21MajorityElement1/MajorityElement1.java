@@ -1,26 +1,28 @@
 package DS.Array.Hashing.a21MajorityElement1;
 
 public class MajorityElement1 {
-    //Moore voting algorithm
 
     public int majorityElement(int[] nums) {
-        int ele = nums[0];
-        int count = 0;
 
-        for(int num: nums){
-            if(count==0){
-                ele = num;
-            }
-            if(ele == num){
-                count++;
-            }
-            else{
-                count--;
+        int majority = 0;
+        int votes = 0;
+
+        for (int num : nums) {
+
+            if (majority == num) {
+                votes++;
+            } else if (votes == 0) {
+                majority = num;
+                votes = 1;
+            } else {
+                votes--;
             }
         }
-        return ele;
+
+        return majority;
     }
 }
+
 
 /**
  *
