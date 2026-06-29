@@ -7,7 +7,7 @@ import java.util.Queue;
 
 class Graph {
     List<List<Integer>> graph;
-    boolean visited[];
+    boolean [] visited;
 
     Graph(int nodes) {
         graph = new ArrayList<>();
