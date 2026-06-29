@@ -1,20 +1,21 @@
-package DS.Graph.adjacencyList.a07zCourseSchedule2;
+package DS.Graph.adjacencyList.a07CourseSchedule;
 
 import java.util.*;
 
-public class CourseSchedule2 {
+public class CourseSchedule1 {
 
     private List<List<Integer>> graph = new ArrayList<>();
     private Map<Integer, Integer> incomingDegree = new HashMap<>();
     private Queue<Integer> sourceQueue = new LinkedList<>();
 
+    private int visitedNodes = 0;
     private int nodes;
 
-    public int[] findOrder(int numCourses, int[][] prerequisites) {
+    public boolean canFinish(int numCourses, int[][] prerequisites) {
 
-        nodes = numCourses;
+        this.nodes = numCourses;
 
-        // Initialize graph
+        // Initialize graph and indegree
         for (int i = 0; i < nodes; i++) {
             graph.add(new ArrayList<>());
             incomingDegree.put(i, 0);
@@ -29,30 +30,17 @@ public class CourseSchedule2 {
             addEdge(preReq, course);
         }
 
-        List<Integer> order = topologicalSort();
-
-        if (order.size() != nodes) {
-            return new int[0];//Empty Array
-        }
-
-        int[] result = new int[nodes];
-        for (int i = 0; i < nodes; i++) {
-            result[i] = order.get(i);
-        }
-
-        return result;
+        return !checkIfGraphHasCycle();
     }
 
-    private void addEdge(int a, int b) {
+    public void addEdge(int a, int b) {
         graph.get(a).add(b);
         incomingDegree.put(b, incomingDegree.get(b) + 1);
     }
 
-    private List<Integer> topologicalSort() {
+    private boolean checkIfGraphHasCycle() {
 
-        List<Integer> order = new ArrayList<>();
-
-        // Find all source nodes
+        // Find all source nodes (indegree = 0)
         for (int i = 0; i < nodes; i++) {
             if (incomingDegree.get(i) == 0) {
                 sourceQueue.add(i);
@@ -62,7 +50,7 @@ public class CourseSchedule2 {
         while (!sourceQueue.isEmpty()) {
 
             int source = sourceQueue.poll();
-            order.add(source);
+            visitedNodes++;
 
             for (int child : graph.get(source)) {
 
@@ -74,20 +62,23 @@ public class CourseSchedule2 {
             }
         }
 
-        return order;
+        // If all nodes were processed, graph has no cycle.
+        return visitedNodes != nodes;
     }
 
     public static void main(String[] args) {
 
-        CourseSchedule2 cs = new CourseSchedule2();
+        ZCourseSchedule cs = new ZCourseSchedule();
+
+        int numCourses = 4;
 
         int[][] prerequisites = {
-                {1,0},
-                {2,0},
-                {3,1},
-                {3,2}
+                {1, 0},
+                {2, 0},
+                {3, 1},
+                {3, 2}
         };
 
-        System.out.println(Arrays.toString(cs.findOrder(4, prerequisites)));
+        System.out.println(cs.canFinish(numCourses, prerequisites));
     }
 }

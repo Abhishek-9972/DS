@@ -5,6 +5,10 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * Given a directed graph, determine whether the graph is strongly connected.
+ * There must be a path from u to v and from v to u
+ */
 class Graph {
     List<List<Integer>> graph;
     boolean visited[];

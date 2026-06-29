@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Same question as hasCycle in Graph
  */
-public class CourseSchedule {
+public class ZCourseSchedule {
     List<List<Integer>> graph = new ArrayList<>();
     HashMap<Integer, Integer> incomingDegree = new HashMap<>();
     Queue<Integer> sourceQueue = new LinkedList<>();
