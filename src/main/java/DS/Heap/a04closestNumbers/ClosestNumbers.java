@@ -11,12 +11,8 @@ public class ClosestNumbers {
         int k = 3;
         int x = 7;
 
-        PriorityQueue<Pair> pq = new PriorityQueue<>(new Comparator<Pair>() {
-            @Override
-            public int compare(Pair pair1, Pair pair2) {
-                return pair2.getValue().compareTo(pair1.getValue());
-            }
-        });
+        PriorityQueue<Pair> pq =
+                new PriorityQueue<>((a, b) -> b.getValue().compareTo(a.getValue()));
 
         for (int i = 0; i < arr.length; i++) {
             pq.add(new Pair(arr[i], Math.abs(arr[i] - x)));

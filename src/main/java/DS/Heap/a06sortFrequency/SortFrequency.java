@@ -9,7 +9,6 @@ public class SortFrequency {
     public static void main(String[] args) {
         int [] arr = {1,1,2,3,5,3,3,3,3,3,2,2,1,1};
         int n = arr.length;
-        int k = 2;
         SortFrequency.printTopKFrequentNumbers(arr, n);
     }
     public static void printTopKFrequentNumbers(int[] arr, int n) {
@@ -23,13 +22,8 @@ public class SortFrequency {
         }
 
 
-        PriorityQueue<Map.Entry<Integer, Integer> > queue =
-                new PriorityQueue<>(new Comparator<Map.Entry<Integer, Integer>>() {
-                    @Override
-                    public int compare(Map.Entry<Integer, Integer> o1, Map.Entry<Integer, Integer> o2) {
-                        return o2.getValue().compareTo(o1.getValue());
-                    }
-                });
+        PriorityQueue<Map.Entry<Integer, Integer>> queue =
+                new PriorityQueue<>((a, b) -> b.getValue().compareTo(a.getValue()));
 
         for(Map.Entry<Integer, Integer> entry: map.entrySet())
         {
