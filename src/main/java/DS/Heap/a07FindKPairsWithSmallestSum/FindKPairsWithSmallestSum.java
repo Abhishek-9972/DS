@@ -18,10 +18,12 @@ public class FindKPairsWithSmallestSum {
                 new PriorityQueue<>((a, b) -> a.sum - b.sum);
 
         // Insert first element of each row
+        // Suppose nums1 length = 100000 k = 3 -> Do we need to insert - 100000 rows? -> Hence Math.min(nums1.length, k)
         for (int i = 0; i < Math.min(nums1.length, k); i++) {
             minHeap.offer(new Node(i, 0, nums1[i] + nums2[0]));
         }
 
+        // Either heap becomes empty or answer contains k pairs.
         while (!minHeap.isEmpty() && result.size() < k) {
 
             Node current = minHeap.poll();
