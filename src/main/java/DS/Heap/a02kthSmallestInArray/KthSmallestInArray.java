@@ -1,4 +1,4 @@
-package DS.Heap.kthSmallestInArray;
+package DS.Heap.a02kthSmallestInArray;
 
 import java.util.Collections;
 import java.util.PriorityQueue;

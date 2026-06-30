@@ -1,4 +1,4 @@
-package DS.Heap.findMedianOfDataStream;
+package DS.Heap.a08findMedianOfDataStream;
 
 import java.util.PriorityQueue;
 

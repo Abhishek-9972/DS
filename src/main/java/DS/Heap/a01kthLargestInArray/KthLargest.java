@@ -1,4 +1,4 @@
-package DS.Heap.kthLargestInArray;
+package DS.Heap.a01kthLargestInArray;
 
 import java.util.PriorityQueue;
 

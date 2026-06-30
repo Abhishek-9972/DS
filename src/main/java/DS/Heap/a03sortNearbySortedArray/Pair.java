@@ -1,4 +1,4 @@
-package DS.Heap.sortNearbySortedArray;
+package DS.Heap.a03sortNearbySortedArray;
 
 public class Pair {
     Integer key;

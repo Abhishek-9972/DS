@@ -1,4 +1,4 @@
-package DS.Heap.sortNearbySortedArray;
+package DS.Heap.a03sortNearbySortedArray;
 
 import java.util.Arrays;
 import java.util.Iterator;
@@ -44,3 +44,20 @@ public class SortNearBySortedArray {
     }
 
 }
+
+/**
+ * Question
+ *
+ * Given an array where every element is at most k positions away from its correct sorted position, sort the array.
+ *
+ * Example 1
+ *
+ * Input
+ *
+ * nums = [6, 5, 3, 2, 8, 10, 9]
+ * k = 3
+ *
+ * Output
+ *
+ * [2, 3, 5, 6, 8, 9, 10]
+ */

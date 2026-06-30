@@ -1,6 +1,6 @@
-package DS.Heap.closestNumbers;
+package DS.Heap.a04closestNumbers;
 
-import DS.Heap.sortNearbySortedArray.Pair;
+import DS.Heap.a03sortNearbySortedArray.Pair;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;
