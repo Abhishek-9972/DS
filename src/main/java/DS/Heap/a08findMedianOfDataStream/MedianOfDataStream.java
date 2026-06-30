@@ -1,5 +1,6 @@
 package DS.Heap.a08findMedianOfDataStream;
 
+import java.util.Collections;
 import java.util.PriorityQueue;
 
 public class MedianOfDataStream {
@@ -10,7 +11,7 @@ public class MedianOfDataStream {
     public MedianOfDataStream() {
         this.even = true;
         this.minHeap = new PriorityQueue<Integer>();
-        this.maxHeap = new PriorityQueue<Integer>((a, b) -> Integer.compare(b, a));
+        this.maxHeap = new PriorityQueue<Integer>(Collections.reverseOrder());
     }
 
     public void addNum(final int num) {
