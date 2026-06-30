@@ -1,4 +1,4 @@
-package DS.Intervals.InsertIntervals;
+package DS.Intervals.a03InsertIntervals;
 
 import java.util.Arrays;
 import java.util.Stack;

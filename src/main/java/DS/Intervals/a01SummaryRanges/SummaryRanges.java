@@ -1,4 +1,4 @@
-package DS.Intervals.a02SummaryRanges;
+package DS.Intervals.a01SummaryRanges;
 
 import java.util.ArrayList;
 import java.util.List;

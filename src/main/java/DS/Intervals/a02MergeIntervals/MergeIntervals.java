@@ -1,4 +1,4 @@
-package DS.Intervals.a01MergeIntervals;
+package DS.Intervals.a02MergeIntervals;
 
 import java.util.Arrays;
 import java.util.Stack;
