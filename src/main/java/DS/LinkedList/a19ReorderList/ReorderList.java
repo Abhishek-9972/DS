@@ -2,43 +2,61 @@ package DS.LinkedList.a19ReorderList;
 
 import DS.LinkedList.ListNode;
 
+/**
+ * https://leetcode.com/problems/reorder-list/
+ */
 public class ReorderList {
 
-    static ListNode reverse(ListNode head) {
-        ListNode curr = head;
-        ListNode after = null;
-        ListNode prev = null;
-
-        while (curr != null) {
-            after = curr.next;
-            curr.next = prev;
-            prev = curr;
-            curr = after;
-        }
-        return prev;
-    }
-
     public void reorderList(ListNode head) {
-        ListNode t = head;
 
+        if (head == null || head.next == null) {
+            return;
+        }
+
+        // Step 1: Find middle
         ListNode slow = head;
-        ListNode fast = head.next;
+        ListNode fast = head;
 
-        while (fast != null && fast.next != null) {
+        while (fast.next != null && fast.next.next != null) {
             slow = slow.next;
             fast = fast.next.next;
         }
 
-        ListNode left = head;
-        ListNode right = reverse(slow);
-        ListNode nextL, nextR;
-        while (left != null && right != null) {
-            nextL = left.next;
-            left.next = right;
-            nextR = right.next;
-            right.next = nextL;
-            left = nextL;
-            right = nextR;
+        // Step 2: Reverse second half
+        ListNode second = reverse(slow.next);
+
+        // Break the list into two halves
+        slow.next = null;
+
+        // Step 3: Merge both halves
+        ListNode first = head;
+
+        while (second != null) {
+
+            ListNode nextFirst = first.next;
+            ListNode nextSecond = second.next;
+
+            first.next = second;
+            second.next = nextFirst;
+
+            first = nextFirst;
+            second = nextSecond;
         }
+    }
+
+    private ListNode reverse(ListNode head) {
+
+        ListNode previous = null;
+        ListNode current = head;
+
+        while (current != null) {
+
+            ListNode next = current.next;
+            current.next = previous;
+            previous = current;
+            current = next;
+        }
+
+        return previous;
     }
 }

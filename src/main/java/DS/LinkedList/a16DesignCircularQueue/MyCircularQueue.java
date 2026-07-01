@@ -1,54 +1,72 @@
 package DS.LinkedList.a16DesignCircularQueue;
 
-import java.util.ArrayList;
-
+/**
+ * https://leetcode.com/problems/design-circular-queue/
+ */
 class MyCircularQueue {
 
-    ArrayList<Integer> list;
-    int max;
+    private int[] queue;
+    private int front;
+    private int rear;
+    private int size;
+    private int capacity;
+
     public MyCircularQueue(int k) {
-        list=new ArrayList<>();
-        max=k;
+        queue = new int[k];
+        capacity = k;
+        front = 0;
+        rear = -1;
+        size = 0;
     }
-    
+
     public boolean enQueue(int value) {
-        if(list.size()==max) return false;
-        list.add(value);
+
+        if (isFull()) {
+            return false;
+        }
+
+        rear = (rear + 1) % capacity;
+        queue[rear] = value;
+        size++;
+
         return true;
     }
-    
+
     public boolean deQueue() {
-        if(list.size()==0) return false;
-        list.remove(0);
+
+        if (isEmpty()) {
+            return false;
+        }
+
+        front = (front + 1) % capacity;
+        size--;
+
         return true;
     }
-    
+
     public int Front() {
-        if(list.size()==0) return -1;
-        return list.get(0);
+
+        if (isEmpty()) {
+            return -1;
+        }
+
+        return queue[front];
     }
-    
+
     public int Rear() {
-        if(list.size()==0) return -1;
-        return list.get(list.size()-1);
+
+        if (isEmpty()) {
+            return -1;
+        }
+
+        return queue[rear];
     }
-    
+
     public boolean isEmpty() {
-        return list.size()==0;
+        return size == 0;
     }
-    
+
     public boolean isFull() {
-        return list.size()==max;
+        return size == capacity;
     }
 }
-
-/**
- * Your MyCircularQueue object will be instantiated and called as such:
- * MyCircularQueue obj = new MyCircularQueue(k);
- * boolean param_1 = obj.enQueue(value);
- * boolean param_2 = obj.deQueue();
- * int param_3 = obj.Front();
- * int param_4 = obj.Rear();
- * boolean param_5 = obj.isEmpty();
- * boolean param_6 = obj.isFull();
- */

@@ -1,74 +1,115 @@
 package DS.LinkedList.a17DesignCircularDeque;
 
-import java.util.ArrayList;
-import java.util.List;
-
+/**
+ * https://leetcode.com/problems/design-circular-deque/
+ */
 class MyCircularDeque {
 
-    List<Integer> list;
-    int max;
+    private int[] deque;
+    private int front;
+    private int rear;
+    private int size;
+    private int capacity;
 
     public MyCircularDeque(int k) {
-        list = new ArrayList<>();
-        max =k;
+        deque = new int[k];
+        capacity = k;
+        front = 0;
+        rear = -1;
+        size = 0;
     }
-    
+
     public boolean insertFront(int value) {
-        if(isFull()){return false;}
-        else{list.add(0,value); return true;}
+
+        if (isFull()) {
+            return false;
+        }
+
+        front = (front - 1 + capacity) % capacity;
+        deque[front] = value;
+
+        if (size == 0) {
+            rear = front;
+        }
+
+        size++;
+        return true;
     }
-    
+
     public boolean insertLast(int value) {
-        if(isFull()){return false;}
-        else{list.add(value);return true; }
+
+        if (isFull()) {
+            return false;
+        }
+
+        rear = (rear + 1) % capacity;
+        deque[rear] = value;
+
+        if (size == 0) {
+            front = rear;
+        }
+
+        size++;
+        return true;
     }
-    
+
     public boolean deleteFront() {
-        if(isEmpty()){return false;}
-        else{list.remove(0);return true;}
+
+        if (isEmpty()) {
+            return false;
+        }
+
+        front = (front + 1) % capacity;
+        size--;
+
+        if (size == 0) {
+            front = 0;
+            rear = -1;
+        }
+
+        return true;
     }
-    
+
     public boolean deleteLast() {
-        if(isEmpty()){return false;}
-        else{list.remove(list.size()-1);return true;}
+
+        if (isEmpty()) {
+            return false;
+        }
+
+        rear = (rear - 1 + capacity) % capacity;
+        size--;
+
+        if (size == 0) {
+            front = 0;
+            rear = -1;
+        }
+
+        return true;
     }
-    
+
     public int getFront() {
-        if(isEmpty()){return -1;}
-        else{return list.get(0);}
+
+        if (isEmpty()) {
+            return -1;
+        }
+
+        return deque[front];
     }
-    
+
     public int getRear() {
-        if(isEmpty()){return -1;}
-        else{return list.get(list.size()-1);}
+
+        if (isEmpty()) {
+            return -1;
+        }
+
+        return deque[rear];
     }
-    
+
     public boolean isEmpty() {
-        if(list.size()==0){
-            return true;
-        }else{
-            return false;
-        }
+        return size == 0;
     }
-    
+
     public boolean isFull() {
-        if(list.size()==max){
-            return true;
-        }else{
-            return false;
-        }
+        return size == capacity;
     }
 }
-
-/**
- * Your MyCircularDeque object will be instantiated and called as such:
- * MyCircularDeque obj = new MyCircularDeque(k);
- * boolean param_1 = obj.insertFront(value);
- * boolean param_2 = obj.insertLast(value);
- * boolean param_3 = obj.deleteFront();
- * boolean param_4 = obj.deleteLast();
- * int param_5 = obj.getFront();
- * int param_6 = obj.getRear();
- * boolean param_7 = obj.isEmpty();
- * boolean param_8 = obj.isFull();
- */
