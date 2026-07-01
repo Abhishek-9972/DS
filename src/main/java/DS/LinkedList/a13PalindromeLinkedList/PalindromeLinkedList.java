@@ -1,51 +1,55 @@
 package DS.LinkedList.a13PalindromeLinkedList;
 
-import DS.LinkedList.ListNode;
+import DS.LinkedList.ListNode;public class PalindromeLinkedList {
 
-public class PalindromeLinkedList {
     public boolean isPalindrome(ListNode head) {
-        ListNode actualHead = head;
-        ListNode cur = head;
-        ListNode middle = middleNode(cur);
-        System.out.println(middle.val);
-        ListNode secondHead = reverseList(middle);
-        System.out.println(secondHead.val);
-        System.out.println(actualHead.val);
 
+        if (head == null || head.next == null) {
+            return true;
+        }
 
-        while(secondHead!=null){
-            if(actualHead.val != secondHead.val){
+        ListNode first = head;
+        ListNode second = reverseList(middleNode(head));
+
+        while (second != null) {
+
+            if (first.val != second.val) {
                 return false;
             }
-            actualHead = actualHead.next;
-            secondHead = secondHead.next;
+
+            first = first.next;
+            second = second.next;
         }
+
         return true;
     }
 
     public ListNode middleNode(ListNode head) {
-        ListNode fastPtr = head;
-        ListNode slowPtr = head;
 
-        while(fastPtr!=null && fastPtr.next!=null){
-            slowPtr = slowPtr.next;
-            fastPtr = fastPtr.next.next;
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
-        return slowPtr;
+        return slow;
     }
 
     public ListNode reverseList(ListNode head) {
+
         ListNode previous = null;
         ListNode current = head;
-        ListNode next = null;
 
-        while(current!=null){
-            next = current.next;
+        while (current != null) {
+
+            ListNode next = current.next;
             current.next = previous;
             previous = current;
             current = next;
         }
+
         return previous;
     }
 }

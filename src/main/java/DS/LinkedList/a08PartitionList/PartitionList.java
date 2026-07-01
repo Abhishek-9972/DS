@@ -11,7 +11,6 @@ public class PartitionList {
         ListNode before = beforeHead;
         ListNode afterHead = new ListNode(0);
         ListNode after = afterHead;
-        ListNode temp = head;
 
         while (head!=null)
         {
