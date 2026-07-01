@@ -7,32 +7,35 @@ import DS.LinkedList.ListNode;
  */
 public class RotateList {
     public ListNode rotateRight(ListNode head, int k) {
-        ListNode temp = head;
-        int len = 1;
 
-        if (k == 0 || head == null || head.next == null) {
+        if (head == null || head.next == null || k == 0) {
             return head;
         }
 
-        while (temp.next != null) {
+        ListNode tail = head;
+        int len = 1;
+
+        while (tail.next != null) {
             len++;
-            temp = temp.next;
+            tail = tail.next;
         }
 
-        k = k % len;
+        k %= len;
 
-        int start = len - k;
-
-        // create circle
-        temp.next = head;
-
-        while (start > 0) {
-            temp = temp.next;
-            start--;
+        if (k == 0) {
+            return head;
         }
 
-        head = temp.next;
-        temp.next = null;
+        int stepsToNewTail = len - k;
+
+        tail.next = head;
+
+        while (stepsToNewTail-- > 0) {
+            tail = tail.next;
+        }
+
+        head = tail.next;
+        tail.next = null;
 
         return head;
     }
