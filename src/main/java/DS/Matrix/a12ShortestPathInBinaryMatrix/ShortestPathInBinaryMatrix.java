@@ -63,22 +63,22 @@ public class ShortestPathInBinaryMatrix {
 
             for (int[] direction : directions) {
 
-                int newRow = row + direction[0];
-                int newCol = col + direction[1];
+                int nextRow = row + direction[0];
+                int nextCol = col + direction[1];
 
-                if (newRow < 0 || newCol < 0 ||
-                        newRow >= rows || newCol >= cols ||
-                        grid[newRow][newCol] != 0) {
+                if (nextRow < 0 || nextCol < 0 ||
+                        nextRow >= rows || nextCol >= cols ||
+                        grid[nextRow][nextCol] != 0) {
                     continue;
                 }
 
                 // Visit neighbour
-                grid[newRow][newCol] = 1;
+                grid[nextRow][nextCol] = 1;
 
                 queue.offer(
                         new Node(
-                                newRow,
-                                newCol,
+                                nextRow,
+                                nextCol,
                                 distance + 1
                         )
                 );
