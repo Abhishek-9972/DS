@@ -4,61 +4,87 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * https://www.youtube.com/watch?v=9c0qTWU1MjI
- * <p>
  * https://leetcode.com/problems/shortest-path-in-binary-matrix/
  */
-class ShortestPathInBinaryMatrix {
-    static class Node {
-        int x;
-        int y;
-        int dist;
+public class ShortestPathInBinaryMatrix {
 
-        Node(int x, int y, int dist) {
-            this.x = x;
-            this.y = y;
-            this.dist = dist;
+    class Node {
+        int row;
+        int col;
+        int distance;
+
+        Node(int row, int col, int distance) {
+            this.row = row;
+            this.col = col;
+            this.distance = distance;
         }
     }
 
     public int shortestPathBinaryMatrix(int[][] grid) {
-        int row = grid.length;
-        int col = grid[0].length;
 
-        if (grid[0][0] == 1 || grid[row - 1][col - 1] == 1) {
+        int rows = grid.length;
+        int cols = grid[0].length;
+
+        // Start or destination blocked
+        if (grid[0][0] == 1 || grid[rows - 1][cols - 1] == 1) {
             return -1;
         }
 
-        int[][] directions = {{0, 1}, {1, 0}, {-1, 0}, {0, -1}, {1, 1}, {1, -1}, {-1, 1}, {-1, -1}};
-
         Queue<Node> queue = new LinkedList<>();
-        queue.add(new Node(0, 0, 1));
-        grid[0][0] = 1;
+
+        // Step 1 : Start BFS from (0,0)
+        queue.offer(new Node(0, 0, 1));
+        grid[0][0] = 1;      // Mark visited
+
+        int[][] directions = {
+                {0, 1},
+                {1, 0},
+                {-1, 0},
+                {0, -1},
+                {1, 1},
+                {1, -1},
+                {-1, 1},
+                {-1, -1}
+        };
+
+        // Step 2 : BFS
         while (!queue.isEmpty()) {
-            int size = queue.size();
-            for (int i = 0; i < size; i++) {
-                Node temp = queue.poll();
-                int x = temp.x;
-                int y = temp.y;
-                int cost = temp.dist;
 
-                if (x == row - 1 && y == col - 1)
-                    return cost;
+            Node current = queue.poll();
 
-                for (int[] direction : directions) {
-                    int nextX = x + direction[0];
-                    int nextY = y + direction[1];
+            int row = current.row;
+            int col = current.col;
+            int distance = current.distance;
 
-                    if (nextX >= 0 && nextX < row && nextY >= 0 && nextY < col && grid[nextX][nextY] == 0) {
-                        queue.add(new Node(nextX, nextY, cost + 1));
-                        grid[nextX][nextY] = 1;
-                    }
+            // Destination reached
+            if (row == rows - 1 && col == cols - 1) {
+                return distance;
+            }
 
+            for (int[] direction : directions) {
+
+                int newRow = row + direction[0];
+                int newCol = col + direction[1];
+
+                if (newRow < 0 || newCol < 0 ||
+                        newRow >= rows || newCol >= cols ||
+                        grid[newRow][newCol] != 0) {
+                    continue;
                 }
+
+                // Visit neighbour
+                grid[newRow][newCol] = 1;
+
+                queue.offer(
+                        new Node(
+                                newRow,
+                                newCol,
+                                distance + 1
+                        )
+                );
             }
         }
 
         return -1;
-
     }
 }
