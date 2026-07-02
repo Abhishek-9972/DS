@@ -1,63 +1,79 @@
 package DS.Matrix.a11RottingOrange;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
- * https://www.youtube.com/watch?v=TzoDDOj60zE
+ * https://leetcode.com/problems/rotting-oranges/
  */
-class RottingOrange {
-    public int orangesRotting(int[][] grid) {
-        Set<String> fresh = new HashSet<>();
-        Set<String> rotten = new HashSet<>();
+public class RottingOrange {
 
+    public int orangesRotting(int[][] grid) {
+
+        Queue<int[]> queue = new LinkedList<>();
+        int fresh = 0;
+
+        // Count fresh oranges and add all rotten oranges to queue
         for (int i = 0; i < grid.length; i++) {
-            for (int j = 0; j < grid[i].length; j++) {
+            for (int j = 0; j < grid[0].length; j++) {
+
                 if (grid[i][j] == 1) {
-                    fresh.add("" + i + j);
+                    fresh++;
                 } else if (grid[i][j] == 2) {
-                    rotten.add("" + i + j);
+                    queue.offer(new int[]{i, j});
                 }
             }
         }
 
-        System.out.println(fresh);
-        System.out.println(rotten);
+        // No fresh oranges
+        if (fresh == 0) {
+            return 0;
+        }
 
         int minutes = 0;
-        int[][] directions = { { 0, 1 }, { 1, 0 }, { -1, 0 }, { 0, -1 } };
 
-        while (fresh.size() > 0) {
-            Set<String> infected = new HashSet<>();
-            for (String s : rotten) {
-                int i = s.charAt(0) - '0';
-                int j = s.charAt(1) - '0';
+        int[][] directions = {
+                {0, 1},
+                {1, 0},
+                {-1, 0},
+                {0, -1}
+        };
+
+        while (!queue.isEmpty() && fresh > 0) {
+
+            int size = queue.size();
+
+            // Process one minute
+            for (int i = 0; i < size; i++) {
+
+                int[] current = queue.poll();
+
+                int row = current[0];
+                int col = current[1];
+
                 for (int[] direction : directions) {
-                    int nextI = i + direction[0];
-                    int nextJ = j + direction[1];
 
-                    if (fresh.contains("" + nextI + nextJ)) {
-                        fresh.remove("" + nextI + nextJ);
-                        infected.add("" + nextI + nextJ);
+                    int newRow = row + direction[0];
+                    int newCol = col + direction[1];
+
+                    if (newRow < 0 || newCol < 0 ||
+                            newRow >= grid.length ||
+                            newCol >= grid[0].length ||
+                            grid[newRow][newCol] != 1) {
+                        continue;
                     }
+
+                    // Rotten the fresh orange
+                    grid[newRow][newCol] = 2;
+                    fresh--;
+
+                    queue.offer(new int[]{newRow, newCol});
                 }
             }
 
-            if (infected.size() == 0) {
-                return -1;
-            }
-
-            rotten = infected;
             minutes++;
         }
 
-        return minutes;
-    }
-
-
-    public static void main(String[] args) {
-        int[][] grid = {{2,1,1},{1,1,0},{0,1,1}};
-        RottingOrange rottingOrange = new RottingOrange();
-        rottingOrange.orangesRotting(grid);
+        return fresh == 0 ? minutes : -1;
     }
 }
