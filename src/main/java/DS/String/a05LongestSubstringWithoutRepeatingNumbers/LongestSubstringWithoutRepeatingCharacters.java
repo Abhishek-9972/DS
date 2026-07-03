@@ -1,28 +1,31 @@
 package DS.String.a05LongestSubstringWithoutRepeatingNumbers;
 
+import java.util.HashSet;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 
-public class LongestSubstringWithoutRepeatingCharacters {
-    public int lengthOfLongestSubstring(String s) {
-        Map<Character,Integer> map = new LinkedHashMap<>();
-        int longestSubstringLength = 0;
+class LongestSubstringWithoutRepeatingCharacters {
 
-        for(int i =0; i< s.length(); i++)
-        {
-            if(map.containsKey(s.charAt(i))){
-                i = map.get(s.charAt(i));
-                map.clear();
-            }
-            else{
-                map.put(s.charAt(i), i);
+    int lengthOfLongestSubstring(String s) {
+
+        Set<Character> charSet = new HashSet<>();
+
+        int maxLength = 0;
+        int left = 0;
+
+        for (int right = 0; right < s.length(); right++) {
+
+            while (charSet.contains(s.charAt(right))) {
+                charSet.remove(s.charAt(left));
+                left++;
             }
 
-            if(map.size() > longestSubstringLength){
-                longestSubstringLength = map.size();
-            }
+            charSet.add(s.charAt(right));
+            maxLength = Math.max(maxLength, right - left + 1);
         }
 
-        return longestSubstringLength;
+        return maxLength;
     }
+
 }
