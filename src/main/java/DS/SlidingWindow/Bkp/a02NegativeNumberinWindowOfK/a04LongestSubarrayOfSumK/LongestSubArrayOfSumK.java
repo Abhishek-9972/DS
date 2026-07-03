@@ -1,4 +1,4 @@
-package DS.SlidingWindow.a04LongestSubarrayOfSumK;
+package DS.SlidingWindow.Bkp.a02NegativeNumberinWindowOfK.a04LongestSubarrayOfSumK;
 
 class LongestSubArrayOfSumK {
 

@@ -1,57 +1,53 @@
 package DS.SlidingWindow.a05MinimumWindowSubstring;
 
-import java.util.HashMap;
+/**
+ * https://www.youtube.com/watch?v=SdeaOYoPhIs
+ */
+class MinimumWindowSubstring {
 
-public class MinimumWindowSubstring {
-    public String minWindow(String s, String t) {
-        HashMap<Character, Integer> map = new HashMap<>();
-        for (int x = 0; x < t.length(); x++) {
-            char c = t.charAt(x);
-            map.put(c, map.getOrDefault(c, 0) + 1);
-        }
-        int i = 0, j = 0;
-        int min = Integer.MAX_VALUE;
-        int temp = min;
-        int count = map.size();
-        int start = 0;
-        while (j < s.length()) {
-            char c = s.charAt(j);
-            if (map.containsKey(c)) {
-                map.put(c, map.getOrDefault(c, 0) - 1);
-                if (map.get(c) == 0) {
-                    count--;
-                }
-            }
-            if (count > 0)
-                j++;
-            if (count == 0) {
-                temp = min;
+    String minWindow(String s, String t) {
 
-                min = Math.min(min, j - i + 1);
-                if (temp != min)
-                    start = i;
+        // Count characters in s
+        int[] mapS = new int[256];
 
-                while (count == 0) {
-                    char c2 = s.charAt(i);
-                    if (map.containsKey(c2)) {
-                        map.put(c2, map.getOrDefault(c2, 0) + 1);
-                        if (map.get(c2) == 1)
-                            count++;
-                    }
-                    i++;
-                    if (count == 0) {
-                        min = Math.min(min, j - i + 1);
-                        if (temp != min)
-                            start = i;
-                    }
-                }
-                j++;
+        // Count characters in t
+        int[] mapT = new int[256];
 
+        for (char ch : t.toCharArray())
+            mapT[ch]++;
+
+        String result = "";
+        int right = 0, min = Integer.MAX_VALUE;
+
+        // Two pointers of the sliding window: i(left), right
+        for (int i = 0; i < s.length(); i++) {
+
+            while (right < s.length() && !isDesirable(mapS, mapT)) {
+                mapS[s.charAt(right)]++;
+
+                // Extend the right pointer of the sliding window
+                right++;
             }
 
+            if (isDesirable(mapS, mapT) && min > right - i + 1) {
+                result = s.substring(i, right);
+                min = right - i + 1;
+            }
+
+            // Shrink the left pointer from i to i + 1
+            mapS[s.charAt(i)]--;
         }
-        if (min == Integer.MAX_VALUE)
-            return ("");
-        return s.substring(start, start + min);
+
+        return result;
+    }
+
+    // Runtime = O(256) = O(1)
+    private boolean isDesirable(int[] mapS, int[] mapT) {
+        // s should cover all characters in t
+        for (int i = 0; i < mapT.length; i++) {
+            if (mapT[i] > mapS[i])
+                return false;
+        }
+        return true;
     }
 }

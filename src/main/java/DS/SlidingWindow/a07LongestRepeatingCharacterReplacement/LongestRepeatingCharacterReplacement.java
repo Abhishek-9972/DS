@@ -1,26 +1,37 @@
 package DS.SlidingWindow.a07LongestRepeatingCharacterReplacement;
 
 public class LongestRepeatingCharacterReplacement {
-    public int characterReplacement(String s, int k) {
-        int n = s.length();
-        int[] charCounts = new int[26];
 
-        int windowStart = 0;
-        int maxLength = 0;
-        int maxCount = 0;
+    int characterReplacement(String s, int k) {
 
-        for (int windowEnd = 0; windowEnd < n; windowEnd++) {
-            charCounts[s.charAt(windowEnd) - 'A']++;
-            int currentCharCount = charCounts[s.charAt(windowEnd) - 'A'];
-            maxCount = Math.max(maxCount, currentCharCount);
+        int[] freq = new int[26];
+        int left = 0;
+        int maxFreq = 0;
+        int maxWindow = 0;
 
-            while (windowEnd - windowStart - maxCount + 1 > k) {
-                charCounts[s.charAt(windowStart) - 'A']--;
-                windowStart++;
+        for (int right = 0; right < s.length(); right++) {
+
+            // Update the frequency of the current character
+            freq[s.charAt(right) - 'A']++;
+
+            // Update the max frequency
+            maxFreq = Math.max(maxFreq, freq[s.charAt(right) - 'A']);
+
+            int windowLength = right - left + 1;
+
+            // If the windowLength - max frequency > k,
+            // then we need to shrink the window
+            if (windowLength - maxFreq > k) {
+                freq[s.charAt(left) - 'A']--;
+                left++;
             }
 
-            maxLength = Math.max(maxLength, windowEnd - windowStart + 1);
+            windowLength = right - left + 1;
+            maxWindow = Math.max(maxWindow, windowLength);
         }
-        return maxLength;
+
+        return maxWindow;
+
     }
+
 }
