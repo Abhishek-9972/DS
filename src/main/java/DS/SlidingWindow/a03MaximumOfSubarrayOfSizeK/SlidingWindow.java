@@ -3,49 +3,65 @@ package DS.SlidingWindow.a03MaximumOfSubarrayOfSizeK;
 import java.util.Deque;
 import java.util.LinkedList;
 
+/**
+ * https://leetcode.com/problems/sliding-window-maximum/
+ */
 public class SlidingWindow {
 
-    static void printMax(int arr[], int N, int K)
-    {
+    public int[] maxSlidingWindow(int[] nums, int k) {
+        int n = nums.length;
 
-        Deque<Integer> Qi = new LinkedList<Integer>();
+        //Step1 : Initialize the deque and result array
+        //Deque stores indices and not values
+        Deque<Integer> deque = new LinkedList<>();
+        int[] result = new int[n - k + 1];
 
-        int i;
-        for (i = 0; i < K; ++i) {
-
-            while (!Qi.isEmpty()
-                    && arr[i] >= arr[Qi.peekLast()])
-
-                Qi.removeLast();
-
-            Qi.addLast(i);
+        //Step2 : SetUp deque for the first k elements
+        for (int i = 0; i < k; i++) {
+            //Remove all smaller elements from the back
+            while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {
+                deque.pollLast();
+            }
+            deque.offerLast(i);
         }
 
-        for (; i < N; ++i) {
+        //The front of the deque is the max of the first window
+        result[0] = nums[deque.peekFirst()];
 
-            System.out.print(arr[Qi.peek()] + " ");
+        //Process the remaining elements
+        for (int i = k; i < n; i++) {
+            //Remove the element that has slid out of the window
+            if (deque.peekFirst() <= i - k) {
+                deque.pollFirst();
+            }
 
-            while ((!Qi.isEmpty()) && Qi.peek() <= i - K)
-                Qi.removeFirst();
+            //Remove all the elements smaller than the incoming element
+            while (!deque.isEmpty() && nums[deque.peekLast()] <= nums[i]) {
+                deque.pollLast();
+            }
 
-            while ((!Qi.isEmpty())
-                    && arr[i] >= arr[Qi.peekLast()])
-                Qi.removeLast();
+            //Add current element's index
+            deque.offerLast(i);
 
-            Qi.addLast(i);
+            //The front of the deque is always the max of the window
+            result[i - k + 1] = nums[deque.peekFirst()];
         }
+        return result;
 
-        System.out.print(arr[Qi.peek()]);
     }
 
     // Driver's code
-    public static void main(String[] args)
-    {
-        int arr[] = { 12, 1, 78, 90, 57, 89, 56 };
+    public static void main(String[] args) {
+        int arr[] = {12, 1, 78, 90, 57, 89, 56};
         int K = 3;
 
         // Function call
-        printMax(arr, arr.length, K);
+        SlidingWindow slidingWindow = new SlidingWindow();
+        int[] result = slidingWindow.maxSlidingWindow(arr, K);
+        for (int ele: result){
+            System.out.print(ele + " ");
+        }
+
     }
 }
 
