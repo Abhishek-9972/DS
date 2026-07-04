@@ -20,7 +20,7 @@ class MinimumWindowSubstring {
         int right = 0, min = Integer.MAX_VALUE;
 
         // Two pointers of the sliding window: i(left), right
-        for (int i = 0; i < s.length(); i++) {
+        for (int left = 0; left < s.length(); left++) {
 
             while (right < s.length() && !isDesirable(mapS, mapT)) {
                 mapS[s.charAt(right)]++;
@@ -29,13 +29,13 @@ class MinimumWindowSubstring {
                 right++;
             }
 
-            if (isDesirable(mapS, mapT) && min > right - i + 1) {
-                result = s.substring(i, right);
-                min = right - i + 1;
+            if (isDesirable(mapS, mapT) && min > right - left + 1) {
+                result = s.substring(left, right);
+                min = right - left + 1;
             }
 
             // Shrink the left pointer from i to i + 1
-            mapS[s.charAt(i)]--;
+            mapS[s.charAt(left)]--;
         }
 
         return result;
