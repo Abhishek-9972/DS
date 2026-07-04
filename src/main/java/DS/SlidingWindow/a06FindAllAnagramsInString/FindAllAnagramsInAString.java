@@ -28,7 +28,7 @@ public class FindAllAnagramsInAString {
 
             // Compare counts
             if (Arrays.equals(pCount, sCount)) {
-                result.add(i - p.length() + 1);
+                result.add(i - p.length() + 1); // Doing - p.length because we need to give start index of anagram
             }
         }
 
