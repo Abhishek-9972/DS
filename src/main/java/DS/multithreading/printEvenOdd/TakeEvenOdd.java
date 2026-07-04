@@ -3,12 +3,12 @@ package DS.multithreading.printEvenOdd;
 public class TakeEvenOdd implements Runnable {
 
     private int max;
-    private Printer print;
+    private Printer printer;
     private boolean isEvenNumber;
 
-    public TakeEvenOdd(Printer print, int max, boolean isEvenNumber) {
+    public TakeEvenOdd(Printer printer, int max, boolean isEvenNumber) {
         this.max = max;
-        this.print = print;
+        this.printer = printer;
         this.isEvenNumber = isEvenNumber;
     }
 
@@ -17,9 +17,9 @@ public class TakeEvenOdd implements Runnable {
         int number = isEvenNumber ? 2 : 1;
         while (number <= max) {
             if (isEvenNumber) {
-                print.printEven(number);
+                printer.printEven(number);
             } else {
-                print.printOdd(number);
+                printer.printOdd(number);
             }
             number = number + 2;
         }
