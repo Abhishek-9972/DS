@@ -2,42 +2,38 @@ package DS.Matrix.a09FloodFill;
 
 /**
  * https://leetcode.com/problems/flood-fill/description/
- *
+ * <p>
  * https://www.youtube.com/watch?v=hkOzrK9vZHM&list=PLFKexf2NBjmNNEsaJai9HCPh-26iSChZU&index=35
  */
 public class FloodFill {
 
-    int row=0;
-    int col=0;
-    int newC=0;
-    int startingPix=0;
+    int newC = 0;
+    int startingPix = 0;
 
     public int[][] floodFill(int[][] image, int sr, int sc, int newColor) {
-        this.row=image.length;
-        this.col=image[0].length;
-        this.newC=newColor;
-        this.startingPix=image[sr][sc];
-        if(this.startingPix==newColor){
+        this.newC = newColor;
+        this.startingPix = image[sr][sc];
+        if (this.startingPix == newColor) {
             return image;
         }
 
-        return dfs(sr,sc,image);
+        return dfs(sr, sc, image);
 
     }
 
 
-    public int[][] dfs(int i,int j,int[][] image){
+    public int[][] dfs(int i, int j, int[][] image) {
 
-        if(i<0|| i>=row || j<0 || j>=col || image[i][j]!=this.startingPix){
+        if (i < 0 || i >= image.length || j < 0 || j >= image[0].length || image[i][j] != this.startingPix) {
             return image;
         }
 
-        image[i][j]=this.newC;
+        image[i][j] = this.newC;
 
-        dfs(i,j-1,image);
-        dfs(i,j+1,image);
-        dfs(i+1,j,image);
-        dfs(i-1,j,image);
+        dfs(i, j - 1, image);
+        dfs(i, j + 1, image);
+        dfs(i + 1, j, image);
+        dfs(i - 1, j, image);
 
         return image;
     }

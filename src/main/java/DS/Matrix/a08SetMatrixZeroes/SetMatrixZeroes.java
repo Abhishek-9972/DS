@@ -19,15 +19,15 @@ public class SetMatrixZeroes {
             }
         }
 
-        for(Integer it: rows){
+        for(Integer row: rows){
             for(int i=0; i<matrix[0].length; i++){
-                matrix[it][i] = 0;
+                matrix[row][i] = 0;
             }
         }
 
-        for(Integer it: columns){
+        for(Integer column: columns){
             for(int i=0; i<matrix.length; i++){
-                matrix[i][it] = 0;
+                matrix[i][column] = 0;
             }
         }
     }
