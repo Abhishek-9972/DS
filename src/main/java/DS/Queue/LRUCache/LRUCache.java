@@ -39,7 +39,7 @@ public class LRUCache {
         if (map.containsKey(key))
             remove(map.get(key));
         if (map.size() == capacity) {
-            remove(tail.prev);
+            remove(tail.prev);//head and tail are dummy node. So we are doing tail.prev
         }
         insert(new Node(key, value));
     }
