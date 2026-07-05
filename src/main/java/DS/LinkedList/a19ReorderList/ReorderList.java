@@ -13,22 +13,13 @@ public class ReorderList {
             return;
         }
 
-        // Step 1: Find middle
-        ListNode slow = head;
-        ListNode fast = head;
+        ListNode middle = middleNode(head);
 
-        while (fast.next != null && fast.next.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
-        }
-
-        // Step 2: Reverse second half
-        ListNode second = reverse(slow.next);
+        ListNode second = reverseList(middle.next);
 
         // Break the list into two halves
-        slow.next = null;
+        middle.next = null;
 
-        // Step 3: Merge both halves
         ListNode first = head;
 
         while (second != null) {
@@ -44,7 +35,21 @@ public class ReorderList {
         }
     }
 
-    private ListNode reverse(ListNode head) {
+    public ListNode middleNode(ListNode head) {
+
+        ListNode slow = head;
+        ListNode fast = head;
+
+        // Return first middle for even length
+        while (fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
+
+    public ListNode reverseList(ListNode head) {
 
         ListNode previous = null;
         ListNode current = head;
