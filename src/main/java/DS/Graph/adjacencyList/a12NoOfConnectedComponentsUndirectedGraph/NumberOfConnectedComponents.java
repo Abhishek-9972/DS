@@ -2,7 +2,11 @@ package DS.Graph.adjacencyList.a12NoOfConnectedComponentsUndirectedGraph;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
+/**
+ * https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/
+ */
 public class NumberOfConnectedComponents {
 
     List<List<Integer>> graph = new ArrayList<>();
@@ -19,6 +23,7 @@ public class NumberOfConnectedComponents {
 
         // Build undirected graph
         for (int[] edge : edges) {
+
             int u = edge[0];
             int v = edge[1];
 
@@ -33,7 +38,6 @@ public class NumberOfConnectedComponents {
             if (!visited[i]) {
 
                 dfs(i);
-
                 components++;
             }
         }
@@ -41,14 +45,24 @@ public class NumberOfConnectedComponents {
         return components;
     }
 
-    private void dfs(int node) {
+    private void dfs(int start) {
 
-        visited[node] = true;
+        Stack<Integer> stack = new Stack<>();
 
-        for (int neighbour : graph.get(node)) {
+        stack.push(start);
+        visited[start] = true;
 
-            if (!visited[neighbour]) {
-                dfs(neighbour);
+        while (!stack.isEmpty()) {
+
+            int node = stack.pop();
+
+            for (int neighbour : graph.get(node)) {
+
+                if (!visited[neighbour]) {
+
+                    visited[neighbour] = true;
+                    stack.push(neighbour);
+                }
             }
         }
     }
@@ -60,11 +74,11 @@ public class NumberOfConnectedComponents {
         int n = 5;
 
         int[][] edges = {
-                {0,1},
-                {1,2},
-                {3,4}
+                {0, 1},
+                {1, 2},
+                {3, 4}
         };
 
-        System.out.println(obj.countComponents(n, edges));
+        System.out.println(obj.countComponents(n, edges)); // 2
     }
 }
