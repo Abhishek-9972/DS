@@ -10,29 +10,31 @@ public class FindAllAnagramsInAString {
 
         int[] pCount = new int[26];
         int[] sCount = new int[26];
-        List<Integer> result = new java.util.ArrayList<>();
+        List<Integer> result = new ArrayList<>();
 
         // Count frequency of characters in p
         for (char c : p.toCharArray()) {
             pCount[c - 'a']++;
         }
 
-        // Sliding window to count frequency of characters in s
-        for (int i = 0; i < s.length(); i++) {
-            sCount[s.charAt(i) - 'a']++;
+        // Sliding window
+        for (int left = 0; left < s.length(); left++) {
+
+            // Add current character to the window
+            sCount[s.charAt(left) - 'a']++;
 
             // Remove the character that is out of the window
-            if (i >= p.length()) {
-                sCount[s.charAt(i - p.length()) - 'a']--;
+            if (left >= p.length()) {
+                sCount[s.charAt(left - p.length()) - 'a']--;
             }
 
-            // Compare counts
+            // Compare frequencies
             if (Arrays.equals(pCount, sCount)) {
-                result.add(i - p.length() + 1); // Doing - p.length because we need to give start index of anagram
+                // Start index of the anagram
+                result.add(left - p.length() + 1);
             }
         }
 
         return result;
     }
-
 }
