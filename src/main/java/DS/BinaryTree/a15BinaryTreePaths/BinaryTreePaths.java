@@ -7,28 +7,44 @@ import java.util.List;
 
 public class BinaryTreePaths {
     public List<String> binaryTreePaths(TreeNode root) {
-        List<String> paths = new ArrayList<>();
-        if (root == null) {
-            return paths;
-        }
-        binaryTreePathsDfs(root, "", paths);
-        return paths;
+
+        List<String> result = new ArrayList<>();
+
+        backtrack(root, new ArrayList<>(), result);
+
+        return result;
     }
 
-    private void binaryTreePathsDfs(TreeNode root, String path, List<String> paths) {
-        path += root.val;
+    private void backtrack(TreeNode root,
+                           List<Integer> partial,
+                           List<String> result) {
+
+        if (root == null)
+            return;
+
+        partial.add(root.val);
 
         if (root.left == null && root.right == null) {
-            paths.add(path);
-            return;
+
+            StringBuilder sb = new StringBuilder();
+
+            for (int i = 0; i < partial.size(); i++) {
+
+                sb.append(partial.get(i));
+
+                if (i != partial.size() - 1)
+                    sb.append("->");
+            }
+
+            result.add(sb.toString());
+
+        } else {
+
+            backtrack(root.left, partial, result);
+
+            backtrack(root.right, partial, result);
         }
 
-        if (root.left != null) {
-            binaryTreePathsDfs(root.left, path + "->", paths);
-        }
-
-        if (root.right != null) {
-            binaryTreePathsDfs(root.right, path + "->", paths);
-        }
+        partial.remove(partial.size() - 1);
     }
 }
