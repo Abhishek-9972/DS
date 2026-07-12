@@ -5,7 +5,7 @@ import DS.BinaryTree.a01Traversal.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SumRootToLeafNumbers1 {
+public class SumRootToLeafNumbersBkp {
     public int sumNumbers(TreeNode root) {
         List<String> lt = binaryTreePaths(root);
         System.out.println(lt);
