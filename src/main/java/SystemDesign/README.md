@@ -263,6 +263,15 @@ Once the IP address has been resolved, the client should be able to request cont
 
 ![img.png](diagrams/A01.png)
 
+Interview Question
+
+### Q: Does DNS use TCP or UDP?
+
+Answer:
+
+Mostly UDP (Port 53) because DNS lookups are small and speed is important.
+Sometimes TCP (Port 53) for large responses, zone transfers, or when UDP responses are truncated.
+
 ## Server types
 
 Now, let's look at the four key groups of servers that make up the DNS infrastructure.
@@ -422,7 +431,7 @@ Unfortunately, DNS load balancing has inherent problems limiting its reliability
 Now, let's discuss commonly used routing algorithms:
 
 - **Round-robin**: Requests are distributed to application servers in rotation.
-- **Weighted Round-robin**: Builds on the simple Round-robin technique to account for differing server characteristics such as compute and traffic handling capacity using weights that can be assigned via DNS records by the administrator.
+- **Weighted Round-robin**: Builds on the simple Round-robin technique to account for differing server characteristics such as compute and traffic handling capacity using weights that can be assigned via DNS records by the administrator. Server is assigned weight on basis of its shape.
 - **Least Connections**: A new request is sent to the server with the fewest current connections to clients. The relative computing capacity of each server is factored into determining which one has the least connections.
 - **Least Response Time**: Sends requests to the server selected by a formula that combines the fastest response time and fewest active connections.
 - **Least Bandwidth**: This method measures traffic in megabits per second (Mbps), sending client requests to the server with the least Mbps of traffic.
@@ -474,6 +483,9 @@ Following are some of the load balancing solutions commonly used in the industry
 - [HAProxy](http://www.haproxy.org)
 
 # Clustering
+
+Clustering is the practice of running multiple servers (nodes) together so they behave as a single system, improving availability, scalability, and fault tolerance.
+A load balancer sends requests to the cluster instead of a single server.
 
 At a high level, a computer cluster is a group of two or more computers, or nodes, that run in parallel to achieve a common goal. This allows workloads consisting of a high number of individual, parallelizable tasks to be distributed among the nodes in the cluster. As a result, these tasks can leverage the combined memory and processing power of each computer to increase overall performance.
 
