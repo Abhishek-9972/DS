@@ -731,6 +731,23 @@ As we all know good things come with extra costs, so let's discuss some disadvan
 - **Restrictions**: Some organizations and countries have blocked the domains or IP addresses of popular CDNs.
 - **Location**: If most of our audience is located in a country where the CDN has no servers, the data on our website may have to travel further than without using any CDN.
 
+```text
+User
+  ↓
+Nearest Edge Server
+  ↓
+Cache Hit?
+  ├── YES → Return cached content
+  │
+  └── NO
+       ↓
+   Origin Server
+       ↓
+   Edge caches content
+       ↓
+   Return to User
+```
+
 ## Examples
 
 Here are some widely used CDNs:
@@ -1015,6 +1032,21 @@ HDFS is designed to reliably store very large files across machines in a large c
                       ↓
                    Storage
 ```
+
+| Component         | Main Problem It Solves                                   |
+| ----------------- | -------------------------------------------------------- |
+| **IP**            | How do we identify/reach a machine?                      |
+| **DNS**           | How do we convert a human-readable name to an IP?        |
+| **TCP/UDP**       | How do applications communicate over the network?        |
+| **Load Balancer** | How do we distribute traffic?                            |
+| **Clustering**    | How do multiple servers work together?                   |
+| **Caching**       | How do we make frequently accessed data faster?          |
+| **CDN**           | How do we serve content closer to users?                 |
+| **Proxy**         | How do we put an intermediary between client and server? |
+| **Availability**  | How do we keep the system running despite failures?      |
+| **Scalability**   | How do we handle more users/traffic?                     |
+| **Storage**       | Where do we persist data?                                |
+
 
 # Databases and DBMS
 
