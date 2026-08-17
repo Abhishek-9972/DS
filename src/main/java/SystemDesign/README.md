@@ -965,6 +965,57 @@ The Hadoop Distributed File System (HDFS) is a distributed file system designed 
 
 HDFS is designed to reliably store very large files across machines in a large cluster. It stores each file as a sequence of blocks, all blocks in a file except the last block are the same size. The blocks of a file are replicated for fault tolerance.
 
+# System Design — Quick Revision
+
+## 1. Main Topics
+
+| Topic | Simple Definition | Key Points to Remember | Interview Example / Analogy |
+|---|---|---|---|
+| **IP** | Address used to identify a device/server on a network | IPv4 = 32-bit, IPv6 = 128-bit. IP helps **route packets** between machines | Like a **house address** |
+| **OSI Model** | 7-layer model explaining how network communication works | Physical → Data Link → Network → Transport → Session → Presentation → Application | Helps understand where protocols like IP/TCP/HTTP operate |
+| **TCP** | Reliable, connection-oriented transport protocol | Reliable, ordered, error checking, retransmission, 3-way handshake | Like a **registered courier** — delivery is confirmed |
+| **UDP** | Fast, connectionless transport protocol | No guarantee of delivery/order, low overhead, faster | Like **sending a postcard** — no delivery confirmation |
+| **DNS** | Converts domain name → IP address | `google.com → IP`. Uses hierarchy: **Root → TLD → Authoritative DNS**. Caching reduces lookup time | Like a **phonebook** |
+| **Load Balancing** | Distributes traffic across multiple servers | Prevents overload, improves availability and scalability. Algorithms: Round Robin, Least Connections, etc. | Traffic police directing cars to different roads |
+| **Clustering** | Multiple servers work together as one logical system | Provides **high availability, scalability and fault tolerance** | Multiple servers acting as one team |
+| **Caching** | Stores frequently accessed data closer/faster | Reduces latency and database/server load. Cache can have **TTL and eviction policies** | Keeping frequently used items on your desk |
+| **CDN** | Distributed network of **edge servers** that cache content close to users | User → nearest Edge → cache hit/miss → Origin. Great for static content | Local warehouses storing products closer to customers |
+| **Proxy** | Server that sits between client and another server | **Forward proxy:** client-side. **Reverse proxy:** server-side. Can provide security, caching, routing, load balancing | A middleman between two parties |
+| **Availability** | Ability of a system to remain operational | Measured using **99%, 99.9%, 99.99%**, etc. Replication and failover improve availability | "Is the service available when users need it?" |
+| **Scalability** | Ability to handle increasing traffic/load | **Vertical scaling:** bigger machine. **Horizontal scaling:** more machines | Add more checkout counters instead of making one counter bigger |
+| **Storage** | Persistent place to store data | **EBS = disk for one EC2**, **EFS = shared filesystem**, **S3 = object storage** | EBS = personal disk, EFS = shared folder, S3 = cloud warehouse |
+
+---
+
+# 2. How These Components Fit Together
+
+```text
+                    Users
+                      │
+                      ↓
+                    DNS
+                      │
+                      ↓
+                 CDN / Proxy
+                      │
+                      ↓
+               Load Balancer
+                 /    |    \
+                ↓     ↓     ↓
+             Server Server Server
+                \     |     /
+                 ── Cluster ──
+                      │
+                      ↓
+                    Cache
+                      │
+                      ↓
+                   Database
+                      │
+                      ↓
+                   Storage
+```
+
 # Databases and DBMS
 
 ## What is a Database?
