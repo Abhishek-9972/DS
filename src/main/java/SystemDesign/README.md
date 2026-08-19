@@ -1093,6 +1093,19 @@ Below are different types of databases:
   - Wide column
   - Multi-model
 
+## How do you choose between SQL and NoSQL?
+
+
+I wouldn't choose based simply on scale or whether the data is structured.
+I'd first look at the data model and access patterns, then the consistency and transaction requirements, followed by throughput, latency, availability and scaling requirements.
+If the system has complex relationships, joins and strong transactional requirements, I'd generally lean toward SQL.
+If the workload has predictable access patterns, massive distributed scale, high throughput or a [document/key-value model, I'd consider an appropriate NoSQL database.
+I'd then evaluate the specific database's consistency and transaction guara]()ntees rather than assuming all NoSQL databases behave the same.
+
+````
+Data model → Access patterns → Consistency → Transactions → Integrity → Throughput → Latency → Availability → Scalability
+````
+
 SQL and NoSQL databases are broad topics and will be discussed separately in [SQL databases](https://karanpratapsingh.com/courses/system-design/sql-databases) and [NoSQL databases](https://karanpratapsingh.com/courses/system-design/nosql-databases). Learn how they compare to each other in [SQL vs NoSQL databases](https://karanpratapsingh.com/courses/system-design/sql-vs-nosql-databases).
 
 ## Challenges
@@ -1358,6 +1371,201 @@ As always we should always pick the technology that fits the requirements better
 - No need for complex joins
 - Very data-intensive workload
 - Very high throughput for IOPS
+
+Yes. Your document already covers the **main SQL vs NoSQL decision framework**, but for the **first three topics** I would add a small set of interview points that are not fully captured yet.
+
+Don't add a huge amount. You want something you can actually remember.
+
+## Add these to your document
+
+### 1. DBMS — DBMS vs Database
+
+> **A database is the collection of stored data, while a DBMS is the software that manages that data and provides capabilities such as querying, transactions, concurrency control, indexing and recovery.**
+
+Example:
+
+```text
+Database → Data
+DBMS      → Software managing the data
+```
+
+---
+
+### 2. DBMS — Query execution
+
+If asked **"What happens when you execute a SQL query?"**
+
+> "The DBMS parses and validates the query, the optimizer chooses an efficient execution plan, and the storage engine executes that plan using indexes, memory and disk as required."
+
+```text
+SQL Query
+   ↓
+Parser
+   ↓
+Query Optimizer
+   ↓
+Execution Plan
+   ↓
+Storage Engine
+   ↓
+Memory / Disk
+```
+
+---
+
+### 3. Indexes
+
+You already discussed this, but definitely remember this answer:
+
+> **"An index allows the database to locate rows more efficiently instead of scanning the entire table. However, indexes consume additional storage and can slow down writes because the index also needs to be updated."**
+
+And the important interview follow-up:
+
+> **"An index isn't automatically beneficial. It depends on the query, selectivity, cardinality and how the database executes the query."**
+
+---
+
+### 4. Transaction Log / WAL
+
+Remember:
+
+> **"The transaction log provides durability and crash recovery. Changes are recorded in the log before the corresponding data pages are persisted, allowing the database to recover after a crash."**
+
+If they ask why:
+
+```text
+Transaction
+    ↓
+Write to durable log
+    ↓
+ACK
+    ↓
+Data pages eventually persisted
+```
+
+After a crash, the DB can use the log to recover.
+
+---
+
+### 5. SQL — Constraints
+
+Add this because it's a major advantage of relational databases:
+
+> **"SQL databases can enforce data integrity using constraints such as primary keys, foreign keys, unique constraints, NOT NULL and CHECK constraints."**
+
+Example:
+
+```text
+User
+ └── user_id (PK)
+
+Order
+ └── user_id (FK → User)
+```
+
+This prevents an order from referencing a non-existent user.
+
+---
+
+### 6. SQL — Relationships
+
+Your earlier answer was:
+
+> "We can join and fetch data later."
+
+Make it slightly better:
+
+> **"Relationships are a strength of relational databases because related entities can be modeled separately and connected using keys. We can then use joins to retrieve related data without duplicating it."**
+
+This also naturally leads to **normalization**, which is coming later.
+
+---
+
+### 7. SQL — Horizontal scaling
+
+Definitely remember this because it's a common interview trap:
+
+> **"SQL databases can scale horizontally using replication, partitioning and sharding. However, distributed SQL introduces challenges such as cross-shard joins, distributed transactions, rebalancing and consistency."**
+
+Never say:
+
+> ❌ SQL cannot scale horizontally.
+
+---
+
+### 8. NoSQL — Four major types
+
+Keep this table:
+
+| Type            | Example   | Typical use                       |
+| --------------- | --------- | --------------------------------- |
+| **Key-value**   | Redis     | Cache, sessions                   |
+| **Document**    | MongoDB   | Profiles, catalogs                |
+| **Wide-column** | Cassandra | High-volume distributed workloads |
+| **Graph**       | Neo4j     | Relationship-heavy queries        |
+
+You don't need to memorize dozens of NoSQL databases.
+
+---
+
+### 9. NoSQL — Schema flexibility
+
+Important nuance:
+
+> **"NoSQL databases often provide more flexible schemas, but flexible schema doesn't mean there is no schema. The application still needs to maintain a consistent data model."**
+
+This is a good interview follow-up if someone asks why MongoDB is useful.
+
+---
+
+### 10. Cassandra — the four things to remember
+
+Since we discussed Cassandra quite a bit, I'd add this:
+
+> **"Cassandra is a good fit when I have high write throughput, massive distributed data, predictable access patterns, and high availability requirements."**
+
+And:
+
+> **"Cassandra data modeling is query-driven. I design the partition key and clustering keys based on how the application will access the data."**
+
+And:
+
+> **"Cassandra provides tunable consistency through consistency levels such as ONE and QUORUM."**
+
+And finally:
+
+> **"Eventual consistency is a consistency model; tunable consistency is the mechanism that allows me to choose different consistency levels."**
+
+That last distinction is worth remembering.
+
+---
+
+## 11. Don't confuse these concepts
+
+This is probably the most useful "trap sheet" from the first three topics:
+
+```text
+SQL ≠ ACID only
+NoSQL ≠ eventual consistency only
+
+SQL ≠ cannot scale horizontally
+NoSQL ≠ automatically faster
+
+Flexible schema ≠ no schema
+
+High scale ≠ automatically choose NoSQL
+
+High write throughput ≠ automatically choose Cassandra
+
+Replication ≠ sharding
+
+Consistency ≠ availability
+
+Database ≠ DBMS
+```
+
+---
+
 
 # Database Replication
 
