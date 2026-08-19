@@ -1614,6 +1614,44 @@ The primary difference between synchronous and asynchronous replication is how t
 
 In contrast, asynchronous replication copies the data to the replica after the data is already written to the primary storage. Although the replication process may occur in near-real-time, it is more common for replication to occur on a scheduled basis and it is more cost-effective.
 
+8. Read-after-write consistency problem
+
+This is a very common system-design interview question.
+````text
+Suppose:
+
+1. User updates profile
+   ↓
+   Primary
+
+
+2. User immediately requests profile
+   ↓
+   Replica
+
+
+3. Replica hasn't caught up
+   ↓
+   Old profile returned ❌
+````
+Possible solutions:
+````
+Option 1 — Read from primary after writing
+Write → Primary
+Read  → Primary
+Option 2 — Sticky reads
+
+After a user writes, route their subsequent reads to the primary temporarily.
+
+Option 3 — Synchronous replication
+
+Make sure the required replicas have the write before acknowledging.
+
+Option 4 — Session/causal consistency mechanisms
+
+More sophisticated distributed systems can track ordering/dependencies.
+````
+
 # Indexes
 
 Indexes are well known when it comes to databases, they are used to improve the speed of data retrieval operations on the data store. An index makes the trade-offs of increased storage overhead, and slower writes (since we not only have to write the data but also have to update the index) for the benefit of faster reads. Indexes are used to quickly locate data without having to examine every row in a database table. Indexes can be created using one or more columns of a database table, providing the basis for both rapid random lookups and efficient access to ordered records.
