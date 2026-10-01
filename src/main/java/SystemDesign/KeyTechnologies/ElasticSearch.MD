@@ -1,8 +1,8 @@
-![img_3.png](images/img_3.png)
+![img_3.png](images/Default/img_3.png)
 
-![img_4.png](images/img_4.png)
+![img_4.png](images/Default/img_4.png)
 
-![img_5.png](images/img_5.png)
+![img_5.png](images/Default/img_5.png)
 
 //PUT /books - For setting index
 //PUT /books/_mapping - For Setting mapping, which field will be of what type

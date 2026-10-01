@@ -9,9 +9,9 @@
 * Use when Write >> Read
 * Don't use when need flexibe queries
 
-![img_8.png](images/img_8.png)
+![img_8.png](images/Default/img_8.png)
 
-![img_9.png](images/img_9.png)
+![img_9.png](images/Default/img_9.png)
 
 ![img.png](images/Cassandra/img.png)
 
