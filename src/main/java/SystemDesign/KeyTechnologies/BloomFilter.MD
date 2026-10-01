@@ -13,3 +13,6 @@
 ![img_5.png](images/Cassandra/img_5.png)
 
 ![img_6.png](images/Cassandra/img_6.png)
+
+![img_6.png](images/BloomFIlter/img_6.png)
+![img_7.png](images/BloomFIlter/img_7.png)
