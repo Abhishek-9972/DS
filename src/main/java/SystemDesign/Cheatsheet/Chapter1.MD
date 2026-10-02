@@ -365,6 +365,15 @@ DB
 Cache
 ```
 
+1. Request came to write, write it in the DB and send response
+2. Request came to read, search in cache, as it is first read, it wont be available so read from DB and store in cache and respond back. First read would be slower due to this.
+3. Second request came directly serve from cache.
+4. Update came - Update in DB and invalidate Cache
+5. Delete scenarion - Delete from both cache and DB
+
+
+![img.png](Images/Chapter1/img1.png)
+
 Most common strategy.
 
 ### Write
@@ -424,6 +433,10 @@ Data can be lost if the cache fails before persistence.
 ---
 
 # 10. Cache Problems
+
+1. Cache Stampede - Request Coalescing, Cache Warming, Locks, Early Refresh
+2. Cache Consistency - Cache Invalidation on writes, Short TTLs, Accept Eventual Consistency
+3. Hot Key - Replicate Hot Keys, Local Fallback cache in app, Rate Limiting
 
 ### Cache invalidation
 
