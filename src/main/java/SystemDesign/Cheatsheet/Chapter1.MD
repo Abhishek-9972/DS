@@ -1,5 +1,3 @@
-Absolutely. Here's the **same interview-focused cheat sheet** for the networking/infrastructure section. I've emphasized **what you should actually say during system design**, rather than textbook definitions.
-
 # System Design Cheat Sheet — Networking & Infrastructure
 
 ## 1. IP
@@ -111,28 +109,10 @@ DNS:
 Example:
 
 ```text
-www.example.com
-       ↓
-      DNS
-       ↓
-142.250.x.x
+www.example.com -> DNS -> 142.250.x.x
 ```
 
-### Typical flow
-
-```text
-Browser
-   ↓
-DNS Resolver
-   ↓
-Root
-   ↓
-TLD (.com)
-   ↓
-Authoritative DNS
-   ↓
-IP address
-```
+![A01.png](../diagrams/A01.png)
 
 In practice, caching means you don't necessarily traverse all these steps every time.
 
@@ -143,10 +123,7 @@ In practice, caching means you don't necessarily traverse all these steps every 
 DNS responses have a **TTL**.
 
 ```text
-example.com
-     ↓
-IP = 10.20.30.40
-TTL = 300 seconds
+example.com -> IP = 10.20.30.40 TTL = 300 seconds
 ```
 
 The resolver can cache the answer for 300 seconds.
@@ -314,17 +291,7 @@ It is a mechanism for distributing traffic.
 
 Caching stores frequently accessed data in a faster layer.
 
-```text
-Request
-   ↓
-Cache
-   ↓
-Cache Hit → Return
-   ↓
-Cache Miss
-   ↓
-Database
-```
+![img.png](Images/Chapter1/img.png)
 
 Example:
 
