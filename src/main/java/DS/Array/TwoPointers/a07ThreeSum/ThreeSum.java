@@ -7,8 +7,10 @@ import java.util.List;
 /**
  * https://leetcode.com/problems/3sum/description/
  *
- * * Time Complexity: O(n²)
- *  * Space Complexity: O(1)
+ * https://dsaanimator.com/viz/problems/arrays/15-three-sum
+ *
+ * Time Complexity: O(n²)
+ * Space Complexity: O(1)
  *
  */
 public class ThreeSum {

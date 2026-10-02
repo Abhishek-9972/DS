@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /**
  * https://leetcode.com/problems/3sum-closest/description/
- *
- *  *
- *  * Time Complexity: O(n²)
- *  * Space Complexity: O(1)
+ * <p>
+ * *
+ * * Time Complexity: O(n²)
+ * * Space Complexity: O(1)
  */
 public class ThreeSumClosest {
     public int threeSumClosest(int[] nums, int target) {
@@ -28,17 +28,17 @@ public class ThreeSumClosest {
                     closest = sum;
                 }
 
-                if (sum < target) {
+                if (sum == target) {
+                    return sum;
+                } else if (sum < target) {
                     l++;
-                } else if (sum > target) {
-                    r--;
                 } else {
-                    return sum; // exact match
+                    r--;
                 }
             }
         }
 
         return closest;
     }
-    }
+}
 
