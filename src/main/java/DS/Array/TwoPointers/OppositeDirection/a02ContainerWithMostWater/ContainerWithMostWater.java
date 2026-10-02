@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a02ContainerWithMostWater;
+package DS.Array.TwoPointers.OppositeDirection.a02ContainerWithMostWater;
 
 /**
  * https://leetcode.com/problems/container-with-most-water/description/

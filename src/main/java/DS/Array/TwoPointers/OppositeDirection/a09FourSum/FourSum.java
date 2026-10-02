@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a09FourSum;
+package DS.Array.TwoPointers.OppositeDirection.a09FourSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;

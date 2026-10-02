@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a04RemoveElement;
+package DS.Array.TwoPointers.OppositeDirection.a04RemoveElement;
 
 public class RemoveElement {
     public int removeElement(int[] nums, int val) {

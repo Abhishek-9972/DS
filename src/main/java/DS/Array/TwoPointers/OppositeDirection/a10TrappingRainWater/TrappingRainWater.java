@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a10TrappingRainWater;
+package DS.Array.TwoPointers.OppositeDirection.a10TrappingRainWater;
 
 /**
  *

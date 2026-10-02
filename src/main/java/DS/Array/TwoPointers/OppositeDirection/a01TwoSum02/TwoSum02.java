@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a01TwoSum02;
+package DS.Array.TwoPointers.OppositeDirection.a01TwoSum02;
 
 /**
  * In regular Two Sum, the array is unsorted, so we use a HashMap.

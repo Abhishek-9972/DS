@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a06SquaresOfSortedArray;
+package DS.Array.TwoPointers.OppositeDirection.a06SquaresOfSortedArray;
 
 /**
  * Time O(n)

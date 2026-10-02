@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a03RemoveDuplicatesFromSortedArray;
+package DS.Array.TwoPointers.OppositeDirection.a03RemoveDuplicatesFromSortedArray;
 
 public class RemoveDuplicates {
     public int removeDuplicates(int[] arr) {

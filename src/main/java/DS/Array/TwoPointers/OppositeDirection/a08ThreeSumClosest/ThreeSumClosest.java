@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a08ThreeSumClosest;
+package DS.Array.TwoPointers.OppositeDirection.a08ThreeSumClosest;
 
 import java.util.Arrays;
 

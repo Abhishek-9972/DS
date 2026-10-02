@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a07ThreeSum;
+package DS.Array.TwoPointers.OppositeDirection.a07ThreeSum;
 
 import java.util.ArrayList;
 import java.util.Arrays;

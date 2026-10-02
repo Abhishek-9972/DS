@@ -1,4 +1,4 @@
-package DS.Array.TwoPointers.a05MoveZeroes;
+package DS.Array.TwoPointers.OppositeDirection.a05MoveZeroes;
 
 public class MoveZeroes {
     int counter = 0;
