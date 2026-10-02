@@ -446,9 +446,16 @@ Cache expires
 Solutions include:
 
 * Request coalescing
+* Cache Warming
 * Locks
 * Early refresh
 * Randomized TTL/jitter
+
+### Cache Consistency
+
+* Cache Invalidation on writes
+* Short TTLs for stale tolerance
+* Accept eventual consistency
 
 ### Hot key
 
@@ -461,6 +468,10 @@ celebrity_profile
 ```
 
 Can overload one cache node.
+
+* Replicate Hot Keys
+* Add a local fallback cache
+* Apply rate limiting
 
 ---
 
