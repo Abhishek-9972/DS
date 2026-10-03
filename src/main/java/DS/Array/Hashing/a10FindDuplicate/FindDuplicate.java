@@ -3,6 +3,8 @@ package DS.Array.Hashing.a10FindDuplicate;
 /**
  * https://www.youtube.com/watch?v=_n5MR8IxR6c
  *
+ * https://leetcode.com/problems/find-the-duplicate-number/description/
+ *
  */
 public class FindDuplicate {
     public int findDuplicate(int[] nums) {

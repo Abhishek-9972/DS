@@ -1,6 +1,8 @@
 # Arrays
 
 ## Two Pointers
+
+### Opposite Direction
 - Two Sum II
 - Container With Most Water
 - Remove Duplicates From Sorted Array
@@ -11,6 +13,11 @@
 - Three Sum Closest
 - Four Sum
 - Trapping Rain Water
+
+### Same Direction
+- Merge Sorted Array
+- BackspaceStringCompare
+- Boats To Save people
 
 ## Prefix Sum
 - Subarray Sum Equals K
@@ -53,8 +60,8 @@
 - K Closest Points To Origin
 
 ## Array Manipulation
-- Rotate Array
 - Merge Sorted Array
+- Rotate Array
 - Sort Colors (Dutch National Flag)
 
 ---
