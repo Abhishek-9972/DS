@@ -17,11 +17,8 @@ public class SubarraySumEqualsK {
         int count = 0;
 
         for (int num : nums) {
-
             prefixSum += num;
-
             count += map.getOrDefault(prefixSum - k, 0);
-
             map.put(prefixSum, map.getOrDefault(prefixSum, 0) + 1);
         }
 

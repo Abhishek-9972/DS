@@ -9,9 +9,7 @@ public class Sort012 {
         int high = nums.length - 1;
 
         while (mid <= high) {
-
             if (nums[mid] == 0) {
-
                 swap(nums, low, mid);
                 low++;
                 mid++;

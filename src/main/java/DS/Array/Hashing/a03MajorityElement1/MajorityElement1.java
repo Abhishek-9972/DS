@@ -8,7 +8,6 @@ public class MajorityElement1 {
         int votes = 0;
 
         for (int num : nums) {
-
             if (majority == num) {
                 votes++;
             } else if (votes == 0) {

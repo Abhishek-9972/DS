@@ -7,12 +7,12 @@ public class KadaneUsingDP {
         int size = a.length;
         int[] dp = new int[size];
         dp[0] = a[0];
-        int ans = dp[0];
+        int max = dp[0];
         for (int i = 1; i < size; i++) {
             dp[i] = Math.max(a[i], a[i] + dp[i - 1]);
-            ans = Math.max(ans, dp[i]);
+            max = Math.max(max, dp[i]);
         }
-        System.out.println(ans);
+        System.out.println(max);
     }
 
     public static void main(String[] args) {
