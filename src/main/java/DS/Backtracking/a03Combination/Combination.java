@@ -26,7 +26,7 @@ public class Combination {
 
         for (int i = start; i <= n; i++) {
             partial.add(i);
-            backtrack(i + 1, n, k, partial, result);
+            backtrack(i + 1, n, k, partial, result); //i+1 so no reuse, no duplicates
             partial.remove(partial.size() - 1);
         }
     }

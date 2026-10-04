@@ -8,22 +8,24 @@ import java.util.List;
  * https://leetcode.com/problems/subsets-ii/description/
  */
 public class Subset2 {
+
     public List<List<Integer>> subsetsWithDup(int[] nums) {
-        List<List<Integer>> list = new ArrayList<>();
+        List<List<Integer>> result = new ArrayList<>();
         Arrays.sort(nums);
-        backtrack(nums, new ArrayList<>(), 0, list);
-        return list;
+        backtrack(0, nums, new ArrayList<>(), result);
+        return result;
     }
 
-    private void backtrack(int[] input, List<Integer> partial, int start, List<List<Integer>> list) {
-        if (!list.contains(partial)) {
-            list.add(new ArrayList<>(partial));
-        }
-        for (int i = start; i < input.length; i++) {
-            partial.add(input[i]);
-            backtrack(input, partial, i + 1, list);
+    private void backtrack(int start, int[] nums, List<Integer> partial, List<List<Integer>> result) {
+        result.add(new ArrayList<>(partial));
+        for (int i = start; i < nums.length; i++) {
+            // Skip duplicate choices at the same recursion level
+            if (i > start && nums[i] == nums[i - 1]) {
+                continue;
+            }
+            partial.add(nums[i]);
+            backtrack(i + 1, nums, partial, result);
             partial.remove(partial.size() - 1);
         }
     }
 }
-

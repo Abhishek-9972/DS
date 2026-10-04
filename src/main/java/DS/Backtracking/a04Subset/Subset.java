@@ -10,18 +10,16 @@ import java.util.List;
 public class Subset {
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> list = new ArrayList<>();
-        Arrays.sort(nums);
-        backtrack(nums, new ArrayList<>(), 0, list);
+        backtrack(0, nums, new ArrayList<>(), list);
         return list;
     }
 
-    private void backtrack(int[] input, List<Integer> partial, int start, List<List<Integer>> list) {
+    private void backtrack(int start, int[] input, List<Integer> partial, List<List<Integer>> list) {
         list.add(new ArrayList<>(partial));
         for (int i = start; i < input.length; i++) {
             partial.add(input[i]);
-            backtrack(input, partial, i + 1, list);
+            backtrack(i + 1, input, partial, list);
             partial.remove(partial.size() - 1);
         }
     }
 }
-
