@@ -5,6 +5,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+ */
 public class PhoneNumber {
 
     Map<Character, String> digitToLetters = new HashMap<>();
@@ -29,16 +32,17 @@ public class PhoneNumber {
         return res;
     }
 
-    private void backtrack(int idx, String digits, StringBuilder partial, List<String> res) {
-        if (idx == digits.length()) {
+    private void backtrack(int start, String digits, StringBuilder partial, List<String> res) {
+        if (start == digits.length()) {
             res.add(partial.toString());
             return;
         }
 
-        String letters = digitToLetters.get(digits.charAt(idx));
+        String letters = digitToLetters.get(digits.charAt(start));
+
         for (char letter : letters.toCharArray()) {
             partial.append(letter);
-            backtrack(idx + 1, digits, partial, res);
+            backtrack(start + 1, digits, partial, res);
             partial.deleteCharAt(partial.length() - 1);
         }
     }

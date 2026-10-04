@@ -10,7 +10,7 @@ import java.util.List;
  *
  * Difficulty: Medium
  *
- * Time Complexity: O(n × 2^n)
+ *  Time Complexity: O(n² × 2^n)
  * Space Complexity: O(n) (excluding output)
  */
 public class PalindromePartitioning {
