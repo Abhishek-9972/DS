@@ -16,3 +16,5 @@ For Time = O(n × 2ⁿ)
 - n for copy into result
 - 2ⁿ
 ![img_3.png](Images/img_3.png)
+
+![img_4.png](Images/img_4.png)
