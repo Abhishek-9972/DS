@@ -5,12 +5,12 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/palindrome-partitioning/
- *
+ * <p>
  * Pattern: Backtracking
- *
+ * <p>
  * Difficulty: Medium
- *
- *  Time Complexity: O(n² × 2^n)
+ * <p>
+ * Time Complexity: O(n² × 2^n)
  * Space Complexity: O(n) (excluding output)
  */
 public class PalindromePartitioning {
@@ -18,9 +18,7 @@ public class PalindromePartitioning {
     public List<List<String>> partition(String s) {
 
         List<List<String>> result = new ArrayList<>();
-
         backtrack(0, s, new ArrayList<>(), result);
-
         return result;
     }
 
@@ -43,14 +41,12 @@ public class PalindromePartitioning {
     private boolean isPalindrome(String s, int left, int right) {
 
         while (left < right) {
-
-            if (s.charAt(left) != s.charAt(right))
+            if (s.charAt(left) != s.charAt(right)) {
                 return false;
-
+            }
             left++;
             right--;
         }
-
         return true;
     }
 }
