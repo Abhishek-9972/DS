@@ -6,17 +6,14 @@ public class MinimumDiffElement {
         int end = arr.length - 1;
         while (start <= end) {
             int mid = start + (end - start) / 2;
-            if (arr[mid] < ele) {
-                start = mid + 1;
-            } else if (arr[mid] > ele) {
-                end = mid - 1;
-            } else {
+            if (ele == arr[mid]) {
                 return arr[mid];
+            } else if (ele > arr[mid]) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
             }
         }
-
-        System.out.println("Start" + start);
-        System.out.println("End" + end);
 
         if (Math.abs(arr[start] - ele) < Math.abs(arr[end]) - ele) {
             return arr[start];

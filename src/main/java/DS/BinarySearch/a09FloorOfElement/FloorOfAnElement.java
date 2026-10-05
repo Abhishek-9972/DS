@@ -21,7 +21,7 @@ public class FloorOfAnElement {
 
             if (arr[mid] == ele)
                 return arr[mid];
-            else if (arr[mid] < ele) {
+            else if (ele > arr[mid]) {
                 result = arr[mid];
                 start = mid + 1;
             } else {

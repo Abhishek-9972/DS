@@ -6,6 +6,8 @@ package DS.BinarySearch.a08CeilOfAnElement;
  * Element = 5
  * <p>
  * Ceil = 6
+ *
+ *
  */
 public class CeilOfAnElement {
 
@@ -21,9 +23,10 @@ public class CeilOfAnElement {
 
             if (arr[mid] == ele)
                 return arr[mid];
-            else if (arr[mid] < ele) {
+            else if (ele > arr[mid]) {
                 start = mid + 1;
             } else {
+                //“I found a value ≥ target. Can I find a smaller valid one?”
                 result = arr[mid];
                 end = mid - 1;
             }

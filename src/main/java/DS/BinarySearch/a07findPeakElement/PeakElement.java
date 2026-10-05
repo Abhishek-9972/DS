@@ -1,5 +1,8 @@
 package DS.BinarySearch.a07findPeakElement;
 
+/**
+ * https://leetcode.com/problems/find-peak-element/description/
+ */
 public class PeakElement {
 
     public int findPeakElement(int[] nums) {
