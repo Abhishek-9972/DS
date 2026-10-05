@@ -13,21 +13,17 @@ class TimeBasedKeyValueStore {
     Map<String, List<Data>> map;
 
     public TimeBasedKeyValueStore() {
-
         map = new HashMap<>();
     }
 
     public void set(String key, String value, int timestamp) {
 
         if (map.containsKey(key)) {
-
             map.get(key).add(new Data(value, timestamp));
         } else {
-
             ArrayList<Data> arr = new ArrayList<>();
             arr.add(new Data(value, timestamp));
             map.put(key, arr);
-
         }
     }
 
@@ -38,23 +34,28 @@ class TimeBasedKeyValueStore {
         if (map.containsKey(key)) {
 
             List<Data> arr = map.get(key);
-            int low = 0, high = arr.size() - 1;
 
-            while (low <= high) {
+            int start = 0;
+            int end = arr.size() - 1;
 
-                int mid = low + (high - low) / 2;
+            while (start <= end) {
+
+                int mid = start + (end - start) / 2;
 
                 int time = arr.get(mid).timeStamp;
 
                 if (time == timestamp) {
                     return arr.get(mid).val;
-                } else if (time < timestamp) {
-                    result = arr.get(mid).val;
-                    low = mid + 1;
-                } else {
-                    high = mid - 1;
-                }
 
+                } else if (timestamp > time) {
+                    // Valid candidate → find a later timestamp
+                    result = arr.get(mid).val;
+                    start = mid + 1;
+
+                } else {
+                    // Timestamp is too large → go left
+                    end = mid - 1;
+                }
             }
         }
 
@@ -68,16 +69,7 @@ class Data {
     int timeStamp;
 
     public Data(String val, int timeStamp) {
-
         this.val = val;
         this.timeStamp = timeStamp;
     }
-
 }
-
-/**
- * Your TimeMap object will be instantiated and called as such:
- * TimeMap obj = new TimeMap();
- * obj.set(key,value,timestamp);
- * String param_2 = obj.get(key,timestamp);
- */
