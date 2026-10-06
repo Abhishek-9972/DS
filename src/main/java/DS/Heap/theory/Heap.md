@@ -7,3 +7,5 @@ A Heap is a special Tree-based data structure in which the tree is a complete bi
 PriorityQueue.remove() (without any argument) always removes the root of the heap.
 
 Since Java's default PriorityQueue is a Min Heap, the root is the smallest element.
+
+![img_1.png](img_1.png)

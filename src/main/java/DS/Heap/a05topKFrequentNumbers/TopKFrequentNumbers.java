@@ -30,7 +30,7 @@ public class TopKFrequentNumbers {
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
             queue.add(entry);
             if (queue.size() > k) {
-                queue.remove();
+                queue.poll();
             }
         }
 

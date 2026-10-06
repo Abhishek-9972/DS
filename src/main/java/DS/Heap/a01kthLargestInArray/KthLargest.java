@@ -2,6 +2,11 @@ package DS.Heap.a01kthLargestInArray;
 
 import java.util.PriorityQueue;
 
+/**
+ * https://leetcode.com/problems/kth-largest-element-in-an-array/description/
+ * Input: nums = [3,2,1,5,6,4], k = 2
+ * Output: 5
+ */
 public class KthLargest {
 
     public static void main(String[] args) {
@@ -12,12 +17,12 @@ public class KthLargest {
 
     public int findKthLargest(int[] nums, int k) {
         PriorityQueue<Integer> minHeap = new PriorityQueue<>();
-        for (int i : nums) {
-            minHeap.add(i);
+        for (int num : nums) {
+            minHeap.offer(num);
             if (minHeap.size() > k) {
-                minHeap.remove();
+                minHeap.poll();
             }
         }
-        return minHeap.remove();
+        return minHeap.peek();
     }
 }
