@@ -6,13 +6,13 @@ import java.util.Stack;
 public class InsertIntervals {
     public int[][] insert(int[][] intervals, int[] newInterval) {
 
-        if(intervals.length==0){
+        if (intervals.length == 0) {
             return new int[][]{newInterval};
         }
 
-        int[][] modifiedIntervals = new int[intervals.length+1][intervals[0].length+1];
+        int[][] modifiedIntervals = new int[intervals.length + 1][2];
 
-        for(int i=0; i<intervals.length; i++){
+        for (int i = 0; i < intervals.length; i++) {
             modifiedIntervals[i] = intervals[i];
         }
 
@@ -46,8 +46,8 @@ public class InsertIntervals {
 
     public static void main(String[] args) {
         int[][] a = new int[1][2];
-        a[0] = new int[]{1,5};
-        int[] b = new int[]{0,3};
+        a[0] = new int[]{1, 5};
+        int[] b = new int[]{0, 3};
         InsertIntervals intervals = new InsertIntervals();
         intervals.insert(a, b);
     }
