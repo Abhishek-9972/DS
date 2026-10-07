@@ -31,7 +31,6 @@ public class LongestRepeatingCharacterReplacement {
         }
 
         return maxWindow;
-
     }
 
 }

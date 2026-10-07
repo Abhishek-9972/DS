@@ -1,4 +1,4 @@
-package DS.multithreading.printEvenOdd;
+package DS.multithreading.printEvenOdd.Bkp;
 
 /**
  * Both threads share the same Printer object. Only one thread can enter a synchronized method at a time.

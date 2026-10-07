@@ -1,4 +1,4 @@
-package DS.multithreading.printEvenOdd;
+package DS.multithreading.printEvenOdd.Bkp;
 
 public class TakeEvenOdd implements Runnable {
 
