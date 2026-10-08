@@ -28,6 +28,7 @@ public class BalancedBinaryTree {
         if (right == -1)
             return -1;
 
+        //If the current node is unbalanced, we immediately return -1.
         if (Math.abs(left - right) > 1)
             return -1;
 

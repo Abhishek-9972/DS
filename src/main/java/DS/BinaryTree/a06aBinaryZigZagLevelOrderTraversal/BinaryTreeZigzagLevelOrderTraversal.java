@@ -5,6 +5,7 @@ import DS.BinaryTree.a01Traversal.TreeNode;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Queue;
 
 public class BinaryTreeZigzagLevelOrderTraversal {
 
@@ -15,7 +16,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         if (root == null)
             return result;
 
-        LinkedList<TreeNode> queue = new LinkedList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
 
         boolean leftToRight = true;
@@ -23,7 +24,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
         while (!queue.isEmpty()) {
 
             int size = queue.size();
-            LinkedList<Integer> level = new LinkedList<>();
+            List<Integer> level = new LinkedList<>();
 
             for (int i = 0; i < size; i++) {
 
