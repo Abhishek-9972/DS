@@ -23,3 +23,8 @@ public class BinaryTreeFromPreorderInorder {
         return root;
     }
 }
+
+/**
+ * Number of nodes in left subtree:
+ * inIndex - inStart
+ */
