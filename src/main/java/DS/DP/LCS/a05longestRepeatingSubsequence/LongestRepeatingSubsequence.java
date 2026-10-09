@@ -1,5 +1,10 @@
 package DS.DP.LCS.a05longestRepeatingSubsequence;
 
+/**
+ * LCS(s, s)
+ *
+ * i != j
+ */
 public class LongestRepeatingSubsequence {
     public static void main(String[] args) {
         String x = "aabb";

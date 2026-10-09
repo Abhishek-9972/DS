@@ -2,6 +2,13 @@ package DS.DP.LCS.a04LongestPalindromicSubSequence;
 
 import java.util.Arrays;
 
+/**
+ * LPS of a string = LCS of the string and its reverse.
+ *
+ * agbcba
+ *
+ * Output - abcba - 5
+ */
 public class LongestPalindromicSubsequence {
     public static void main(String[] args) {
         String x = "agbcba";
