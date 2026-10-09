@@ -1,4 +1,4 @@
-package DS.DP.knapsack.zeroByOne.countSubset;
+package DS.DP.knapsack.zeroByOne.a04CountSubset;
 
 public class SubsetProblem {
 
@@ -14,14 +14,13 @@ public class SubsetProblem {
     private int findSubset(int[] arr, int n, int sum) {
         int dp[][] = new int[n + 1][sum + 1];
 
-        // If sum is 0, then answer is true
-        for (int i = 1; i <= sum; i++)
-            dp[0][i] = 0;
-
-        // If sum is not 0 and set is empty,
-        // then answer is false
-        for (int i = 0; i <= n; i++)
+        // If sum is not 0 and set is empty, then answer is false
+        for (int i = 0; i < n + 1; i++)
             dp[i][0] = 1;
+
+        // If sum is 0, then answer is true
+        for (int i = 1; i < sum + 1; i++)
+            dp[0][i] = 0;
 
         for (int i = 1; i < n + 1; i++) {
             for (int j = 1; j < sum + 1; j++) {

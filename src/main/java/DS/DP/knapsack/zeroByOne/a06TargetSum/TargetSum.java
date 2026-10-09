@@ -1,4 +1,4 @@
-package DS.DP.knapsack.zeroByOne.targetSum;
+package DS.DP.knapsack.zeroByOne.a06TargetSum;
 
 public class TargetSum {
 
@@ -10,10 +10,18 @@ public class TargetSum {
             totalSum += num;
         }
 
+        // Step 2: Target cannot be greater than total sum
+        // Step 3: (totalSum + target) must be even
         if (Math.abs(target) > totalSum || (totalSum + target) % 2 != 0) {
             return 0;
         }
 
+        /*
+         * positiveSum - negativeSum = target
+         * positiveSum + negativeSum = totalSum
+
+         * positiveSum = (totalSum + target) / 2
+         */
         int subsetSum = (totalSum + target) / 2;
 
         return countSubset(nums, subsetSum);
@@ -24,14 +32,12 @@ public class TargetSum {
         int n = nums.length;
         int[][] dp = new int[n + 1][sum + 1];
 
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i < n + 1; i++) {
             dp[i][0] = 1;
         }
 
-        for (int i = 1; i <= n; i++) {
-
-            for (int j = 1; j <= sum; j++) {
-
+        for (int i = 1; i < n + 1; i++) {
+            for (int j = 1; j < sum + 1; j++) {
                 if (nums[i - 1] <= j) {
                     dp[i][j] = dp[i - 1][j - nums[i - 1]] + dp[i - 1][j];
                 } else {

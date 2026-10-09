@@ -1,4 +1,4 @@
-package DS.DP.knapsack.zeroByOne.zeroByOne;
+package DS.DP.knapsack.zeroByOne.a01zeroByOne;
 
 import static java.lang.Math.max;
 

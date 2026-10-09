@@ -1,4 +1,4 @@
-package DS.DP.knapsack.zeroByOne.zeroByOne;
+package DS.DP.knapsack.zeroByOne.a01zeroByOne;
 
 public class KnapsackTabulation {
     public static void main(String[] args) {
