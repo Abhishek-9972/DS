@@ -15,14 +15,15 @@ public class TaskScheduler {
 
         Arrays.sort(charMap);
 
+        // The most frequent task creates (max frequency - 1) gaps, each needing n cooldown slots.
         int maxVal = charMap[25] - 1;
         int idleSlots = maxVal * n;
 
         for (int i = 24; i >= 0; i--) {
             idleSlots = idleSlots - Math.min(charMap[i], maxVal);
-
         }
 
+        // If idle slots is zero that means no extra slot required
         return idleSlots > 0 ? idleSlots + tasks.length : tasks.length;
     }
 }

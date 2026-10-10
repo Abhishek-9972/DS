@@ -1,5 +1,8 @@
 package DS.String.a07AtoiStringToInteger;
 
+/**
+ * https://leetcode.com/problems/string-to-integer-atoi/description/
+ */
 public class Atoi {
     public int myAtoi(String s) {
         s = s.trim();
