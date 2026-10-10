@@ -2,6 +2,7 @@ package DS.String.a09LongestPalindromicSubstring;
 
 /**
  * https://leetcode.com/problems/longest-palindromic-substring/
+ * Time Complexity - O(n^2)
  */
 public class LongestPalindromicSubstring {
 
@@ -40,7 +41,7 @@ public class LongestPalindromicSubstring {
 
         if (length > maxLength) {
             maxLength = length;
-            start = left + 1;
+            start = left + 1; // Because left has moved one position outside the palindrome. We need the first valid index, which is left + 1.
         }
     }
 }
