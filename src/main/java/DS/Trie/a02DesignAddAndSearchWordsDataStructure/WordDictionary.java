@@ -26,18 +26,13 @@ public class WordDictionary {
     public void addWord(String word) {
 
         TrieNode current = root;
-
         for (char ch : word.toCharArray()) {
-
             int index = ch - 'a';
-
             if (current.children[index] == null) {
                 current.children[index] = new TrieNode();
             }
-
             current = current.children[index];
         }
-
         current.isEndOfWord = true;
     }
 
