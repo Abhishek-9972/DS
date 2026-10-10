@@ -37,7 +37,7 @@ public class LongestPalindromicSubstring {
             right++;
         }
 
-        int length = right - left - 1;
+        int length = right - left - 1; // After the loop stops, left and right are just outside the palindrome.
 
         if (length > maxLength) {
             maxLength = length;
