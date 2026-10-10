@@ -54,23 +54,18 @@ public class WordDictionary {
         }
 
         char ch = word.charAt(index);
-
         // Wildcard '.'
         if (ch == '.') {
-
             for (TrieNode child : current.children) {
-
                 if (child != null && dfs(word, index + 1, child)) {
                     return true;
                 }
             }
-
             return false;
         }
 
         // Normal character
         int childIndex = ch - 'a';
-
         if (current.children[childIndex] == null) {
             return false;
         }
