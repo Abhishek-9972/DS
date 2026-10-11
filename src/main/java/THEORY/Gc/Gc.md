@@ -7,3 +7,8 @@
 ![img_6.png](Images/img_6.png)
 ![img_7.png](Images/img_7.png)
 ![img_8.png](Images/img_8.png)
+
+Serial GC uses a single GC thread and is suitable for small heaps and simple applications.
+Parallel GC uses multiple GC threads and focuses on maximum throughput, but can have longer STW pauses.
+G1 GC divides the heap into regions and tries to provide a balance between throughput and predictable pause times. It performs concurrent marking and uses mixed collections.
+ZGC and Shenandoah are low-latency collectors designed to perform most GC work concurrently and keep pause times very small, even for large heaps.
