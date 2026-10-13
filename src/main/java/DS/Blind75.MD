@@ -11,3 +11,9 @@ Blind 75
 [LongestPalindromicSubstring](String/a09LongestPalindromicSubstring/LongestPalindromicSubstring.java)
 
 [PalindromicSubstrings](String/a10PalindromicSubstrings/PalindromicSubstrings.java)
+
+Graph - Pending
+
+[ContainerWithMostWater](Array/TwoPointers/OppositeDirection/a02ContainerWithMostWater/ContainerWithMostWater.java)
+
+[WordBreak](DP/MISC/a09WordBreak/WordBreak.java)
