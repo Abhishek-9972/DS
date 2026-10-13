@@ -97,3 +97,21 @@ DummyHead, current=DummyHead while(l1!=null & l2!=null)
 ````
 PriorityQueue<ListNode>((a,b) -> a.val - b.val);  DummyHead, current=DummyHead ; smallest = pq.poll; current.next= smallest
 ````
+
+[MaximumProductSubArray](Array/Kadane/a01MaximumProductSubarray/MaximumProductSubArray.java)
+````
+Input: nums = [2,3,-2,4] Output: 6 Explanation: [2,3] has the largest product 6.
+l *= nums[i]; r *= nums[n - 1 - i]; max = Math.max(max, Math.max(l, r));
+````
+
+[MinimumInRotateSortedArray](Array/BinarySearch/a04MinimumInSortedArray/MinimumInSortedArray.java)
+````
+Input: nums = [3,4,5,1,2] Output: 1
+if (nums[mid] < nums[end]) {end = mid;} else {st = mid + 1;} return nums[st];
+````
+
+[SearchInRotatedSortedArray](Array/BinarySearch/a03SearchInRotatedSortedArray/SearchInRotatedSortedArray.java)
+````
+Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4
+else if (nums[st] <= nums[mid]) {if (nums[st] <= target && nums[mid] > target) {end = mid - 1;} 
+````

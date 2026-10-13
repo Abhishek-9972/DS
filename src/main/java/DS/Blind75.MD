@@ -40,3 +40,9 @@ Graph - Pending
 
 [MergeKSortedLists](LinkedList/a04MergeKLists/MergeKLists.java)
 
+[MaximumProductSubArray](Array/Kadane/a01MaximumProductSubarray/MaximumProductSubArray.java)
+
+[MinimumInRotateSortedArray](Array/BinarySearch/a04MinimumInSortedArray/MinimumInSortedArray.java)
+
+[SearchInRotatedSortedArray](Array/BinarySearch/a03SearchInRotatedSortedArray/SearchInRotatedSortedArray.java)
+

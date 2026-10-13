@@ -7,7 +7,7 @@ public class MaximumProductSubArray {
     public int maxProduct(int[] nums) {
         int n = nums.length;
         int l = 1, r = 1;
-        int ans = nums[0];
+        int max = nums[0];
 
         for (int i = 0; i < n; i++) {
 
@@ -18,11 +18,11 @@ public class MaximumProductSubArray {
             l *= nums[i];   //prefix product
             r *= nums[n - 1 - i];    //suffix product
 
-            ans = Math.max(ans, Math.max(l, r));
+            max = Math.max(max, Math.max(l, r));
 
         }
 
-        return ans;
+        return max;
     }
 }
 
