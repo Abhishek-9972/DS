@@ -5,6 +5,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Time Complexity: O(n)
+ */
 class LongestSubstringWithoutRepeatingCharacters {
 
     int lengthOfLongestSubstring(String s) {
