@@ -18,7 +18,6 @@ class RemoveNode {
         }
         ListNode cur = head;
         for (int i = 0; i < length; i++) {
-
             if (i == (length - n - 1)) {
                 cur.next = cur.next.next;
                 break;

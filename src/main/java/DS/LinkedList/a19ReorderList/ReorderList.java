@@ -14,12 +14,9 @@ public class ReorderList {
         }
 
         ListNode middle = middleNode(head);
-
         ListNode second = reverseList(middle.next);
-
         // Break the list into two halves
         middle.next = null;
-
         ListNode first = head;
 
         while (second != null) {

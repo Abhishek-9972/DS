@@ -29,3 +29,14 @@ Graph - Pending
 [ThreeSumClosest](Array/TwoPointers/OppositeDirection/a08ThreeSumClosest/ThreeSumClosest.java)
 
 [FourSum](Array/TwoPointers/OppositeDirection/a09FourSum/FourSum.java)
+
+[ReorderList](LinkedList/a19ReorderList/ReorderList.java)
+
+[RemoveNthNodeFromEndOfList](LinkedList/a02RemoveNthNodeFromEndOfList/RemoveNode.java)
+
+[ValidParentheses](Stack/a01ValidParantheses/ValidParanthesis.java)
+
+[MergeTwoSortedLists](LinkedList/a03MergeTwoSortedLists/MergeTwoSortedList.java)
+
+[MergeKSortedLists](LinkedList/a04MergeKLists/MergeKLists.java)
+

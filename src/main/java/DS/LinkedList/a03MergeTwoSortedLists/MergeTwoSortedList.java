@@ -7,8 +7,8 @@ import DS.LinkedList.ListNode;
  */
 class MergeTwoSortedList {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        ListNode dummyNode = new ListNode(0);
-        ListNode current = dummyNode;
+        ListNode dummyHead = new ListNode(0);
+        ListNode current = dummyHead;
         while(list1!=null && list2!=null){
 
             if(list1.val <= list2.val){
@@ -22,6 +22,6 @@ class MergeTwoSortedList {
             current = current.next;
         }
         current.next = list1==null ? list2: list1;
-        return dummyNode.next;
+        return dummyHead.next;
     }
 }

@@ -66,3 +66,34 @@ n * (n+1)/2 - sum
 Arrays.sort(arr);
 for (int i=0; i<nums.length-2; i++) -> l = i+1; r = nums.length-1; -> while (l<r) -> if(sum==0)
 ````
+
+[ReorderList](LinkedList/a19ReorderList/ReorderList.java)
+````
+Input: head = [1,2,3,4] Output: [1,4,2,3]
+First = head, middle = middle(head), second = reverse(middle.next) ; middle.next!=null; while(second!=null) {nextFirst, nextSecond}
+````
+
+AlienDictionary
+EncodeAndDecodeString
+
+[RemoveNthNodeFromEndOfList](LinkedList/a02RemoveNthNodeFromEndOfList/RemoveNode.java)
+````
+Input: head = [1,2,3,4,5], n = 2 , Output: [1,2,3,5]
+Length ; if(i==length-n-1) {current.next = current.next.next; break;} current = current.next
+````
+
+[ValidParentheses](Stack/a01ValidParantheses/ValidParanthesis.java)
+````
+Input: s = "()[]{}" Output: true
+Stack<Character> stack = new Stack<>(); stack.push(ch)
+````
+
+[MergeTwoSortedLists](LinkedList/a03MergeTwoSortedLists/MergeTwoSortedList.java)
+````
+DummyHead, current=DummyHead while(l1!=null & l2!=null)
+````
+
+[MergeKSortedLists](LinkedList/a04MergeKLists/MergeKLists.java)
+````
+PriorityQueue<ListNode>((a,b) -> a.val - b.val);  DummyHead, current=DummyHead ; smallest = pq.poll; current.next= smallest
+````
