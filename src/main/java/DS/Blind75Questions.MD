@@ -38,4 +38,5 @@ max = Math.max(max, height[aPointer] * (bPointer - aPointer));
 [WordBreak](DP/MISC/a09WordBreak/WordBreak.java)
 ````
 Input: s = "leetcode", wordDict = ["leet","code"] Output: true
+if (dp[j] && words.contains(s.substring(j, i))) {
 ````
