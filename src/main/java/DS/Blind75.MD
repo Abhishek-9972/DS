@@ -17,3 +17,15 @@ Graph - Pending
 [ContainerWithMostWater](Array/TwoPointers/OppositeDirection/a02ContainerWithMostWater/ContainerWithMostWater.java)
 
 [WordBreak](DP/MISC/a09WordBreak/WordBreak.java)
+
+[LinkedListCycle](LinkedList/a09LinkedListCycle/LinkedListCycle.java)
+
+[LinkedListCycle2](LinkedList/a10LinkedListCycle2/LinkedListCycle2.java)
+
+[MissingNumber](Array/Hashing/a02MissingNumberInArray/MissingNumber.java)
+
+[ThreeSum](Array/TwoPointers/OppositeDirection/a07ThreeSum/ThreeSum.java)
+
+[ThreeSumClosest](Array/TwoPointers/OppositeDirection/a08ThreeSumClosest/ThreeSumClosest.java)
+
+[FourSum](Array/TwoPointers/OppositeDirection/a09FourSum/FourSum.java)

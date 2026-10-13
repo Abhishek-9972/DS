@@ -40,3 +40,29 @@ max = Math.max(max, height[aPointer] * (bPointer - aPointer));
 Input: s = "leetcode", wordDict = ["leet","code"] Output: true
 if (dp[j] && words.contains(s.substring(j, i))) {
 ````
+
+[LinkedListCycle](LinkedList/a09LinkedListCycle/LinkedListCycle.java)
+[LinkedListCycle2](LinkedList/a10LinkedListCycle2/LinkedListCycle2.java)
+````
+Input: head = [3,2,0,-4], pos = 1 Output: true
+while (fastPtr.next != null && fastPtr.next.next != null) {
+````
+
+[MissingNumber](Array/Hashing/a02MissingNumberInArray/MissingNumber.java)
+````
+Input: nums = [3,0,1] Output: 2
+n * (n+1)/2 - sum
+````
+
+[ThreeSum](Array/TwoPointers/OppositeDirection/a07ThreeSum/ThreeSum.java)
+[ThreeSumClosest](Array/TwoPointers/OppositeDirection/a08ThreeSumClosest/ThreeSumClosest.java)
+[FourSum](Array/TwoPointers/OppositeDirection/a09FourSum/FourSum.java)
+
+````
+3 Sum - Input: nums = [-1,0,1,2,-1,-4] Output: [[-1,-1,2],[-1,0,1]]
+3 Sum Closest - Input: nums = [-1,2,1,-4], target = 1 Output: 2
+4 Sum - Input: nums = [1,0,-1,0,-2,2], target = 0 Output: [[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]
+
+Arrays.sort(arr);
+for (int i=0; i<nums.length-2; i++) -> l = i+1; r = nums.length-1; -> while (l<r) -> if(sum==0)
+````
