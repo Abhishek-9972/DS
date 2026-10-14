@@ -46,3 +46,14 @@ Graph - Pending
 
 [SearchInRotatedSortedArray](Array/BinarySearch/a03SearchInRotatedSortedArray/SearchInRotatedSortedArray.java)
 
+Pacific Atlantic Waterflow
+
+[CombinationSum](Backtracking/a06CombinationSum1/CombinationSum1.java)
+
+[FindMedianOfTwoDataStream](Heap/a08findMedianOfDataStream/MedianOfDataStream.java)
+
+[SerializeAndDeserializeBinaryTree](BinaryTree/a26SerializeAndDeserializeTree/SerializeAndDeserializeTree.java)
+
+[LongestRepeatingCharacterReplacement](SlidingWindow/a07LongestRepeatingCharacterReplacement/LongestRepeatingCharacterReplacement.java)
+
+

@@ -115,3 +115,28 @@ if (nums[mid] < nums[end]) {end = mid;} else {st = mid + 1;} return nums[st];
 Input: nums = [4,5,6,7,0,1,2], target = 0 Output: 4
 else if (nums[st] <= nums[mid]) {if (nums[st] <= target && nums[mid] > target) {end = mid - 1;} 
 ````
+
+[CombinationSum](Backtracking/a06CombinationSum1/CombinationSum1.java)
+````
+Input: candidates = [2,3,6,7], target = 7 Output: [[2,2,3],[7]]
+combinationSum(int start, int remain, int [] input, List<Integer> partial, List<List<Integer>> result) { if(remain==0) { result.add(new ArrayList<>(partial)); }
+````
+
+[FindMedianOfTwoDataStream](Heap/a08findMedianOfDataStream/MedianOfDataStream.java)
+````
+Input - ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]   -   [[], [1], [2], [], [3], []]   Output  - [null, null, null, 1.5, null, 2.0]
+Add - if (even) {this.minHeap.offer(num);this.maxHeap.offer(this.minHeap.poll());} else {this.maxHeap.offer(num);this.minHeap.offer(this.maxHeap.poll());}
+FindMedian -        return even ? (this.minHeap.peek() + this.maxHeap.peek()) / 2.0 : this.maxHeap.peek();
+````
+
+[SerializeAndDeserializeBinaryTree](BinaryTree/a26SerializeAndDeserializeTree/SerializeAndDeserializeTree.java)
+````
+Serailize - Queue<TreeNode> queue = new LinkedList<>(); StringBuilder res = new StringBuilder();
+Deserialize - String [] values = res.split(" "); int index = 1; TreeNode parent = queue.poll();
+````
+
+[LongestRepeatingCharacterReplacement](SlidingWindow/a07LongestRepeatingCharacterReplacement/LongestRepeatingCharacterReplacement.java)
+````
+Input: s = "AABABBA", k = 1 Output: 4 Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA". The substring "BBBB" has the longest repeating letters, which is 4.
+
+````
