@@ -138,5 +138,28 @@ Deserialize - String [] values = res.split(" "); int index = 1; TreeNode parent 
 [LongestRepeatingCharacterReplacement](SlidingWindow/a07LongestRepeatingCharacterReplacement/LongestRepeatingCharacterReplacement.java)
 ````
 Input: s = "AABABBA", k = 1 Output: 4 Explanation: Replace the one 'A' in the middle with 'B' and form "AABBBBA". The substring "BBBB" has the longest repeating letters, which is 4.
+for(int right=0; right<s.length-1; right++) { freqMap(s.charAt(right)-'A')++; maxFreq; windowLenth; if (windowLength-maxFreq > k) {freqMap(s.charAt(left)-'A')--; left++;} windowLength; maxLength;
+````
 
+[LongestIncreasingSubsequence](DP/MISC/a02LongestIncreasingSubsequence/LongestIncreasingSubsequence.java)
+````
+Input: nums = [10,9,2,5,3,7,101,18] Output: 4 Explanation: The longest increasing subsequence is [2,3,7,101], therefore the length is 4.
+
+````
+
+[RotateImage](Matrix/a01RotateImage/RotateImage.java)
+
+[GroupAnagrams](Array/Hashing/a11GroupAnagrams/GroupAnagrams.java)
+
+[NonOverlappingIntervals](Intervals/a06NonOverlappingIntervals/NonOverlappingIntervals.java)
+
+[MaximumSumSubArray](Array/Kadane/a02MaximumSubArray/KadaneUsingDP.java)
+````
+Input: nums = [-2,1,-3,4,-1,2,1,-5,4] Output: 6 Explanation: The subarray [4,-1,2,1] has the largest sum 6.
+dp[i] = Math.max(nums[i], nums[i] + dp[i - 1]);
+````
+
+[SpiralMatrix](Matrix/a02SprialMatrix/SpiralMatrix.java)
+````
+rs = 0; cs = 0; re = arr.length-1; ce = arr[0].length-1 -> while(rs<=re && cs<=ce) { }
 ````

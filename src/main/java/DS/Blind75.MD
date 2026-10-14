@@ -56,4 +56,15 @@ Pacific Atlantic Waterflow
 
 [LongestRepeatingCharacterReplacement](SlidingWindow/a07LongestRepeatingCharacterReplacement/LongestRepeatingCharacterReplacement.java)
 
+[LongestIncreasingSubsequence](DP/MISC/a02LongestIncreasingSubsequence/LongestIncreasingSubsequence.java)
+
+[RotateImage](Matrix/a01RotateImage/RotateImage.java)
+
+[GroupAnagrams](Array/Hashing/a11GroupAnagrams/GroupAnagrams.java)
+
+[NonOverlappingIntervals](Intervals/a06NonOverlappingIntervals/NonOverlappingIntervals.java)
+
+[MaximumSumSubArray](Array/Kadane/a02MaximumSubArray/KadaneUsingDP.java)
+
+[SpiralMatrix](Matrix/a02SprialMatrix/SpiralMatrix.java)
 
