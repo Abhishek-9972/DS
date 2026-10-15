@@ -13,7 +13,7 @@ public class MinNoOfCoins {
     }
 
     private int findSubset(int[] arr, int n, int sum) {
-        int dp[][] = new int[n + 1][sum + 1];
+        int [][] dp = new int[n + 1][sum + 1];
 
 
         // If sum is not 0 and set is empty,

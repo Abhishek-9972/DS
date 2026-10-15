@@ -163,3 +163,64 @@ dp[i] = Math.max(nums[i], nums[i] + dp[i - 1]);
 ````
 rs = 0; cs = 0; re = arr.length-1; ce = arr[0].length-1 -> while(rs<=re && cs<=ce) { }
 ````
+
+[JumpGame](Array/Greedy/a01Jump1/Jump1.java)
+````
+Input: nums = [2,3,1,1,4] Output: true Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+if (i > reachable) return false; reachable = Math.max(reachable, i + nums[i]);
+````
+
+[MergeIntervals](Intervals/a02MergeIntervals/MergeIntervals.java)
+````
+Input: intervals = [[1,3],[2,6],[8,10],[15,18]] Output: [[1,6],[8,10],[15,18]] Explanation: Since intervals [1,3] and [2,6] overlap, merge them into [1,6].
+Arrays.sort(arr, (a,b) -> Integer.compare(a[0], b[0]));
+currentInterval = intervals[i]; topInterval = stack.peek(); if(topEle[1]>curr[0]{top[1] = Math.max(curr[1], top[1]);} else {stack.push(curr);}
+````
+
+[InsertIntervals](Intervals/a02MergeIntervals/MergeIntervals.java)
+````
+Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]
+int[][] modifiedIntervals = new int[intervals.length + 1][2];
+````
+
+[SubTreeOfAnotherTree](BinaryTree/a27SubTreeOfAnotherTree/SubTreeOfAnotherTree.java)
+````
+subTree - sameTree(root, subRoot); return sameTree(root.left, subRoot.left); return sameTree(root.right, subRoot.right)
+sameTree return s.val == t.val && isSameTree(s.left, t.left) && isSameTree(s.right, t.right)
+````
+
+[UniquePaths](DP/MISC/a06UniquePaths/b3UniquePaths.java)
+```
+dp[i][0] = 1; dp[0][j] = 1;   ---->   dp[i][j] = dp[i-1][j] + dp[i][j-1]  -> return dp[m-1][n-1]
+```
+
+ReverseBits
+
+NumberOf1Bits
+
+[CoinChange](DP/knapsack/unbounded/coinChange/coinChange1/MinNoOfCoins.java)
+````
+Input: coins = [1,2,5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1
+dp[0][i] = Integer.MAX_VALUE - 1; ----> dp[i][j] = Math.min(1 + dp[i][j - arr[i - 1]], dp[i - 1][j]);
+````
+
+[ClimbingStairs](DP/MISC/a03ClimbingStairs/ClimbingStairs.java)
+````
+dp[0], dp[1] = 1 ---> dp[n+1]  ----> dp[i] = dp[i-1] + dp[i-2]
+````
+
+[HouseRobber](DP/MISC/a04HouseRobber01/HouseRobber1.java)
+````
+dp[0] = nums[0]; dp[1] = Math.max(nums[0], nums[1]);  ----> dp[n]  ---> dp[i] = Math.max(dp[i - 1], nums[i] + dp[i - 2]);
+````
+
+[HouseRobber2](DP/MISC/a05HouseRobber02/HouseRobber2.java)
+````
+skipFirstHouse, skipLastHouse ---> return Math.max(lootSkippingLast, lootSkippingFirst);
+````
+
+[NumberOfIslands](Matrix/a05NumberOfIslands/NumberOfIslands.java)
+````
+res = res + dfs(grid, i, j);
+````
+

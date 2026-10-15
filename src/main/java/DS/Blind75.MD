@@ -68,3 +68,27 @@ Pacific Atlantic Waterflow
 
 [SpiralMatrix](Matrix/a02SprialMatrix/SpiralMatrix.java)
 
+[JumpGame](Matrix/a02SprialMatrix/SpiralMatrix.java)
+
+[MergeIntervals](Intervals/a02MergeIntervals/MergeIntervals.java)
+
+[SubTreeOfAnotherTree](BinaryTree/a27SubTreeOfAnotherTree/SubTreeOfAnotherTree.java)
+
+[UniquePaths](DP/MISC/a06UniquePaths/b3UniquePaths.java)
+
+ReverseBits
+
+NumberOf1Bits
+
+[CoinChange](DP/knapsack/unbounded/coinChange/coinChange1/MinNoOfCoins.java)
+
+[ClimbingStairs](DP/MISC/a03ClimbingStairs/ClimbingStairs.java)
+
+[HouseRobber](DP/MISC/a04HouseRobber01/HouseRobber1.java)
+
+[HouseRobber2](DP/MISC/a05HouseRobber02/HouseRobber2.java)
+
+[NumberOfIslands](Matrix/a05NumberOfIslands/NumberOfIslands.java)
+
+[ReverseLinkedList](LinkedList/a12ReverseLinkedList/ReverseLinkedList.java)
+
