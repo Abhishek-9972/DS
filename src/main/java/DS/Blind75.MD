@@ -4,7 +4,7 @@ Blind 75
 
 [TwoSum](Array/Hashing/a01TwoSum/TwoSum.java)
 
-[TwoSum2](Array/TwoPointers/OppositeDirection/a01TwoSum02/TwoSum02.java)
+[TwoSum2](Array/TwoPointers/OppositeDirection/a01TwoSum02/TwoSum02.java) (NB75)
 
 [LongestSubstringWithoutRepeatingCharacters](String/a05LongestSubstringWithoutRepeatingNumbers/LongestSubstringWithoutRepeatingCharacters.java)
 
@@ -20,15 +20,15 @@ Graph - Pending
 
 [LinkedListCycle](LinkedList/a09LinkedListCycle/LinkedListCycle.java)
 
-[LinkedListCycle2](LinkedList/a10LinkedListCycle2/LinkedListCycle2.java)
+[LinkedListCycle2](LinkedList/a10LinkedListCycle2/LinkedListCycle2.java) (NB75)
 
 [MissingNumber](Array/Hashing/a02MissingNumberInArray/MissingNumber.java)
 
 [ThreeSum](Array/TwoPointers/OppositeDirection/a07ThreeSum/ThreeSum.java)
 
-[ThreeSumClosest](Array/TwoPointers/OppositeDirection/a08ThreeSumClosest/ThreeSumClosest.java)
+[ThreeSumClosest](Array/TwoPointers/OppositeDirection/a08ThreeSumClosest/ThreeSumClosest.java) (NB75)
 
-[FourSum](Array/TwoPointers/OppositeDirection/a09FourSum/FourSum.java)
+[FourSum](Array/TwoPointers/OppositeDirection/a09FourSum/FourSum.java) (NB75)
 
 [ReorderList](LinkedList/a19ReorderList/ReorderList.java)
 
@@ -68,11 +68,13 @@ Pacific Atlantic Waterflow
 
 [SpiralMatrix](Matrix/a02SprialMatrix/SpiralMatrix.java)
 
-[JumpGame](Matrix/a02SprialMatrix/SpiralMatrix.java)
+[JumpGame](Array/Greedy/a01Jump1/Jump1.java)
 
 [MergeIntervals](Intervals/a02MergeIntervals/MergeIntervals.java)
 
 [SubTreeOfAnotherTree](BinaryTree/a27SubTreeOfAnotherTree/SubTreeOfAnotherTree.java)
+
+[SameTree](BinaryTree/a03SameTree/SameTree.java)
 
 [UniquePaths](DP/MISC/a06UniquePaths/b3UniquePaths.java)
 
@@ -92,3 +94,4 @@ NumberOf1Bits
 
 [ReverseLinkedList](LinkedList/a12ReverseLinkedList/ReverseLinkedList.java)
 
+[MeetingRooms02](Intervals/a05MeetingRooms2/MeetingRooms2.java)
