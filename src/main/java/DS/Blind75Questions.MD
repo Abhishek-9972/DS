@@ -279,5 +279,35 @@ TreeNode left = invertTree(root.left);TreeNode right = invertTree(root.right);ro
 
 [KthSmallestElementInBST](BinaryTree/a11KthSmallestElementInBST/KthSmallestElementInBST.java)
 ````
+Input: root = [5,3,6,2,4,null,null,1], k = 3 Output: 3
+int left = kthSmallest(root.left, k);if (left != -1) {return left};count++; if (count == k){return root.val}; return kthSmallest(root.right, k)
+````
 
+[BinaryTreeLevelOrderTraversal](BinaryTree/a05BinaryTreeLevelOrderTraversal/BinaryTreeLevelOrderTraversal.java)
+````
+Queue<TreeNode> queue = new LinkedList<>(); while(!queue.isEmpty()){int size = queue.size(); List<Integer> level; for(int i=0; i<size; i++) { TreeNode node = queue.poll();
+````
+
+[MaximumDepthOfBinaryTree](BinaryTree/a02MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree.java)
+````
+if(root==null) return 0; int left = maxDepth(root.left); int right = maxDepth(root.right); return 1 + Math.max(root.left, root.right);
+````
+
+[BinaryTreeFromPreOrderAndInOrder](BinaryTree/a22BinaryTreeFromPreorderInorder/BinaryTreeFromPreorderInorder.java)
+````
+root = new TreeNode(preOrder[preStart]);
+root.left = helper(prestart+1, instart, inIndex-1, preOrder, inOrder);
+root.right = helper(prestart+ inIndex - inStart + 1, index+1, inEnd, preOrder, inOrder);
+````
+
+[LCAofBST](BinaryTree/a12LCAofBST/LCAofBST.java)
+````
+if (p.val < root.val && q.val < root.val) return lowestCommonAncestor(root.left, p, q);
+if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right, p, q);
+````
+
+[BinaryTreeMaxPathSum](BinaryTree/a25BinaryTreeMaxPathSum/BinaryTreeMaxPathSum.java)
+````
+Input: root = [1,2,3] Output: 6
+ int left = Math.max(helper(root.left), 0);int right = Math.max(helper(root.right), 0);max = Math.max(max, root.val + left + right);return root.val + Math.max(left, right);
 ````

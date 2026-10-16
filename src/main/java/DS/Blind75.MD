@@ -118,3 +118,12 @@ Minimum Window Substring
 
 [KthSmallestElementInBST](BinaryTree/a11KthSmallestElementInBST/KthSmallestElementInBST.java)
 
+[BinaryTreeLevelOrderTraversal](BinaryTree/a05BinaryTreeLevelOrderTraversal/BinaryTreeLevelOrderTraversal.java)
+
+[MaximumDepthOfBinaryTree](BinaryTree/a02MaximumDepthOfBinaryTree/MaximumDepthOfBinaryTree.java)
+
+[BinaryTreeFromPreOrderAndInOrder](BinaryTree/a22BinaryTreeFromPreorderInorder/BinaryTreeFromPreorderInorder.java)
+
+[LCAofBST](BinaryTree/a12LCAofBST/LCAofBST.java)
+
+[BinaryTreeMaxPathSum](BinaryTree/a25BinaryTreeMaxPathSum/BinaryTreeMaxPathSum.java)
