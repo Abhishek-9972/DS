@@ -1,3 +1,13 @@
+![img_1.png](Images/Flow.png)
+
+![img_1.png](Images/img_1.png)
+
+![img_2.png](Images/img_2.png)
+
+![img_3.png](Images/img_3.png)
+
+
+
 # Outbox Pattern — Order Management System
 
 ## 1. Problem
@@ -115,8 +125,3 @@ orders      → committed
 ```
 
 
-![img_1.png](Images/img_1.png)
-
-![img_2.png](Images/img_2.png)
-
-![img_3.png](Images/img_3.png)
