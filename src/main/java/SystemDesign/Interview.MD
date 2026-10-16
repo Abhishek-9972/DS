@@ -114,3 +114,15 @@ One line to remember
 
 Consistent hashing = distribute keys across nodes while minimizing remapping when the number of nodes changes.
 
+## 5. NFR
+
+### Non-Functional Requirements (NFRs)
+
+1. **Scalability:** The system should be highly scalable to handle increasing traffic and data volume.
+2. **Performance:** The system should provide low latency and high throughput.
+3. **Availability:** The system should be highly available, with a defined availability target.
+4. **Consistency:** The system should provide appropriate consistency guarantees based on the use case.
+5. **Fault Tolerance:** The system should tolerate component failures and recover gracefully.
+6. **Security:** The system should protect user data through authentication, authorization, and encryption.
+
+![img.png](diagrams/NFR.png)
