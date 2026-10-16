@@ -72,6 +72,8 @@ Pacific Atlantic Waterflow
 
 [MergeIntervals](Intervals/a02MergeIntervals/MergeIntervals.java)
 
+[InsertIntervals](Intervals/a03InsertIntervals/InsertIntervals.java)
+
 [SubTreeOfAnotherTree](BinaryTree/a27SubTreeOfAnotherTree/SubTreeOfAnotherTree.java)
 
 [SameTree](BinaryTree/a03SameTree/SameTree.java)
@@ -137,3 +139,7 @@ Minimum Window Substring
 [BestTimeToBuyAndSellStock](Array/Greedy/a02Stock1/Stock1.java)
 
 [ValidPalindrome](String/a01ValidPalindrome/ValidPalindrome.java)
+
+[LongestCommonSubSequence](DP/LCS/a01longestCommonSubsequence/LongestCommonSubsequence.java)
+
+![img.png](zArrayBkp/img.png)

@@ -177,6 +177,12 @@ Arrays.sort(arr, (a,b) -> Integer.compare(a[0], b[0]));
 currentInterval = intervals[i]; topInterval = stack.peek(); if(topEle[1]>curr[0]{top[1] = Math.max(curr[1], top[1]);} else {stack.push(curr);}
 ````
 
+[InsertIntervals](Intervals/a03InsertIntervals/InsertIntervals.java)
+````
+Input: intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]Output: [[1,2],[3,10],[12,16]] Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
+Create ModifiedIntervals -> int[][] modifiedIntervals = new int[intervals.length + 1][2];  modifiedIntervals[i] = intervals[i]; modifiedIntervals[intervals.length] = newInterval;
+````
+
 [InsertIntervals](Intervals/a02MergeIntervals/MergeIntervals.java)
 ````
 Input: intervals = [[1,3],[6,9]], newInterval = [2,5] Output: [[1,5],[6,9]]
