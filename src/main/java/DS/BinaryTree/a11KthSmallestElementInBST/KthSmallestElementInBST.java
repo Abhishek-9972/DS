@@ -17,7 +17,6 @@ public class KthSmallestElementInBST {
         int left = kthSmallest(root.left, k);
         if (left != -1)
             return left;
-
         count++;
         if (count == k)
             return root.val;

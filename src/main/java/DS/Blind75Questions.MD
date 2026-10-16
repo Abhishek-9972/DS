@@ -233,11 +233,51 @@ if(matrix[i][j]==0){rows.add(i);columns.add(j);}
 [WordSearch](Matrix/a06WordSearch/WordSearch.java)
 ````
 Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED" Output: true
-if (board[i][j] == word.charAt(0) && dfs(board, i, j, 0, word)) {return true;} dfs -> count==word.length -> true ; grid[i][j]!=word.charAt(count) {return false} boolean found = dfs(i+1 || dfs(i-1 return found
+if (board[i][j] == word.charAt(0) && dfs(board, i, j, 0, word)) {return true;} 
+dfs -> count==word.length -> true ; grid[i][j]!=word.charAt(count) {return false} boolean found = dfs(i+1 || dfs(i-1 return found
 ````
 
 [WordSearch2](Matrix/a06WordSearch2/WordSearch2.java)
 ````
 Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"] Output: ["eat","oath"]
 insert(word) -> Trie, private void dfs(char[][] board, int i, int j,TrieNode node, List<String> result) {
+````
+
+[ImplementTrie](Trie/a01ImplementTrie/Trie.java)
+````
+insert(word), search, startsWith
+TrieNode -> TrieNode[] children = new TrieNode[26]; boolean isEndOfWord;    Root -> current = root; for(char ch: word.toCharArray()){index = ch - 'a'; if(current.children[index]==null)
+3 times -> current.children[index] null check, initialization and setting next current
+````
+
+[AddAndSearchWordsDataDictionary](Trie/a02DesignAddAndSearchWordsDataStructure/WordDictionary.java)
+````
+Input
+["WordDictionary","addWord","addWord","addWord","search","search","search","search"][[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]Output[null,null,null,null,false,true,true,true]
+dfs(word, index, TrieNode current) -> If(index == word.length) return true; 
+char ch = word.charAt(index); if(ch=='.') {  } int childIndex = ch-'a'; if(current.children[childIndex]==null) return false return dfs(word, index+1, current.children[childIndex])
+````
+
+[ContainsDuplicate](Array/Hashing/a09ContainsDuplicate/ContainsDuplicate.java)
+````
+[1,2,3,1] -> true
+if (!set.add(num)) {return true}
+````
+
+[TopKFrequentElements](Heap/a05topKFrequentNumbers/TopKFrequentNumbers.java)
+
+[ValidateBinarySearchTree](BinaryTree/a09ValidateBinarySearchTree/ValidateBinarySearchTree.java)
+````
+Input: root = [2,1,3] Output: true
+isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE) -> isValidBST(TreeNode root, long min, long max)   return isBST(root.left, min, root.val) && isBST(root.right, root.val, max);
+````
+
+[InvertBinaryTree](BinaryTree/a17InvertBinaryTree/InvertBinaryTree.java)
+````
+TreeNode left = invertTree(root.left);TreeNode right = invertTree(root.right);root.left = right;root.right = left;
+````
+
+[KthSmallestElementInBST](BinaryTree/a11KthSmallestElementInBST/KthSmallestElementInBST.java)
+````
+
 ````

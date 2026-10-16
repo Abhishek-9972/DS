@@ -104,3 +104,17 @@ Minimum Window Substring
 
 [WordSearch2](Matrix/a06WordSearch2/WordSearch2.java)
 
+[ImplementTrie](Trie/a01ImplementTrie/Trie.java)
+
+[AddAndSearchWordsDataDictionary](Trie/a02DesignAddAndSearchWordsDataStructure/WordDictionary.java)
+
+[ContainsDuplicate](Array/Hashing/a09ContainsDuplicate/ContainsDuplicate.java)
+
+[TopKFrequentElements](Heap/a05topKFrequentNumbers/TopKFrequentNumbers.java)
+
+[ValidateBinarySearchTree](BinaryTree/a09ValidateBinarySearchTree/ValidateBinarySearchTree.java)
+
+[InvertBinaryTree](BinaryTree/a17InvertBinaryTree/InvertBinaryTree.java)
+
+[KthSmallestElementInBST](BinaryTree/a11KthSmallestElementInBST/KthSmallestElementInBST.java)
+
