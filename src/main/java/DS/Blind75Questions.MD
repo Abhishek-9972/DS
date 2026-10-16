@@ -311,3 +311,31 @@ if (p.val > root.val && q.val > root.val) return lowestCommonAncestor(root.right
 Input: root = [1,2,3] Output: 6
  int left = Math.max(helper(root.left), 0);int right = Math.max(helper(root.right), 0);max = Math.max(max, root.val + left + right);return root.val + Math.max(left, right);
 ````
+
+[ProductOfArrayExceptSelf](Array/PrefixSum/a02ProductOfArrayExceptSelf/ProductOfArrayExceptSelf.java)
+````
+Input: nums = [1,2,3,4] Output: [24,12,8,6]
+left ->  result[i] = result[i - 1] * nums[i - 1]; right -> result[i] *= rightProduct;
+````
+
+[ValidAnagram](String/a02ValidAnagram/ValidAnagram.java)
+````
+Input: s = "anagram", t = "nagaram" Output: true
+Put in Map and check fequency count
+````
+
+[MeetingRooms1](Intervals/a04MeetingRooms1/MeetingRooms1.java)
+````
+[[0,30],[5,10],[15,20]] => False
+if (intervals[i][0] < intervals[i - 1][1]) {return false;}
+````
+
+[BestTimeToBuyAndSellStock](Array/Greedy/a02Stock1/Stock1.java)
+````
+Input: prices = [7,1,5,3,6,4] Output: 5 Explanation: Buy on day 2 (price = 1) and sell on day 5 (price = 6), profit = 6-1 = 5.
+if (prices[i] < min) {min = prices[i];} else {max = Math.max(max, prices[i] - min);}
+````
+
+````
+ if (Character.toLowerCase(s.charAt(left)) != Character.toLowerCase(s.charAt(right))) {return false;}
+````
