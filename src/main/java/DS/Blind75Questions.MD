@@ -224,3 +224,20 @@ skipFirstHouse, skipLastHouse ---> return Math.max(lootSkippingLast, lootSkippin
 res = res + dfs(grid, i, j);
 ````
 
+[Set Matrix Zeroes](Matrix/a08SetMatrixZeroes/SetMatrixZeroes.java)
+````
+Input: matrix = [[1,1,1],[1,0,1],[1,1,1]] Output: [[1,0,1],[0,0,0],[1,0,1]]
+if(matrix[i][j]==0){rows.add(i);columns.add(j);}
+````
+
+[WordSearch](Matrix/a06WordSearch/WordSearch.java)
+````
+Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED" Output: true
+if (board[i][j] == word.charAt(0) && dfs(board, i, j, 0, word)) {return true;} dfs -> count==word.length -> true ; grid[i][j]!=word.charAt(count) {return false} boolean found = dfs(i+1 || dfs(i-1 return found
+````
+
+[WordSearch2](Matrix/a06WordSearch2/WordSearch2.java)
+````
+Input: board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"] Output: ["eat","oath"]
+insert(word) -> Trie, private void dfs(char[][] board, int i, int j,TrieNode node, List<String> result) {
+````

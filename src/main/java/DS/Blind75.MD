@@ -95,3 +95,12 @@ NumberOf1Bits
 [ReverseLinkedList](LinkedList/a12ReverseLinkedList/ReverseLinkedList.java)
 
 [MeetingRooms02](Intervals/a05MeetingRooms2/MeetingRooms2.java)
+
+[Set Matrix Zeroes](Matrix/a08SetMatrixZeroes/SetMatrixZeroes.java)
+
+Minimum Window Substring
+
+[WordSearch](Matrix/a06WordSearch/WordSearch.java)
+
+[WordSearch2](Matrix/a06WordSearch2/WordSearch2.java)
+
