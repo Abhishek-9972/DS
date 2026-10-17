@@ -18,3 +18,5 @@ By default, changes from one database table are written to a Kafka topic whose n
 Route records to a topic whose name is different from the table’s name
 
 Stream change event records for multiple tables into a single topic
+
+![img.png](images/Debezium/img.png)
