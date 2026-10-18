@@ -92,3 +92,5 @@ Its a sortedSet
 ## RateLimiter Token Bucket Algorithm
 
 ![img_16.png](images/Redis/img_16.png)
+
+![img_17.png](images/Redis/img_17.png)
