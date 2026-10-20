@@ -1,0 +1,289 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2560" height="1440" viewBox="0 0 2560 1440" font-family="DejaVu Sans, Liberation Sans, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplNmYwNTdhMi03M2Q5LTRjNzAtOGNiOS1lN2E1Y2RjMjVkZTIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCiXJde/6PwZh1U2XuV1TucAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1MWJhNDg4Mi1iMzg3LTQ5ZjUtYmVmMC1kOTM2ODFjYjhjZWZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNopVhrjf8Skj+Pxocf170ZFQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggJ23C3uQrjh7odiJMIUHC+b98ReI3PB/RHcquoKtmq8mkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaEwwbKQisiVeSXfpIedWKPkAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDY1AESlo8y8eevyVgt58RpSu4aUdkVppX/2sLPekjYl2RuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjYZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU2ZjA1N2EyLTczZDktNGM3MC04Y2I5LWU3YTVjZGMyNWRlMi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmM1MTQ1ZTdiLTkwMTctNDk0YS04NWZhLTQ2ZjgyNjgwYTQyNXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCAnbcLe5CuOHuh2IkwhQcL5v3xF4jc8H9Edyq6gq2aryaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggenNSeFUoEGSWyULxs0Nv3IWSGF696qwdOc9QIsiVpj2iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggHN2leASvfUoEVAy1BAK+u9ntiaacaCXt3kqCawGfFtZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQKvpqccmrIG1IupMlMXpz6YlFaZZbt0OvRwnF7p2++IDSivx53lawtpv3+0KCiv+JA8gPtDKIV67v5DrTilSFX4=</c2pa:manifest></metadata>
+<defs>
+<marker id="mb" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#60a5fa"/></marker>
+<marker id="mr" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#fb7185"/></marker>
+<marker id="mg" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#34d399"/></marker>
+<marker id="my" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#fbbf24"/></marker>
+</defs>
+<rect width="2560" height="1440" fill="#0b1220"/>
+<text x="40" y="58" font-size="44" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Dropbox  |  HLD: what happens at each stage</text>
+<text x="40" y="96" font-size="22" fill="#a9b8d2" font-weight="normal" text-anchor="start" >Worked example: user saves report.mp4 (100 MiB)  -&gt;  25 blocks x 4 MiB  -&gt;  SHA-256 per block  -&gt;  upload only what the server lacks</text>
+<line x1="1800" y1="44" x2="1856" y2="44" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<text x="1870" y="50" font-size="18" fill="#a9b8d2" font-weight="normal" text-anchor="start" >control plane (JSON, KBs)</text>
+<line x1="2200" y1="44" x2="2256" y2="44" stroke="#fb7185" stroke-width="3" marker-end="url(#mr)"/>
+<text x="2270" y="50" font-size="18" fill="#a9b8d2" font-weight="normal" text-anchor="start" >data plane (blocks, MiBs)</text>
+<line x1="1800" y1="80" x2="1856" y2="80" stroke="#34d399" stroke-width="3" marker-end="url(#mg)"/>
+<text x="1870" y="86" font-size="18" fill="#a9b8d2" font-weight="normal" text-anchor="start" >events / push</text>
+<line x1="2200" y1="80" x2="2256" y2="80" stroke="#fbbf24" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#my)"/>
+<text x="2270" y="86" font-size="18" fill="#a9b8d2" font-weight="normal" text-anchor="start" >pull / download</text>
+<rect x="20" y="120" width="2520" height="148" rx="14" fill="#0e1a33" stroke="#22385f" stroke-width="1.5"/>
+<rect x="20" y="278" width="2520" height="148" rx="14" fill="#27141c" stroke="#5a2a3a" stroke-width="1.5"/>
+<rect x="20" y="436" width="2520" height="150" rx="14" fill="#1a1230" stroke="#3d2a5e" stroke-width="1.5"/>
+<rect x="20" y="596" width="2520" height="66" rx="14" fill="#1f1a0c" stroke="#5a4a1a" stroke-width="1.5"/>
+<text x="1020" y="146" font-size="16" fill="#7fa9e6" font-weight="bold" text-anchor="start" letter-spacing="1">CONTROL PLANE  |  small JSON calls, via API Gateway</text>
+<text x="1020" y="306" font-size="16" fill="#f08ca0" font-weight="bold" text-anchor="start" letter-spacing="1">DATA PLANE  |  bulk block bytes, direct to Block Service (bypasses Gateway + Metadata)</text>
+<text x="40" y="462" font-size="16" fill="#b79ae8" font-weight="bold" text-anchor="start" letter-spacing="1">ASYNC / DERIVED WORK</text>
+<text x="40" y="490" font-size="17" fill="#8294b3" font-weight="normal" text-anchor="start" >runs after commit, never on the</text>
+<text x="40" y="512" font-size="17" fill="#8294b3" font-weight="normal" text-anchor="start" >user's critical path</text>
+<text x="40" y="622" font-size="16" fill="#d9b44a" font-weight="bold" text-anchor="start" letter-spacing="1">PULL PATH (Device B)</text>
+<rect x="40" y="158" width="300" height="256" rx="12" fill="#12294a" stroke="#3b82f6" stroke-width="2"/>
+<text x="56" y="188" font-size="19" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Device A (uploader)</text>
+<text x="56" y="212" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >watcher + chunker (4 MiB)</text>
+<text x="56" y="233" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >SHA-256 per block</text>
+<text x="56" y="254" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >local index (SQLite)</text>
+<text x="56" y="275" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >sync engine (retry / resume)</text>
+<text x="56" y="296" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" ></text>
+<text x="56" y="317" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >user only saves the file;</text>
+<text x="56" y="338" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >the client app does the rest</text>
+<rect x="400" y="158" width="240" height="256" rx="12" fill="#0f3a3a" stroke="#14b8a6" stroke-width="2"/>
+<text x="416" y="188" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Edge</text>
+<text x="416" y="212" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >WAF, TLS, DDoS</text>
+<text x="416" y="233" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >L7 LB, routing</text>
+<text x="416" y="254" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >CDN for downloads</text>
+<text x="416" y="275" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >/api -&gt; control plane</text>
+<text x="416" y="296" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >/blocks -&gt; data plane</text>
+<rect x="700" y="158" width="220" height="96" rx="12" fill="#1f2352" stroke="#818cf8" stroke-width="2"/>
+<text x="716" y="188" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >API Gateway</text>
+<text x="716" y="212" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >authN, rate limit</text>
+<rect x="980" y="158" width="300" height="96" rx="12" fill="#1f2352" stroke="#818cf8" stroke-width="2"/>
+<text x="996" y="188" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Metadata / Sync Svc</text>
+<text x="996" y="212" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >dedup check, commit txn</text>
+<rect x="1340" y="158" width="220" height="96" rx="12" fill="#432a10" stroke="#f59e0b" stroke-width="2"/>
+<text x="1356" y="188" font-size="19" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Metadata Cache</text>
+<text x="1356" y="212" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >Memcache / Redis</text>
+<rect x="1620" y="158" width="280" height="96" rx="12" fill="#432a10" stroke="#f59e0b" stroke-width="2"/>
+<text x="1636" y="188" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Metadata DB</text>
+<text x="1636" y="212" font-size="15" fill="#a9b8d2" font-weight="normal" text-anchor="start" >MySQL, by namespace_id</text>
+<text x="1636" y="233" font-size="15" fill="#a9b8d2" font-weight="normal" text-anchor="start" >revs, journal, block index</text>
+<rect x="1960" y="158" width="240" height="96" rx="12" fill="#173d2e" stroke="#34d399" stroke-width="2"/>
+<text x="1976" y="188" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Kafka</text>
+<text x="1976" y="212" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >events by namespace_id</text>
+<rect x="980" y="318" width="300" height="96" rx="12" fill="#3f1a24" stroke="#fb7185" stroke-width="2"/>
+<text x="996" y="348" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Block Service</text>
+<text x="996" y="372" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >verify hash, write block</text>
+<rect x="1340" y="318" width="560" height="96" rx="12" fill="#3f1a24" stroke="#fb7185" stroke-width="2"/>
+<text x="1356" y="348" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Block Store (object store)</text>
+<text x="1356" y="372" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >content-addressed by SHA-256, immutable</text>
+<text x="1356" y="393" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >erasure-coded, multi-AZ + cross-region</text>
+<rect x="1960" y="318" width="240" height="96" rx="12" fill="#1f2352" stroke="#818cf8" stroke-width="2"/>
+<text x="1976" y="348" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Notification Svc</text>
+<text x="1976" y="372" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >'changes available'</text>
+<rect x="2260" y="318" width="260" height="256" rx="12" fill="#12294a" stroke="#3b82f6" stroke-width="2"/>
+<text x="2276" y="348" font-size="20" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Device B</text>
+<text x="2276" y="372" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >(any other device)</text>
+<text x="2276" y="393" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" ></text>
+<text x="2276" y="414" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >has 24 of 25 blocks</text>
+<text x="2276" y="435" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >locally; needs only</text>
+<text x="2276" y="456" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >block #7 (see example)</text>
+<rect x="995" y="478" width="270" height="96" rx="12" fill="#3a1f4d" stroke="#c084fc" stroke-width="2"/>
+<text x="1011" y="508" font-size="19" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Previews</text>
+<text x="1011" y="534" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >thumbnails, transcodes</text>
+<rect x="1305" y="478" width="270" height="96" rx="12" fill="#3a1f4d" stroke="#c084fc" stroke-width="2"/>
+<text x="1321" y="508" font-size="19" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Virus / DLP scan</text>
+<text x="1321" y="534" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >quarantine, policy</text>
+<rect x="1615" y="478" width="270" height="96" rx="12" fill="#3a1f4d" stroke="#c084fc" stroke-width="2"/>
+<text x="1631" y="508" font-size="19" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Search indexer</text>
+<text x="1631" y="534" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >full-text, Elasticsearch</text>
+<rect x="1925" y="478" width="270" height="96" rx="12" fill="#3a1f4d" stroke="#c084fc" stroke-width="2"/>
+<text x="1941" y="508" font-size="19" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Replicate + GC</text>
+<text x="1941" y="534" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="start" >x-region copy, refcount-0 GC</text>
+<path d="M340 206 H400" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<path d="M340 366 H400" fill="none" stroke="#fb7185" stroke-width="3" marker-end="url(#mr)"/>
+<path d="M640 206 H700" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<path d="M920 206 H980" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<path d="M1280 206 H1340" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<path d="M1560 196 H1620" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<path d="M1620 218 H1560" fill="none" stroke="#60a5fa" stroke-width="3" marker-end="url(#mb)"/>
+<path d="M1900 206 H1960" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#mg)"/>
+<text x="1930" y="190" font-size="13" fill="#8294b3" font-weight="normal" text-anchor="middle" >CDC</text>
+<path d="M640 366 H980" fill="none" stroke="#fb7185" stroke-width="3" marker-end="url(#mr)"/>
+<text x="810" y="354" font-size="16" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >4 MiB block PUT / GET</text>
+<path d="M1280 366 H1340" fill="none" stroke="#fb7185" stroke-width="3" marker-end="url(#mr)"/>
+<path d="M2080 254 V318" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#mg)"/>
+<path d="M2200 366 H2260" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#mg)"/>
+<path d="M2200 206 H2235 V526 H2195" fill="none" stroke="#34d399" stroke-width="3" marker-end="url(#mg)"/>
+<path d="M2390 574 V645 H520 V414" fill="none" stroke="#fbbf24" stroke-width="3" stroke-dasharray="10 7" marker-end="url(#my)"/>
+<text x="1450" y="634" font-size="17" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >list_folder(cursor), then GET /blocks/{sha256} via edge / CDN</text>
+<circle cx="40" cy="158" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="40" y="165" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >1</text>
+<circle cx="980" cy="158" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="980" y="165" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >2</text>
+<circle cx="980" cy="318" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="980" y="325" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >3</text>
+<circle cx="1620" cy="158" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="1620" y="165" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >4</text>
+<circle cx="1960" cy="158" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="1960" y="165" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >5</text>
+<circle cx="1960" cy="318" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="1960" y="325" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >6</text>
+<circle cx="2260" cy="318" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="2260" y="325" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >7</text>
+<circle cx="995" cy="478" r="19" fill="#f59e0b" stroke="#0b1220" stroke-width="3"/>
+<text x="995" y="485" font-size="22" fill="#111827" font-weight="bold" text-anchor="middle" >8</text>
+<rect x="20" y="676" width="2520" height="262" rx="16" fill="#111c33" stroke="#2a3a5c" stroke-width="2"/>
+<text x="44" y="712" font-size="22" fill="#fbbf24" font-weight="bold" text-anchor="start" >WORKED EXAMPLE:  report.mp4 = 100 MiB  =  25 blocks x 4 MiB   (hash prefixes below are real SHA-256 of sample labels, for illustration)</text>
+<rect x="44" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="86.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#0</text>
+<text x="86.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >5ad704</text>
+<rect x="134" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="176.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#1</text>
+<text x="176.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >633f3a</text>
+<rect x="224" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="266.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#2</text>
+<text x="266.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >1b7bde</text>
+<rect x="314" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="356.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#3</text>
+<text x="356.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >06db4e</text>
+<rect x="404" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="446.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#4</text>
+<text x="446.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >e7e071</text>
+<rect x="494" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="536.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#5</text>
+<text x="536.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >a962c8</text>
+<rect x="584" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="626.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#6</text>
+<text x="626.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >329caf</text>
+<rect x="674" y="728" width="84" height="66" rx="8" fill="#4a3410" stroke="#fbbf24" stroke-width="3"/>
+<text x="716.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#7</text>
+<text x="716.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >70d2cb</text>
+<rect x="764" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="806.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#8</text>
+<text x="806.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >456b02</text>
+<rect x="854" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="896.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#9</text>
+<text x="896.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >e6c1a3</text>
+<rect x="944" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="986.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#10</text>
+<text x="986.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >537c21</text>
+<rect x="1034" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1076.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#11</text>
+<text x="1076.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >defede</text>
+<rect x="1124" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1166.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#12</text>
+<text x="1166.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >836e5a</text>
+<rect x="1214" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1256.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#13</text>
+<text x="1256.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >d7088a</text>
+<rect x="1304" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1346.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#14</text>
+<text x="1346.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >7b5913</text>
+<rect x="1394" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1436.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#15</text>
+<text x="1436.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >144ea1</text>
+<rect x="1484" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1526.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#16</text>
+<text x="1526.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >9b333e</text>
+<rect x="1574" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1616.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#17</text>
+<text x="1616.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >da8cfb</text>
+<rect x="1664" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1706.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#18</text>
+<text x="1706.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >0d50f5</text>
+<rect x="1754" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1796.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#19</text>
+<text x="1796.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >55c5e5</text>
+<rect x="1844" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1886.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#20</text>
+<text x="1886.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >f1e85c</text>
+<rect x="1934" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="1976.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#21</text>
+<text x="1976.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >23a92f</text>
+<rect x="2024" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="2066.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#22</text>
+<text x="2066.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >dca4ec</text>
+<rect x="2114" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="2156.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#23</text>
+<text x="2156.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >5cb0d6</text>
+<rect x="2204" y="728" width="84" height="66" rx="8" fill="#1b3358" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="2246.0" y="753" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="middle" >#24</text>
+<text x="2246.0" y="781" font-size="14" fill="#a9b8d2" font-weight="normal" text-anchor="middle" >310d0f</text>
+<text x="44" y="820" font-size="17" fill="#a9b8d2" font-weight="normal" text-anchor="start" >file_id = F123.  Revision r1 = ordered list [h0, h1, ... h24].  content_hash = SHA-256(h0 || h1 || ... || h24).  Server stores each block once under its hash, with a refcount.</text>
+<text x="44" y="852" font-size="18" fill="#fbbf24" font-weight="bold" text-anchor="start" >A. First upload</text>
+<text x="44" y="876" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Server knows none of the 25 hashes -&gt; need_blocks = [0..24] -&gt;</text>
+<text x="44" y="897" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >upload 25 x 4 MiB = 100 MiB. Commit creates r1.</text>
+<text x="669" y="852" font-size="18" fill="#fbbf24" font-weight="bold" text-anchor="start" >B. Edit bytes inside block #7</text>
+<text x="669" y="876" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Only block #7 changes (70d2cb -&gt; 4d9934). need_blocks = [7]:</text>
+<text x="669" y="897" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >upload 4 MiB (4%). r2 = same list, slot 7 swapped, 24 reused.</text>
+<text x="1294" y="852" font-size="18" fill="#fbbf24" font-weight="bold" text-anchor="start" >C. Same file by another user</text>
+<text x="1294" y="876" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >All 25 hashes already exist -&gt; need_blocks = []: 0 bytes</text>
+<text x="1294" y="897" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >uploaded, only a metadata commit (after a proof-of-possession</text>
+<text x="1294" y="918" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >check).</text>
+<text x="1919" y="852" font-size="18" fill="#fbbf24" font-weight="bold" text-anchor="start" >D. Insert bytes at file start</text>
+<text x="1919" y="876" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Fixed 4 MiB boundaries shift, so all 25 hashes change: ~100</text>
+<text x="1919" y="897" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >MiB re-uploaded. Fix: content-defined chunking (rolling hash).</text>
+<rect x="20" y="950" width="2520" height="470" rx="16" fill="#111c33" stroke="#2a3a5c" stroke-width="2"/>
+<text x="44" y="976" font-size="17" fill="#fbbf24" font-weight="bold" text-anchor="start" >#</text>
+<text x="112" y="976" font-size="17" fill="#fbbf24" font-weight="bold" text-anchor="start" >Stage</text>
+<text x="430" y="976" font-size="17" fill="#fbbf24" font-weight="bold" text-anchor="start" >What happens (report.mp4, 100 MiB)</text>
+<text x="1430" y="976" font-size="17" fill="#fbbf24" font-weight="bold" text-anchor="start" >On the wire</text>
+<text x="2000" y="976" font-size="17" fill="#fbbf24" font-weight="bold" text-anchor="start" >Guarantee / failure handling</text>
+<rect x="30" y="988" width="2500" height="52" rx="8" fill="#16233f"/>
+<circle cx="54" cy="1014.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1020.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >1</text>
+<text x="112" y="1019" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Detect + chunk (client)</text>
+<text x="430" y="1010" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Watcher sees report.mp4 change. Stream-read 100 MiB in 4 MiB slices = 25 blocks, SHA-256 each.</text>
+<text x="430" y="1031" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >content_hash = SHA-256(h0||...||h24).</text>
+<text x="1430" y="1019" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >local only, nothing sent yet</text>
+<text x="2000" y="1010" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Constant memory; progress kept in local SQLite so it</text>
+<text x="2000" y="1031" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >can resume.</text>
+<circle cx="54" cy="1066.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1072.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >2</text>
+<text x="112" y="1071" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Dedup handshake (control)</text>
+<text x="430" y="1062" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Client sends the 25 hashes (~1.6 KB as hex) to the Metadata Service, which looks each up in</text>
+<text x="430" y="1083" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >the block index and replies with need_blocks.</text>
+<text x="1430" y="1062" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >POST /commit_begin {path, parent_rev, size, [h0..h24]} -&gt;</text>
+<text x="1430" y="1083" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >{need:[0..24], upload_token}</text>
+<text x="2000" y="1062" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >AuthZ on namespace. Existing hash needs proof-of-</text>
+<text x="2000" y="1083" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >possession (no cross-user leak).</text>
+<rect x="30" y="1092" width="2500" height="52" rx="8" fill="#16233f"/>
+<circle cx="54" cy="1118.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1124.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >3</text>
+<text x="112" y="1123" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Upload blocks (data)</text>
+<text x="430" y="1114" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Client PUTs only the needed blocks straight to Block Service via edge, 4-8 in parallel,</text>
+<text x="430" y="1135" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >compressed. Server re-hashes every block it receives.</text>
+<text x="1430" y="1123" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >PUT /blocks/{sha256}, body = 4 MiB (x25 on first upload)</text>
+<text x="2000" y="1114" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Hash mismatch -&gt; reject, resend that block only. PUT</text>
+<text x="2000" y="1135" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >is idempotent; resumable.</text>
+<circle cx="54" cy="1170.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1176.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >4</text>
+<text x="112" y="1175" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Commit (control)</text>
+<text x="430" y="1166" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Metadata Service checks all 25 hashes exist (no data read), then ONE shard txn: revision r+1 =</text>
+<text x="430" y="1187" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >ordered hash list, refcount++, journal entry, new cursor.</text>
+<text x="1430" y="1175" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >POST /commit_end {upload_token} -&gt; {file_id, rev, cursor}</text>
+<text x="2000" y="1166" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Atomic: blocks are invisible until commit. Stale</text>
+<text x="2000" y="1187" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >parent_rev -&gt; conflicted copy.</text>
+<rect x="30" y="1196" width="2500" height="52" rx="8" fill="#16233f"/>
+<circle cx="54" cy="1222.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1228.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >5</text>
+<text x="112" y="1227" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Publish event</text>
+<text x="430" y="1218" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Same txn writes an outbox row; CDC relays it to Kafka, keyed by namespace_id so each namespace</text>
+<text x="430" y="1239" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >sees changes in order.</text>
+<text x="1430" y="1227" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >event {ns, cursor, file_id, rev}</text>
+<text x="2000" y="1218" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >At-least-once, ordered per namespace; consumers are</text>
+<text x="2000" y="1239" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >idempotent.</text>
+<circle cx="54" cy="1274.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1280.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >6</text>
+<text x="112" y="1279" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Notify devices</text>
+<text x="430" y="1270" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Notification Service tells every online device in the namespace that something changed. No</text>
+<text x="430" y="1291" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >file data is pushed.</text>
+<text x="1430" y="1279" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >push frame {ns, new_cursor} (WebSocket / long-poll)</text>
+<text x="2000" y="1270" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Best effort: a missed push is fine, clients also poll</text>
+<text x="2000" y="1291" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >with their cursor.</text>
+<rect x="30" y="1300" width="2500" height="52" rx="8" fill="#16233f"/>
+<circle cx="54" cy="1326.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1332.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >7</text>
+<text x="112" y="1331" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Pull + download</text>
+<text x="430" y="1322" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >After edit B: Device B calls list_folder(cursor), gets r2 with 25 hashes, keeps the 24 it has,</text>
+<text x="430" y="1343" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >downloads only block #7 via CDN, re-hashes, reassembles.</text>
+<text x="1430" y="1331" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >GET /list_folder?cursor=...  ;  GET /blocks/{sha256}</text>
+<text x="2000" y="1322" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Verify every block hash; retry another replica.</text>
+<text x="2000" y="1343" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Offline devices catch up from saved cursor.</text>
+<circle cx="54" cy="1378.0" r="15" fill="#f59e0b"/>
+<text x="54" y="1384.0" font-size="17" fill="#111827" font-weight="bold" text-anchor="middle" >8</text>
+<text x="112" y="1383" font-size="18" fill="#e2e8f0" font-weight="bold" text-anchor="start" >Async workers</text>
+<text x="430" y="1374" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Previews, virus/DLP scan, search index, cross-region replication, and GC of blocks whose</text>
+<text x="430" y="1395" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >refcount is 0 after a grace period.</text>
+<text x="1430" y="1383" font-size="16" fill="#cbd5e1" font-weight="normal" text-anchor="start" >consume from Kafka (no client wire)</text>
+<text x="2000" y="1383" font-size="16" fill="#e2e8f0" font-weight="normal" text-anchor="start" >Off the commit path; idempotent and retryable.</text>
+<text x="40" y="1432" font-size="15" fill="#8294b3" font-weight="normal" text-anchor="start" >Reference design for design-review use; Dropbox's real internals (Magic Pocket, Edgestore) differ in detail.</text>
+</svg>
