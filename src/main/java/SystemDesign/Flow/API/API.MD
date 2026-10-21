@@ -3,6 +3,7 @@
 ![API.png](API.png)
 
 ![HttpStatusCodes.png](Images/HttpStatusCodes.png)
+
 ![SyncVsAsync.png](Images/SyncVsAsync.png)
 
 ### WebSocket	
