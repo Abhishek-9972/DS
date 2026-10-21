@@ -1,0 +1,408 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo0YTIzMGY4ZS03ODg1LTRjNjUtODI1ZC1iNjM0MmNiOGUxYjYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaCJ9OJ0O2ncLbXphHSilGMYAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo4NTAwNjE3ZS0xN2JjLTRmYzUtODFhMy1kMzIzYWM2Njk4N2FscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNovft7KW4Yt9C9QnosjRO5ZAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggNhh//RqMcDDm8gfP1hs36UGrXlWvaSnbnoKg+XDVCEOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaP+TTVVuNgul+MpUw8bnXz8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDrtV9uzIS12QXQgwyv7h7OwlkrRcfj8dtFPSkGdCHa1GRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjXZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjRhMjMwZjhlLTc4ODUtNGM2NS04MjVkLWI2MzQyY2I4ZTFiNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjFiNGJjOWNkLWIyNWQtNDcwNi1hMWI3LTUwNGZkMmI3MTc2NXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA2GH/9GoxwMObyB8/WGzfpQateVa9pKduegqD5cNUIQ6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggXiRgFtkh4fIcw6vVndGLxAXnU+zhXiGAWYQnMBsJqfeiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggBaKpAA60+GLmwn3+o16RumiJRjJQ6ILuBlk/Y0wrVRp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQPxdpRgInx1UDjmD5+5cQiakBqWzeejU6jsnooFJxArneQkcim8Mn5raF5QlNCA5Z/th8o5tmD7BWIscYJuIyQ0=</c2pa:manifest></metadata>
+<rect width="1920" height="1080" fill="#0b1220"/>
+<text x="24" y="40" font-size="28" font-weight="700" fill="#e5e7eb">System Design NFR Cheat-Sheet: LASCSDIO + Latency, Availability, Consistency brackets</text>
+<text x="1896" y="40" font-size="14" fill="#9fb0cc" text-anchor="end">29 questions · highlighted cards are the three shown in the table</text>
+<rect x="24" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#3b82f6" stroke-width="2.5"/>
+<text x="50" y="109" font-size="40" font-weight="800" fill="#3b82f6" text-anchor="middle">L</text>
+<text x="76" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Low Latency</text>
+<text x="76" y="106" font-size="12.5" fill="#9fb0cc">Fast responses, stated</text>
+<text x="76" y="123" font-size="12.5" fill="#9fb0cc">as P99 / P999</text>
+<rect x="258" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#22c55e" stroke-width="2.5"/>
+<text x="284" y="109" font-size="40" font-weight="800" fill="#22c55e" text-anchor="middle">A</text>
+<text x="310" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Availability</text>
+<text x="310" y="106" font-size="12.5" fill="#9fb0cc">Uptime in nines,</text>
+<text x="310" y="123" font-size="12.5" fill="#9fb0cc">e.g. 99.99%</text>
+<rect x="492" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#6b7f9e" stroke-width="1.5"/>
+<text x="518" y="109" font-size="40" font-weight="800" fill="#6b7f9e" text-anchor="middle">S</text>
+<text x="544" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Scalability</text>
+<text x="544" y="106" font-size="12.5" fill="#9fb0cc">Scale out for users,</text>
+<text x="544" y="123" font-size="12.5" fill="#9fb0cc">QPS and data size</text>
+<rect x="726" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#f59e0b" stroke-width="2.5"/>
+<text x="752" y="109" font-size="40" font-weight="800" fill="#f59e0b" text-anchor="middle">C</text>
+<text x="778" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Consistency</text>
+<text x="778" y="106" font-size="12.5" fill="#9fb0cc">Strong vs eventual,</text>
+<text x="778" y="123" font-size="12.5" fill="#9fb0cc">chosen per operation</text>
+<rect x="960" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#6b7f9e" stroke-width="1.5"/>
+<text x="986" y="109" font-size="40" font-weight="800" fill="#6b7f9e" text-anchor="middle">S</text>
+<text x="1012" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Security</text>
+<text x="1012" y="106" font-size="12.5" fill="#9fb0cc">AuthN / AuthZ, encryption,</text>
+<text x="1012" y="123" font-size="12.5" fill="#9fb0cc">rate limiting</text>
+<rect x="1194" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#6b7f9e" stroke-width="1.5"/>
+<text x="1220" y="109" font-size="40" font-weight="800" fill="#6b7f9e" text-anchor="middle">D</text>
+<text x="1246" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Durability</text>
+<text x="1246" y="106" font-size="12.5" fill="#9fb0cc">Data is never lost:</text>
+<text x="1246" y="123" font-size="12.5" fill="#9fb0cc">replicate and back up</text>
+<rect x="1428" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#6b7f9e" stroke-width="1.5"/>
+<text x="1454" y="109" font-size="40" font-weight="800" fill="#6b7f9e" text-anchor="middle">I</text>
+<text x="1480" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Idempotency</text>
+<text x="1480" y="106" font-size="12.5" fill="#9fb0cc">Retries are safe, no</text>
+<text x="1480" y="123" font-size="12.5" fill="#9fb0cc">double effects</text>
+<rect x="1662" y="58" width="228" height="82" rx="10" fill="#0e1730" stroke="#6b7f9e" stroke-width="1.5"/>
+<text x="1688" y="109" font-size="40" font-weight="800" fill="#6b7f9e" text-anchor="middle">O</text>
+<text x="1714" y="84" font-size="15" font-weight="700" fill="#e5e7eb">Observability</text>
+<text x="1714" y="106" font-size="12.5" fill="#9fb0cc">Metrics, logs, traces</text>
+<text x="1714" y="123" font-size="12.5" fill="#9fb0cc">and alerts</text>
+<rect x="24" y="150" width="240" height="30" fill="#94a3b8"/>
+<text x="38" y="170" font-size="15" font-weight="700" fill="#0b1220">Question</text>
+<rect x="264" y="150" width="540" height="30" fill="#3b82f6"/>
+<text x="278" y="170" font-size="15" font-weight="700" fill="#0b1220">Low Latency</text>
+<rect x="804" y="150" width="500" height="30" fill="#22c55e"/>
+<text x="818" y="170" font-size="15" font-weight="700" fill="#0b1220">Availability</text>
+<rect x="1304" y="150" width="592" height="30" fill="#f59e0b"/>
+<text x="1318" y="170" font-size="15" font-weight="700" fill="#0b1220">Consistency</text>
+<rect x="24" y="180" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="198.5" font-size="11" font-weight="700" fill="#6b7f9e">a01</text>
+<text x="66" y="198.5" font-size="13.5" font-weight="700" fill="#e5e7eb">URL Shortener</text>
+<rect x="276" y="185.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="198.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="198.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 100 ms · P999 &lt; 200 ms (redirect)</text>
+<rect x="816" y="185.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="198.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="198.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="185.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="198.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="198.5" font-size="12.5" fill="#cfd9ee">Strong unique key · eventual reads</text>
+<rect x="24" y="208" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="226.5" font-size="11" font-weight="700" fill="#6b7f9e">a02</text>
+<text x="66" y="226.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Seat Booking</text>
+<rect x="276" y="213.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="226.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="226.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="213.0" width="107.7" height="18" rx="9" fill="#f59e0b"/>
+<text x="869.9" y="226.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Consist-first</text>
+<text x="933.7" y="226.5" font-size="12.5" fill="#cfd9ee">99.99% · correctness over uptime</text>
+<rect x="1316" y="213.0" width="59.4" height="18" rx="9" fill="#f59e0b"/>
+<text x="1345.7" y="226.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Strong</text>
+<text x="1385.4" y="226.5" font-size="12.5" fill="#cfd9ee">Strong · no double booking</text>
+<rect x="24" y="236" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="254.5" font-size="11" font-weight="700" fill="#6b7f9e">a03</text>
+<text x="66" y="254.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Amazon</text>
+<rect x="276" y="241.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="254.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="254.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="241.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="254.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="254.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="241.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="254.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="254.5" font-size="12.5" fill="#cfd9ee">Strong checkout / stock · eventual browse</text>
+<rect x="24" y="264" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="282.5" font-size="11" font-weight="700" fill="#6b7f9e">a04</text>
+<text x="66" y="282.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Twitter</text>
+<rect x="276" y="269.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="282.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="282.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="269.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="282.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="282.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="269.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="282.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="282.5" font-size="12.5" fill="#cfd9ee">Eventual · stale feed OK</text>
+<rect x="24" y="292" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="310.5" font-size="11" font-weight="700" fill="#6b7f9e">a05</text>
+<text x="66" y="310.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Uber</text>
+<rect x="276" y="297.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="310.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="310.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="297.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="310.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="310.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="297.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="310.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="310.5" font-size="12.5" fill="#cfd9ee">Strong trips / pay · eventual location</text>
+<rect x="24" y="320" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="338.5" font-size="11" font-weight="700" fill="#6b7f9e">a06</text>
+<text x="66" y="338.5" font-size="13.5" font-weight="700" fill="#e5e7eb">WhatsApp</text>
+<rect x="276" y="325.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="338.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="338.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="325.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="338.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="338.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="325.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="338.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="338.5" font-size="12.5" fill="#cfd9ee">Per-chat order · eventual delivery</text>
+<rect x="24" y="348" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="366.5" font-size="11" font-weight="700" fill="#6b7f9e">a07</text>
+<text x="66" y="366.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Zoom</text>
+<rect x="276" y="353.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="366.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="366.5" font-size="12.5" fill="#cfd9ee">≈ 150 ms one-way (audio / video)</text>
+<rect x="816" y="353.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="366.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="366.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="353.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="366.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="366.5" font-size="12.5" fill="#cfd9ee">Eventual · real-time media</text>
+<rect x="24" y="376" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="394.5" font-size="11" font-weight="700" fill="#6b7f9e">a08</text>
+<text x="66" y="394.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Netflix</text>
+<rect x="276" y="381.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="394.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="394.5" font-size="12.5" fill="#cfd9ee">1–2 s to start playback</text>
+<rect x="816" y="381.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="394.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="394.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="381.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="394.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="394.5" font-size="12.5" fill="#cfd9ee">Eventual · stale catalog OK</text>
+<rect x="24" y="404" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="422.5" font-size="11" font-weight="700" fill="#6b7f9e">a09</text>
+<text x="66" y="422.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Facebook</text>
+<rect x="276" y="409.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="422.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="422.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="409.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="422.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="422.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="409.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="422.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="422.5" font-size="12.5" fill="#cfd9ee">Eventual · stale feed OK</text>
+<rect x="24" y="432" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="450.5" font-size="11" font-weight="700" fill="#6b7f9e">a10</text>
+<text x="66" y="450.5" font-size="13.5" font-weight="700" fill="#e5e7eb">AirBnb</text>
+<rect x="276" y="437.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="450.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="450.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="437.0" width="107.7" height="18" rx="9" fill="#f59e0b"/>
+<text x="869.9" y="450.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Consist-first</text>
+<text x="933.7" y="450.5" font-size="12.5" fill="#cfd9ee">99.99% · correctness over uptime</text>
+<rect x="1316" y="437.0" width="59.4" height="18" rx="9" fill="#f59e0b"/>
+<text x="1345.7" y="450.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Strong</text>
+<text x="1385.4" y="450.5" font-size="12.5" fill="#cfd9ee">Strong booking · no double booking</text>
+<rect x="24" y="460" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="478.5" font-size="11" font-weight="700" fill="#6b7f9e">a11</text>
+<text x="66" y="478.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Google Docs</text>
+<rect x="276" y="465.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="478.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="478.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="465.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="478.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="478.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="465.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="478.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="478.5" font-size="12.5" fill="#cfd9ee">Eventual convergence (OT / CRDT)</text>
+<rect x="24" y="488" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="506.5" font-size="11" font-weight="700" fill="#6b7f9e">a12</text>
+<text x="66" y="506.5" font-size="13.5" font-weight="700" fill="#e5e7eb">LeetCode</text>
+<rect x="276" y="493.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="506.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="506.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="493.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="506.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="506.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="493.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="506.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="506.5" font-size="12.5" fill="#cfd9ee">Strong verdict · eventual leaderboard</text>
+<rect x="24" y="516" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="534.5" font-size="11" font-weight="700" fill="#6b7f9e">a13</text>
+<text x="66" y="534.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Rate Limiter</text>
+<rect x="276" y="521.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="534.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="534.5" font-size="12.5" fill="#cfd9ee">&lt; 5 ms added per request</text>
+<rect x="816" y="521.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="534.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="534.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="521.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="534.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="534.5" font-size="12.5" fill="#cfd9ee">Eventual · approximate counts</text>
+<rect x="24" y="544" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="562.5" font-size="11" font-weight="700" fill="#6b7f9e">a14</text>
+<text x="66" y="562.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Google Calendar</text>
+<rect x="276" y="549.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="562.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="562.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="549.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="562.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="562.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="549.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="562.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="562.5" font-size="12.5" fill="#cfd9ee">Strong events · eventual invites</text>
+<rect x="24" y="572" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="590.5" font-size="11" font-weight="700" fill="#6b7f9e">a15</text>
+<text x="66" y="590.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Yelp</text>
+<rect x="276" y="577.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="590.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="590.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="577.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="590.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="590.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="577.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="590.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="590.5" font-size="12.5" fill="#cfd9ee">Eventual · stale ratings OK</text>
+<rect x="24" y="600" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="618.5" font-size="11" font-weight="700" fill="#6b7f9e">a16</text>
+<text x="66" y="618.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Top-K Views</text>
+<rect x="276" y="605.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="618.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="618.5" font-size="12.5" fill="#cfd9ee">results update within seconds</text>
+<rect x="816" y="605.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="618.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="618.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="605.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="618.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="618.5" font-size="12.5" fill="#cfd9ee">Eventual · approximate counts</text>
+<rect x="24" y="628" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="646.5" font-size="11" font-weight="700" fill="#6b7f9e">a17</text>
+<text x="66" y="646.5" font-size="13.5" font-weight="700" fill="#e5e7eb">TypeAhead Autocomplete</text>
+<rect x="276" y="633.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="646.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="646.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 100 ms · P999 &lt; 200 ms</text>
+<rect x="816" y="633.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="646.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="646.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="633.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="646.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="646.5" font-size="12.5" fill="#cfd9ee">Eventual · ranking can lag</text>
+<rect x="24" y="656" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="674.5" font-size="11" font-weight="700" fill="#6b7f9e">a18</text>
+<text x="66" y="674.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Stock Trading</text>
+<rect x="276" y="661.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="674.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="674.5" font-size="12.5" fill="#cfd9ee">milliseconds or less (matching)</text>
+<rect x="816" y="661.0" width="107.7" height="18" rx="9" fill="#f59e0b"/>
+<text x="869.9" y="674.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Consist-first</text>
+<text x="933.7" y="674.5" font-size="12.5" fill="#cfd9ee">99.99% · correctness over uptime</text>
+<rect x="1316" y="661.0" width="59.4" height="18" rx="9" fill="#f59e0b"/>
+<text x="1345.7" y="674.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Strong</text>
+<text x="1385.4" y="674.5" font-size="12.5" fill="#cfd9ee">Strong · exact orders and balances</text>
+<rect x="24" y="684" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="702.5" font-size="11" font-weight="700" fill="#6b7f9e">a19</text>
+<text x="66" y="702.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Dropbox</text>
+<rect x="276" y="689.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="702.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="702.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="689.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="702.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="702.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="689.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="702.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="702.5" font-size="12.5" fill="#cfd9ee">Strong metadata · eventual sync</text>
+<rect x="24" y="712" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="730.5" font-size="11" font-weight="700" fill="#6b7f9e">a20</text>
+<text x="66" y="730.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Live Comments</text>
+<rect x="276" y="717.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="730.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="730.5" font-size="12.5" fill="#cfd9ee">1–2 s post to viewers</text>
+<rect x="816" y="717.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="730.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="730.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="717.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="730.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="730.5" font-size="12.5" fill="#cfd9ee">Eventual · order may vary slightly</text>
+<rect x="24" y="740" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="758.5" font-size="11" font-weight="700" fill="#6b7f9e">a21</text>
+<text x="66" y="758.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Auction Bid</text>
+<rect x="276" y="745.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="758.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="758.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="745.0" width="107.7" height="18" rx="9" fill="#f59e0b"/>
+<text x="869.9" y="758.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Consist-first</text>
+<text x="933.7" y="758.5" font-size="12.5" fill="#cfd9ee">99.99% · correctness over uptime</text>
+<rect x="1316" y="745.0" width="59.4" height="18" rx="9" fill="#f59e0b"/>
+<text x="1345.7" y="758.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Strong</text>
+<text x="1385.4" y="758.5" font-size="12.5" fill="#cfd9ee">Strong · one correct highest bid</text>
+<rect x="24" y="768" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="786.5" font-size="11" font-weight="700" fill="#6b7f9e">a22</text>
+<text x="66" y="786.5" font-size="13.5" font-weight="700" fill="#e5e7eb">News Aggregator</text>
+<rect x="276" y="773.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="786.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="786.5" font-size="12.5" fill="#cfd9ee">freshness: seconds to minutes</text>
+<rect x="816" y="773.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="786.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="786.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="773.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="786.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="786.5" font-size="12.5" fill="#cfd9ee">Eventual · fresh enough</text>
+<rect x="24" y="796" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="814.5" font-size="11" font-weight="700" fill="#6b7f9e">a23</text>
+<text x="66" y="814.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Web Crawler</text>
+<rect x="276" y="801.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="814.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="814.5" font-size="12.5" fill="#cfd9ee">no user wait; throughput matters</text>
+<rect x="816" y="801.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="814.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="814.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="801.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="814.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="814.5" font-size="12.5" fill="#cfd9ee">Eventual · crawl state</text>
+<rect x="24" y="824" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="842.5" font-size="11" font-weight="700" fill="#6b7f9e">a24</text>
+<text x="66" y="842.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Distributed Job Scheduler</text>
+<rect x="276" y="829.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="842.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="842.5" font-size="12.5" fill="#cfd9ee">fires within seconds of schedule</text>
+<rect x="816" y="829.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="842.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="842.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="829.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="842.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="842.5" font-size="12.5" fill="#cfd9ee">Strong run claim · eventual rest</text>
+<rect x="24" y="852" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="870.5" font-size="11" font-weight="700" fill="#6b7f9e">a25</text>
+<text x="66" y="870.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Payment System</text>
+<rect x="276" y="857.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="870.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="870.5" font-size="12.5" fill="#cfd9ee">accept &lt; 500 ms (P99) · done in seconds</text>
+<rect x="816" y="857.0" width="107.7" height="18" rx="9" fill="#f59e0b"/>
+<text x="869.9" y="870.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Consist-first</text>
+<text x="933.7" y="870.5" font-size="12.5" fill="#cfd9ee">99.99% · correctness over uptime</text>
+<rect x="1316" y="857.0" width="59.4" height="18" rx="9" fill="#f59e0b"/>
+<text x="1345.7" y="870.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Strong</text>
+<text x="1385.4" y="870.5" font-size="12.5" fill="#cfd9ee">Strong · ledger always right</text>
+<rect x="24" y="880" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="898.5" font-size="11" font-weight="700" fill="#6b7f9e">a26</text>
+<text x="66" y="898.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Ad Click Aggregator</text>
+<rect x="276" y="885.0" width="66.3" height="18" rx="9" fill="#2dd4bf"/>
+<text x="309.1" y="898.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Relaxed</text>
+<text x="352.3" y="898.5" font-size="12.5" fill="#cfd9ee">freshness: seconds to minutes</text>
+<rect x="816" y="885.0" width="73.2" height="18" rx="9" fill="#a78bfa"/>
+<text x="852.6" y="898.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="899.2" y="898.5" font-size="12.5" fill="#cfd9ee">99.9% · standard / background</text>
+<rect x="1316" y="885.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="898.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="898.5" font-size="12.5" fill="#cfd9ee">Eventual aggregates · exact counts</text>
+<rect x="24" y="908" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="926.5" font-size="11" font-weight="700" fill="#6b7f9e">a27</text>
+<text x="66" y="926.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Distributed Cache</text>
+<rect x="276" y="913.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="926.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="926.5" font-size="12.5" fill="#cfd9ee">≈ 10 ms or less</text>
+<rect x="816" y="913.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="926.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="926.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="913.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="926.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="926.5" font-size="12.5" fill="#cfd9ee">Eventual · stale reads OK</text>
+<rect x="24" y="936" width="1872" height="28" fill="#0e1730"/>
+<text x="36" y="954.5" font-size="11" font-weight="700" fill="#6b7f9e">a28</text>
+<text x="66" y="954.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Distributed Key-Value Store</text>
+<rect x="276" y="941.0" width="52.5" height="18" rx="9" fill="#f87171"/>
+<text x="302.2" y="954.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Tight</text>
+<text x="338.5" y="954.5" font-size="12.5" fill="#cfd9ee">≈ 10 ms or less</text>
+<rect x="816" y="941.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="954.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="954.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="941.0" width="52.5" height="18" rx="9" fill="#38bdf8"/>
+<text x="1342.2" y="954.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Mixed</text>
+<text x="1378.5" y="954.5" font-size="12.5" fill="#cfd9ee">Tunable quorum (R + W &gt; N)</text>
+<rect x="24" y="964" width="1872" height="28" fill="#111a2e"/>
+<text x="36" y="982.5" font-size="11" font-weight="700" fill="#6b7f9e">a29</text>
+<text x="66" y="982.5" font-size="13.5" font-weight="700" fill="#e5e7eb">Google Maps</text>
+<rect x="276" y="969.0" width="73.2" height="18" rx="9" fill="#3b82f6"/>
+<text x="312.6" y="982.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Standard</text>
+<text x="359.2" y="982.5" font-size="12.5" fill="#cfd9ee">P99 &lt; 200 ms · P999 &lt; 500 ms</text>
+<rect x="816" y="969.0" width="93.9" height="18" rx="9" fill="#22c55e"/>
+<text x="863.0" y="982.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Avail-first</text>
+<text x="919.9" y="982.5" font-size="12.5" fill="#cfd9ee">99.99% · favors availability</text>
+<rect x="1316" y="969.0" width="73.2" height="18" rx="9" fill="#a3e635"/>
+<text x="1352.6" y="982.0" font-size="11.5" font-weight="700" fill="#0b1220" text-anchor="middle">Eventual</text>
+<text x="1399.2" y="982.5" font-size="12.5" fill="#cfd9ee">Eventual · traffic can lag</text>
+<line x1="264" y1="150" x2="264" y2="992" stroke="#27385c" stroke-width="1.5"/>
+<line x1="804" y1="150" x2="804" y2="992" stroke="#27385c" stroke-width="1.5"/>
+<line x1="1304" y1="150" x2="1304" y2="992" stroke="#27385c" stroke-width="1.5"/>
+<rect x="24" y="150" width="1872" height="842" fill="none" stroke="#27385c" stroke-width="2"/>
+<text x="24" y="1014" font-size="12.5" fill="#9fb0cc"><tspan font-weight="700" fill="#3b82f6">Latency:</tspan> Standard = P99 under 200 ms, P999 under 500 ms · Tight = about 100 ms or less (typing, in-path, real-time) · Relaxed = seconds-level completion or a freshness target.</text>
+<text x="24" y="1034" font-size="12.5" fill="#9fb0cc"><tspan font-weight="700" fill="#22c55e">Availability:</tspan> Avail-first = 99.99%, serve slightly stale rather than go down · Consist-first = 99.99%, reject or delay rather than be wrong · Standard = 99.9%.</text>
+<text x="24" y="1054" font-size="12.5" fill="#9fb0cc"><tspan font-weight="700" fill="#f59e0b">Consistency:</tspan> Strong = must never be wrong · Mixed = strong on the critical write path, eventual elsewhere · Eventual = stale or approximate data is acceptable.   Suggested interview defaults; adjust to your interviewer.</text>
+</svg>
