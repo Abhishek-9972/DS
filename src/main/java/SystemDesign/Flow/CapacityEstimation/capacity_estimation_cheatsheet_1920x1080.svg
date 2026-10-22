@@ -1,0 +1,376 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjNTNlNmM3OS02ZGFmLTQ4MzctOGU4Zi1iYTE4MDI5MzFhOTkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaF/b3/mE4K0OpKsMvwNCeh4AAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyMGJkOGMzMi1iNjZjLTRlNzctYjg0NS1hY2E3ZWU3NTk1ZDZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoW1cLDa/q+qy9kqGiONpMEgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggNnvVT7+45FV28W5AgMJ6+4K7mXkjrCgLR0CLKTqKJ4qkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaL+JtztE/PptQmZWi36rEusAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCAMVZgNvgMZ61Y8ECyeLGy74/12wNODJWebSdD7aoolrWRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjXZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM1M2U2Yzc5LTZkYWYtNDgzNy04ZThmLWJhMTgwMjkzMWE5OS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjM0MTllMDE2LWM0ZjQtNDA2Zi04Mjk5LTc1Y2EwMDU2NzRkZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA2e9VPv7jkVXbxbkCAwnr7gruZeSOsKAtHQIspOooniqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgg8QJJuV3i4JZUlihNId6vZKVrKvwYQ5CQhtdqLXhUBwWiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgglBnPZB7Aksmd95Tb6juVabAkxN3WfgEtWLhTwbqExmt0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQGVCQ1YogwpF7Xze/NKrG9sIE3MqOyAkP2PwImb9NCNfBKuAU+gmcGXVqBY00hw6RWe+f2luwJj6SHnJ5EMRsvo=</c2pa:manifest></metadata>
+<rect width="1920" height="1080" fill="#0b1220"/>
+<text x="24" y="28.0" font-size="24" font-weight="700" fill="#e5e7eb">Capacity Estimation Cheat-Sheet: baseline + all 29 questions</text>
+<text x="1896" y="28.0" font-size="13" fill="#9fb0cc" text-anchor="end">Memorize the baseline, then change only the knob that differs. Last column = what to say aloud.</text>
+<rect x="24" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="34" y="52.0" font-size="10.5" fill="#9fb0cc">MAU</text>
+<text x="34" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">200M</text>
+<rect x="258" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#22c55e" stroke-width="1.5"/>
+<text x="268" y="52.0" font-size="10.5" fill="#9fb0cc">DAU / MAU</text>
+<text x="268" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">50%</text>
+<rect x="492" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="502" y="52.0" font-size="10.5" fill="#9fb0cc">DAU</text>
+<text x="502" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">100M</text>
+<rect x="726" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="736" y="52.0" font-size="10.5" fill="#9fb0cc">Actions / user / day</text>
+<text x="736" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">20</text>
+<rect x="960" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="970" y="52.0" font-size="10.5" fill="#9fb0cc">Requests / day</text>
+<text x="970" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">100M × 20 = 2B</text>
+<rect x="1194" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#22c55e" stroke-width="1.5"/>
+<text x="1204" y="52.0" font-size="10.5" fill="#9fb0cc">Average QPS</text>
+<text x="1204" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">2B / 86,400 ≈ 24K</text>
+<rect x="1428" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#f87171" stroke-width="1.5"/>
+<text x="1438" y="52.0" font-size="10.5" fill="#9fb0cc">Peak factor → Peak QPS</text>
+<text x="1438" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">5× → ≈ 120K</text>
+<rect x="1662" y="38.0" width="228" height="40.0" rx="8" fill="#0e1730" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="1672" y="52.0" font-size="10.5" fill="#9fb0cc">Read / Write → peak split</text>
+<text x="1672" y="70.0" font-size="14" font-weight="700" fill="#e5e7eb">90 / 10 → 108K / 12K</text>
+<rect x="24" y="82.0" width="462" height="40.0" rx="8" fill="#0e1730" stroke="#22c55e" stroke-width="1.5"/>
+<text x="34" y="96.0" font-size="10.5" font-weight="700" fill="#22c55e">STORAGE</text>
+<text x="34" y="114.0" font-size="12.5" font-weight="700" fill="#e5e7eb">2 KB × 200M = 400 GB/day → 146 TB/yr → 438 TB (3×)</text>
+<rect x="494" y="82.0" width="462" height="40.0" rx="8" fill="#0e1730" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="504" y="96.0" font-size="10.5" font-weight="700" fill="#3b82f6">BANDWIDTH</text>
+<text x="504" y="114.0" font-size="12.5" font-weight="700" fill="#e5e7eb">10 KB/req: avg 2 Gbps · peak 120K → 1.2 GB/s ≈ 10 Gbps</text>
+<rect x="964" y="82.0" width="462" height="40.0" rx="8" fill="#0e1730" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="974" y="96.0" font-size="10.5" font-weight="700" fill="#a78bfa">CACHE</text>
+<text x="974" y="114.0" font-size="12.5" font-weight="700" fill="#e5e7eb">80% hit: 108K reads → 86K cache + 22K DB (Redis)</text>
+<rect x="1434" y="82.0" width="462" height="40.0" rx="8" fill="#0e1730" stroke="#f59e0b" stroke-width="1.5"/>
+<text x="1444" y="96.0" font-size="10.5" font-weight="700" fill="#f59e0b">MEDIA</text>
+<text x="1444" y="114.0" font-size="12.5" font-weight="700" fill="#e5e7eb">1 MB img · 5 MB video · 10M × 1 MB = 10 TB/day → 3.65 PB/yr</text>
+<text x="24" y="138.0" font-size="12" font-weight="700" fill="#22c55e">Rules:</text>
+<text x="70" y="138.0" font-size="12" fill="#cfd9ee">avg QPS ≈ 1.2K × actions/day (peak ×5) · every 1% of writes at 2 KB ≈ 40 GB/day (≈ 14.6 TB/yr) · each 1 KB per request at 120K QPS ≈ 1 Gbps · 1B/day ≈ 12K/s, 1B/month ≈ 400/s · DAU ÷ 10 → everything ÷ 10</text>
+<rect x="24" y="148.0" width="200" height="20.0" rx="0" fill="#94a3b8" stroke="#94a3b8" stroke-width="0"/>
+<text x="34" y="162.0" font-size="12.5" font-weight="700" fill="#0b1220">Question  (bracket)</text>
+<rect x="224" y="148.0" width="230" height="20.0" rx="0" fill="#3b82f6" stroke="#3b82f6" stroke-width="0"/>
+<text x="234" y="162.0" font-size="12.5" font-weight="700" fill="#0b1220">What changes from the baseline</text>
+<rect x="454" y="148.0" width="430" height="20.0" rx="0" fill="#a78bfa" stroke="#a78bfa" stroke-width="0"/>
+<text x="464" y="162.0" font-size="12.5" font-weight="700" fill="#0b1220">Numbers</text>
+<rect x="884" y="148.0" width="1012" height="20.0" rx="0" fill="#22c55e" stroke="#22c55e" stroke-width="0"/>
+<text x="894" y="162.0" font-size="12.5" font-weight="700" fill="#0b1220">What to say in the interview</text>
+<rect x="24" y="168.0" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="168.0" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="182.8" r="8" fill="#3b82f6"/>
+<text x="43" y="186.6" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="186.4" font-size="10" font-weight="700" fill="#6b7f9e">a09</text>
+<text x="78" y="187.0" font-size="12" font-weight="700" fill="#e5e7eb">Facebook</text>
+<text x="234" y="187.0" font-size="11.5" fill="#cfe0ff">Nothing: use the baseline as is</text>
+<text x="464" y="180.4" font-size="11.5" fill="#e3dcff">24K avg / 120K peak · 108K reads / 12K writes · 400 GB/day · media</text>
+<text x="464" y="192.6" font-size="11.5" fill="#e3dcff">10M × 1 MB = 10 TB/day ≈ 3.65 PB/yr</text>
+<text x="894" y="180.4" font-size="11.5" fill="#d6f5df">With 100M DAU and 20 actions a day that's 2B requests a day: about 24K QPS average, 120K at peak, 90:10 reads to writes. 200M writes a day at 2 KB is 400 GB a day,</text>
+<text x="894" y="192.6" font-size="11.5" fill="#d6f5df">146 TB a year, 438 TB with 3× replication. Photos: 10M a day at 1 MB is 10 TB a day.</text>
+<rect x="24" y="197.6" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="197.6" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="212.4" r="8" fill="#3b82f6"/>
+<text x="43" y="216.2" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="216.0" font-size="10" font-weight="700" fill="#6b7f9e">a04</text>
+<text x="78" y="216.6" font-size="12" font-weight="700" fill="#e5e7eb">Twitter</text>
+<text x="234" y="216.6" font-size="11.5" fill="#cfe0ff">R/W 99/1</text>
+<text x="464" y="210.0" font-size="11.5" fill="#e3dcff">119K reads / 1.2K writes at peak · 1% writes = 20M tweets = 40</text>
+<text x="464" y="222.2" font-size="11.5" fill="#e3dcff">GB/day · media as Facebook</text>
+<text x="894" y="210.0" font-size="11.5" fill="#d6f5df">Same 100M DAU, 2B requests a day, 24K average and 120K peak, but 99:1 reads to writes: about 119K read and 1.2K write QPS at peak. 20M tweets a day at 2 KB is 40</text>
+<text x="894" y="222.2" font-size="11.5" fill="#d6f5df">GB a day, about 15 TB a year. Images: 10M a day at 1 MB, 10 TB a day.</text>
+<rect x="24" y="227.2" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="227.2" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="242.0" r="8" fill="#3b82f6"/>
+<text x="43" y="245.8" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="245.6" font-size="10" font-weight="700" fill="#6b7f9e">a03</text>
+<text x="78" y="246.2" font-size="12" font-weight="700" fill="#e5e7eb">Amazon</text>
+<text x="234" y="246.2" font-size="11.5" fill="#cfe0ff">R/W 95/5, 10× peak on sale days</text>
+<text x="464" y="239.6" font-size="11.5" fill="#e3dcff">240K peak · writes 5% = 100M/day = 200 GB/day · orders ≈ 5M/day ≈</text>
+<text x="464" y="251.8" font-size="11.5" fill="#e3dcff">60/s</text>
+<text x="894" y="239.6" font-size="11.5" fill="#d6f5df">Browsing dominates, so 95:5 reads to writes. Average is 24K QPS but sale days spike 10×, so I size for 240K. Writes are 5%: 100M a day at 2 KB, 200 GB a day. Actual</text>
+<text x="894" y="251.8" font-size="11.5" fill="#d6f5df">orders are about 5M a day, roughly 60 a second, with strong consistency on inventory.</text>
+<rect x="24" y="256.8" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="256.8" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="271.6" r="8" fill="#3b82f6"/>
+<text x="43" y="275.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="275.2" font-size="10" font-weight="700" fill="#6b7f9e">a10</text>
+<text x="78" y="275.8" font-size="12" font-weight="700" fill="#e5e7eb">AirBnb</text>
+<text x="234" y="275.8" font-size="11.5" fill="#cfe0ff">10 actions/day, R/W 99/1</text>
+<text x="464" y="275.8" font-size="11.5" fill="#e3dcff">12K avg / 60K peak · 10M writes/day = 20 GB/day</text>
+<text x="894" y="269.2" font-size="11.5" fill="#d6f5df">Searches dominate: 10 actions a day gives 1B requests a day, about 12K QPS average and 60K at peak, 99:1 reads to writes. That is 10M writes a day at 2 KB, 20 GB a day.</text>
+<text x="894" y="281.4" font-size="11.5" fill="#d6f5df">Bookings are a tiny share but need strong consistency, so correctness matters more than QPS.</text>
+<rect x="24" y="286.4" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="286.4" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="301.2" r="8" fill="#3b82f6"/>
+<text x="43" y="305.0" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="304.8" font-size="10" font-weight="700" fill="#6b7f9e">a15</text>
+<text x="78" y="305.4" font-size="12" font-weight="700" fill="#e5e7eb">Yelp</text>
+<text x="234" y="298.8" font-size="11.5" fill="#cfe0ff">Same as AirBnb: 10 actions/day,</text>
+<text x="234" y="311.0" font-size="11.5" fill="#cfe0ff">R/W 99/1</text>
+<text x="464" y="305.4" font-size="11.5" fill="#e3dcff">12K avg / 60K peak · 10M writes/day = 20 GB/day</text>
+<text x="894" y="298.8" font-size="11.5" fill="#d6f5df">Read-heavy with 10 actions a day: 1B requests a day, 12K QPS average, 60K at peak, 99:1 reads to writes. Reviews and ratings are about 10M writes a day at 2 KB, 20 GB</text>
+<text x="894" y="311.0" font-size="11.5" fill="#d6f5df">a day. Geo search and caching hot businesses carry the load.</text>
+<rect x="24" y="316.0" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="316.0" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="330.8" r="8" fill="#3b82f6"/>
+<text x="43" y="334.6" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="334.4" font-size="10" font-weight="700" fill="#6b7f9e">a14</text>
+<text x="78" y="335.0" font-size="12" font-weight="700" fill="#e5e7eb">Google Calendar</text>
+<text x="234" y="335.0" font-size="11.5" fill="#cfe0ff">5 actions/day, R/W 80/20</text>
+<text x="464" y="335.0" font-size="11.5" fill="#e3dcff">6K avg / 30K peak · 100M writes/day = 200 GB/day</text>
+<text x="894" y="328.4" font-size="11.5" fill="#d6f5df">5 actions a day gives 500M requests a day: about 6K QPS average and 30K at peak, with 80:20 reads to writes. 100M writes a day at 2 KB is 200 GB a day. Reminders spike</text>
+<text x="894" y="340.6" font-size="11.5" fill="#d6f5df">on the hour, so I queue and fan out rather than poll.</text>
+<rect x="24" y="345.6" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="345.6" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="360.4" r="8" fill="#3b82f6"/>
+<text x="43" y="364.2" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="364.0" font-size="10" font-weight="700" fill="#6b7f9e">a02</text>
+<text x="78" y="364.6" font-size="12" font-weight="700" fill="#e5e7eb">Seat Booking</text>
+<text x="234" y="364.6" font-size="11.5" fill="#cfe0ff">50× peak on a ticket sale</text>
+<text x="464" y="364.6" font-size="11.5" fill="#e3dcff">24K avg → ≈ 1.2M QPS peak · 10% writes = 120K/s on few seats</text>
+<text x="894" y="358.0" font-size="11.5" fill="#d6f5df">Average is the baseline 24K QPS, but a ticket sale spikes about 50×, so I size for 1.2M QPS at peak. If 10% are booking attempts that's 120K a second fighting for a limited</text>
+<text x="894" y="370.2" font-size="11.5" fill="#d6f5df">set of seats, so the problem is contention and double-booking, not storage.</text>
+<rect x="24" y="375.2" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="375.2" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="390.0" r="8" fill="#3b82f6"/>
+<text x="43" y="393.8" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="393.6" font-size="10" font-weight="700" fill="#6b7f9e">a21</text>
+<text x="78" y="394.2" font-size="12" font-weight="700" fill="#e5e7eb">Auction Bid</text>
+<text x="234" y="394.2" font-size="11.5" fill="#cfe0ff">Bids are the writes</text>
+<text x="464" y="394.2" font-size="11.5" fill="#e3dcff">12K bids/s peak · one hot auction ≈ 1K bids/s at close · 400 GB/day</text>
+<text x="894" y="387.6" font-size="11.5" fill="#d6f5df">Baseline traffic, 24K average and 120K peak, with bids as the 10% writes: about 12K bids a second at peak and 400 GB a day. One hot auction can take about 1K bids a</text>
+<text x="894" y="399.8" font-size="11.5" fill="#d6f5df">second in its last seconds, so I serialize bids per item to keep one correct highest bid.</text>
+<rect x="24" y="404.8" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="404.8" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="419.6" r="8" fill="#3b82f6"/>
+<text x="43" y="423.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="423.2" font-size="10" font-weight="700" fill="#6b7f9e">a12</text>
+<text x="78" y="423.8" font-size="12" font-weight="700" fill="#e5e7eb">LeetCode</text>
+<text x="234" y="423.8" font-size="11.5" fill="#cfe0ff">DAU ÷ 10 (10M DAU)</text>
+<text x="464" y="417.2" font-size="11.5" fill="#e3dcff">2.4K avg / 12K peak · 1.2K submissions/s · ≈ 2.4K sandboxes · 40</text>
+<text x="464" y="429.4" font-size="11.5" fill="#e3dcff">GB/day</text>
+<text x="894" y="417.2" font-size="11.5" fill="#d6f5df">Smaller scale: 10M DAU, 20 actions a day, 200M requests a day, about 2.4K QPS average and 12K at peak. 10% submissions is 1.2K a second at peak; at about 2 seconds</text>
+<text x="894" y="429.4" font-size="11.5" fill="#d6f5df">per run that is roughly 2.4K concurrent sandboxes. Storage is 40 GB a day.</text>
+<rect x="24" y="434.4" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="434.4" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="449.2" r="8" fill="#3b82f6"/>
+<text x="43" y="453.0" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="452.8" font-size="10" font-weight="700" fill="#6b7f9e">a11</text>
+<text x="78" y="453.4" font-size="12" font-weight="700" fill="#e5e7eb">Google Docs</text>
+<text x="234" y="453.4" font-size="11.5" fill="#cfe0ff">R/W 50/50, 100 B per edit</text>
+<text x="464" y="453.4" font-size="11.5" fill="#e3dcff">60K reads / 60K writes at peak · 1B edits/day × 100 B = 100 GB/day</text>
+<text x="894" y="446.8" font-size="11.5" fill="#d6f5df">Editing is write-heavy, 50:50. Baseline 24K average and 120K peak means 60K reads and 60K edits a second at peak. Each edit is small, about 100 B, so 1B edits a day is</text>
+<text x="894" y="459.0" font-size="11.5" fill="#d6f5df">100 GB a day. The hard part is conflict resolution, OT or CRDT, not volume.</text>
+<rect x="24" y="464.0" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="464.0" width="4" height="29.6" rx="0" fill="#3b82f6"/>
+<circle cx="43" cy="478.8" r="8" fill="#3b82f6"/>
+<text x="43" y="482.6" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="56" y="482.4" font-size="10" font-weight="700" fill="#6b7f9e">a29</text>
+<text x="78" y="483.0" font-size="12" font-weight="700" fill="#e5e7eb">Google Maps</text>
+<text x="234" y="483.0" font-size="11.5" fill="#cfe0ff">20 KB per tile, almost all reads</text>
+<text x="464" y="483.0" font-size="11.5" fill="#e3dcff">120K × 20 KB = 2.4 GB/s ≈ 20 Gbps · mostly served by a CDN</text>
+<text x="894" y="476.4" font-size="11.5" fill="#d6f5df">Almost all traffic is tile reads. At 120K peak QPS and about 20 KB per tile that's 2.4 GB a second, roughly 20 Gbps, served mostly from a CDN. Writes are tiny, mainly traffic</text>
+<text x="894" y="488.6" font-size="11.5" fill="#d6f5df">and map updates, so the work is caching and routing.</text>
+<rect x="24" y="493.6" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="493.6" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="508.4" r="8" fill="#a78bfa"/>
+<text x="43" y="512.2" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="512.0" font-size="10" font-weight="700" fill="#6b7f9e">a01</text>
+<text x="78" y="512.6" font-size="12" font-weight="700" fill="#e5e7eb">URL Shortener</text>
+<text x="234" y="512.6" font-size="11.5" fill="#cfe0ff">R/W 99/1</text>
+<text x="464" y="506.0" font-size="11.5" fill="#e3dcff">119K reads / 1.2K writes · 20M URLs/day = 40 GB/day · DB ≈ 24K</text>
+<text x="464" y="518.2" font-size="11.5" fill="#e3dcff">reads after cache</text>
+<text x="894" y="506.0" font-size="11.5" fill="#d6f5df">Baseline 100M DAU, 2B requests a day, 24K average and 120K peak, but 99:1 reads to writes: about 119K reads and 1.2K writes a second at peak. 20M new URLs a day at</text>
+<text x="894" y="518.2" font-size="11.5" fill="#d6f5df">2 KB is 40 GB a day, about 15 TB a year. With an 80% cache hit the database sees about 24K reads a second.</text>
+<rect x="24" y="523.2" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="523.2" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="538.0" r="8" fill="#a78bfa"/>
+<text x="43" y="541.8" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="541.6" font-size="10" font-weight="700" fill="#6b7f9e">a17</text>
+<text x="78" y="542.2" font-size="12" font-weight="700" fill="#e5e7eb">TypeAhead</text>
+<text x="234" y="535.6" font-size="11.5" fill="#cfe0ff">50 requests/user/day (10 searches</text>
+<text x="234" y="547.8" font-size="11.5" fill="#cfe0ff">× 5 keys)</text>
+<text x="464" y="542.2" font-size="11.5" fill="#e3dcff">60K avg / 300K peak (exact 58K / 290K) · 1 KB response ≈ 2.4 Gbps</text>
+<text x="894" y="535.6" font-size="11.5" fill="#d6f5df">100M DAU, 10 searches a day, 5 keystrokes each: 50 requests per user, 5B a day, about 58K QPS average and 290K at peak. Responses are about 1 KB, so roughly 2.4</text>
+<text x="894" y="547.8" font-size="11.5" fill="#d6f5df">Gbps at peak. Traffic is read-only; the index is tens of GB, so it fits in memory and I cache hot prefixes.</text>
+<rect x="24" y="552.8" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="552.8" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="567.6" r="8" fill="#a78bfa"/>
+<text x="43" y="571.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="571.2" font-size="10" font-weight="700" fill="#6b7f9e">a13</text>
+<text x="78" y="571.8" font-size="12" font-weight="700" fill="#e5e7eb">Rate Limiter</text>
+<text x="234" y="571.8" font-size="11.5" fill="#cfe0ff">Sits in front of baseline traffic</text>
+<text x="464" y="571.8" font-size="11.5" fill="#e3dcff">120K checks/s ≈ 2 Redis shards · state 100M × 100 B = 10 GB</text>
+<text x="894" y="565.2" font-size="11.5" fill="#d6f5df">Every request is checked, so 120K checks a second at peak: about two Redis shards at roughly 100K operations each. State is one counter per user, 100M × 100 B, about</text>
+<text x="894" y="577.4" font-size="11.5" fill="#d6f5df">10 GB. The limiter must add under 5 ms, so counters stay in memory and approximate counts are fine.</text>
+<rect x="24" y="582.4" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="582.4" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="597.2" r="8" fill="#a78bfa"/>
+<text x="43" y="601.0" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="600.8" font-size="10" font-weight="700" fill="#6b7f9e">a27</text>
+<text x="78" y="601.4" font-size="12" font-weight="700" fill="#e5e7eb">Distributed Cache</text>
+<text x="234" y="601.4" font-size="11.5" fill="#cfe0ff">Use the baseline cache box</text>
+<text x="464" y="594.8" font-size="11.5" fill="#e3dcff">86K cache / 22K DB · hot 20% of 400 GB = 80 GB ≈ 2 nodes (4 with</text>
+<text x="464" y="607.0" font-size="11.5" fill="#e3dcff">replicas)</text>
+<text x="894" y="594.8" font-size="11.5" fill="#d6f5df">With 108K peak reads and an 80% hit ratio the cache serves about 86K a second and 22K reach the database. The hot working set is 20% of a day's 400 GB, 80 GB, which</text>
+<text x="894" y="607.0" font-size="11.5" fill="#d6f5df">is two 64 GB nodes, four with replicas. Sub-millisecond reads, consistent hashing for scale.</text>
+<rect x="24" y="612.0" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="612.0" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="626.8" r="8" fill="#a78bfa"/>
+<text x="43" y="630.6" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="630.4" font-size="10" font-weight="700" fill="#6b7f9e">a28</text>
+<text x="78" y="631.0" font-size="12" font-weight="700" fill="#e5e7eb">Key-Value Store</text>
+<text x="234" y="624.4" font-size="11.5" fill="#cfe0ff">Storage with 3× replication drives</text>
+<text x="234" y="636.6" font-size="11.5" fill="#cfe0ff">sizing</text>
+<text x="464" y="631.0" font-size="11.5" fill="#e3dcff">438 TB ÷ 10 TB/node ≈ 44 nodes · 120K ÷ 10K per node ≈ 12 nodes</text>
+<text x="894" y="624.4" font-size="11.5" fill="#d6f5df">A year of data is 146 TB, 438 TB with 3× replication. At 10 TB per node that's about 44 nodes. QPS needs only about 12 nodes, at 120K peak and 10K per node, so storage</text>
+<text x="894" y="636.6" font-size="11.5" fill="#d6f5df">drives the node count. I partition by key hash and replicate three ways.</text>
+<rect x="24" y="641.6" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="641.6" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="656.4" r="8" fill="#a78bfa"/>
+<text x="43" y="660.2" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="660.0" font-size="10" font-weight="700" fill="#6b7f9e">a25</text>
+<text x="78" y="660.6" font-size="12" font-weight="700" fill="#e5e7eb">Payment System</text>
+<text x="234" y="660.6" font-size="11.5" fill="#cfe0ff">Payments = 1% of actions</text>
+<text x="464" y="654.0" font-size="11.5" fill="#e3dcff">20M/day ≈ 230/s avg, 1.2K peak · 2 entries × 2 KB = 80 GB/day ≈ 29</text>
+<text x="464" y="666.2" font-size="11.5" fill="#e3dcff">TB/yr</text>
+<text x="894" y="654.0" font-size="11.5" fill="#d6f5df">If 1% of the 2B daily actions are payments, that's 20M a day: about 230 a second on average, 1.2K at peak. Each payment writes 2 ledger entries at 2 KB, 80 GB a day,</text>
+<text x="894" y="666.2" font-size="11.5" fill="#d6f5df">about 29 TB a year. Volume is modest; correctness, idempotency and an auditable ledger are the challenge.</text>
+<rect x="24" y="671.2" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="671.2" width="4" height="29.6" rx="0" fill="#a78bfa"/>
+<circle cx="43" cy="686.0" r="8" fill="#a78bfa"/>
+<text x="43" y="689.8" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="56" y="689.6" font-size="10" font-weight="700" fill="#6b7f9e">a18</text>
+<text x="78" y="690.2" font-size="12" font-weight="700" fill="#e5e7eb">Stock Trading</text>
+<text x="234" y="690.2" font-size="11.5" fill="#cfe0ff">Orders = the baseline writes</text>
+<text x="464" y="690.2" font-size="11.5" fill="#e3dcff">12K orders/s peak · 200M orders/day × 2 KB = 400 GB/day</text>
+<text x="894" y="683.6" font-size="11.5" fill="#d6f5df">Orders are the 10% writes: about 12K orders a second at peak, 200M a day at 2 KB, 400 GB a day. Matching is done in memory, one thread per symbol, so the target is</text>
+<text x="894" y="695.8" font-size="11.5" fill="#d6f5df">latency of milliseconds or less and strict ordering, not raw volume.</text>
+<rect x="24" y="700.8" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="700.8" width="4" height="29.6" rx="0" fill="#2dd4bf"/>
+<circle cx="43" cy="715.6" r="8" fill="#2dd4bf"/>
+<text x="43" y="719.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">C</text>
+<text x="56" y="719.2" font-size="10" font-weight="700" fill="#6b7f9e">a06</text>
+<text x="78" y="719.8" font-size="12" font-weight="700" fill="#e5e7eb">WhatsApp</text>
+<text x="234" y="719.8" font-size="11.5" fill="#cfe0ff">Each action is a 100 B message</text>
+<text x="464" y="713.2" font-size="11.5" fill="#e3dcff">24K/s avg, 120K peak · 2B × 100 B = 200 GB/day ≈ 73 TB/yr · 10M</text>
+<text x="464" y="725.4" font-size="11.5" fill="#e3dcff">connections ≈ 200 servers</text>
+<text x="894" y="713.2" font-size="11.5" fill="#d6f5df">Each action is a message: 2B a day, 24K a second on average and 120K at peak. At 100 B each, 200 GB a day, about 73 TB a year. Concurrent users are about 10% of DAU,</text>
+<text x="894" y="725.4" font-size="11.5" fill="#d6f5df">10M connections; at 50K per server that's roughly 200 chat servers.</text>
+<rect x="24" y="730.4" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="730.4" width="4" height="29.6" rx="0" fill="#2dd4bf"/>
+<circle cx="43" cy="745.2" r="8" fill="#2dd4bf"/>
+<text x="43" y="749.0" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">C</text>
+<text x="56" y="748.8" font-size="10" font-weight="700" fill="#6b7f9e">a05</text>
+<text x="78" y="749.4" font-size="12" font-weight="700" fill="#e5e7eb">Uber</text>
+<text x="234" y="749.4" font-size="11.5" fill="#cfe0ff">Driver location updates dominate</text>
+<text x="464" y="749.4" font-size="11.5" fill="#e3dcff">1M drivers / 4 s = 250K updates/s ≈ 25 MB/s · rides 20M/day ≈ 230/s</text>
+<text x="894" y="742.8" font-size="11.5" fill="#d6f5df">Location updates dominate: 1M active drivers sending a point every 4 seconds is 250K updates a second, about 25 MB a second at 100 B each, roughly twice the baseline</text>
+<text x="894" y="755.0" font-size="11.5" fill="#d6f5df">peak. Rides are 1% of 2B, 20M a day, only about 230 a second. I partition by geo cell.</text>
+<rect x="24" y="760.0" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="760.0" width="4" height="29.6" rx="0" fill="#2dd4bf"/>
+<circle cx="43" cy="774.8" r="8" fill="#2dd4bf"/>
+<text x="43" y="778.6" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">C</text>
+<text x="56" y="778.4" font-size="10" font-weight="700" fill="#6b7f9e">a20</text>
+<text x="78" y="779.0" font-size="12" font-weight="700" fill="#e5e7eb">Live Comments</text>
+<text x="234" y="779.0" font-size="11.5" fill="#cfe0ff">Baseline writes, huge fan-out</text>
+<text x="464" y="772.4" font-size="11.5" fill="#e3dcff">12K comments/s × 1M viewers = 12B/s (impossible) · cap 10/s each: 1</text>
+<text x="464" y="784.6" font-size="11.5" fill="#e3dcff">GB/s ≈ 8 Gbps</text>
+<text x="894" y="772.4" font-size="11.5" fill="#d6f5df">Writes peak at about 12K comments a second. With 1M viewers on one stream, sending every comment to everyone would be 12B deliveries a second, so I batch and</text>
+<text x="894" y="784.6" font-size="11.5" fill="#d6f5df">sample. Capping at 10 a second per viewer at 100 B is 1M × 10 × 100 B, 1 GB a second, about 8 Gbps.</text>
+<rect x="24" y="789.6" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="789.6" width="4" height="29.6" rx="0" fill="#f59e0b"/>
+<circle cx="43" cy="804.4" r="8" fill="#f59e0b"/>
+<text x="43" y="808.2" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">D</text>
+<text x="56" y="808.0" font-size="10" font-weight="700" fill="#6b7f9e">a08</text>
+<text x="78" y="808.6" font-size="12" font-weight="700" fill="#e5e7eb">Netflix</text>
+<text x="234" y="808.6" font-size="11.5" fill="#cfe0ff">10% of DAU streaming at once</text>
+<text x="464" y="808.6" font-size="11.5" fill="#e3dcff">10M × 5 Mbps = 50 Tbps (CDN) · 10K titles × 50 GB = 500 TB</text>
+<text x="894" y="802.0" font-size="11.5" fill="#d6f5df">About 10% of 100M DAU stream at once: 10M streams at 5 Mbps is 50 Tbps, far beyond an origin, so everything is served from a CDN. Storage: 10K titles at about 50 GB</text>
+<text x="894" y="814.2" font-size="11.5" fill="#d6f5df">across encodings is 500 TB. Bandwidth, not QPS, is the bottleneck.</text>
+<rect x="24" y="819.2" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="819.2" width="4" height="29.6" rx="0" fill="#f59e0b"/>
+<circle cx="43" cy="834.0" r="8" fill="#f59e0b"/>
+<text x="43" y="837.8" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">D</text>
+<text x="56" y="837.6" font-size="10" font-weight="700" fill="#6b7f9e">a07</text>
+<text x="78" y="838.2" font-size="12" font-weight="700" fill="#e5e7eb">Zoom</text>
+<text x="234" y="838.2" font-size="11.5" fill="#cfe0ff">10% of DAU in meetings</text>
+<text x="464" y="838.2" font-size="11.5" fill="#e3dcff">10M × 1.5 Mbps ≈ 15 Tbps upload · egress is several times that</text>
+<text x="894" y="831.6" font-size="11.5" fill="#d6f5df">Assume 10% of DAU are in meetings, 10M participants. At about 1.5 Mbps upload each that's 15 Tbps ingress, and egress is several times that because each person</text>
+<text x="894" y="843.8" font-size="11.5" fill="#d6f5df">receives several streams. So I use SFU media servers, regional routing and adaptive bitrate.</text>
+<rect x="24" y="848.8" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="848.8" width="4" height="29.6" rx="0" fill="#f59e0b"/>
+<circle cx="43" cy="863.6" r="8" fill="#f59e0b"/>
+<text x="43" y="867.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">D</text>
+<text x="56" y="867.2" font-size="10" font-weight="700" fill="#6b7f9e">a19</text>
+<text x="78" y="867.8" font-size="12" font-weight="700" fill="#e5e7eb">Dropbox</text>
+<text x="234" y="867.8" font-size="11.5" fill="#cfe0ff">Uses MAU: 1 GB per user</text>
+<text x="464" y="861.2" font-size="11.5" fill="#e3dcff">200M × 1 GB = 200 PB · erasure coding 1.5× ≈ 300 PB (vs 600 PB at</text>
+<text x="464" y="873.4" font-size="11.5" fill="#e3dcff">3×)</text>
+<text x="894" y="861.2" font-size="11.5" fill="#d6f5df">Storage is the story: 200M users at 1 GB each is 200 PB. With 3× replication that's 600 PB, but erasure coding at about 1.5× brings it to roughly 300 PB. Chunking and</text>
+<text x="894" y="873.4" font-size="11.5" fill="#d6f5df">deduplication cut it further; sync traffic is small, mostly metadata and deltas.</text>
+<rect x="24" y="878.4" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="878.4" width="4" height="29.6" rx="0" fill="#f87171"/>
+<circle cx="43" cy="893.2" r="8" fill="#f87171"/>
+<text x="43" y="897.0" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">E</text>
+<text x="56" y="896.8" font-size="10" font-weight="700" fill="#6b7f9e">a23</text>
+<text x="78" y="897.4" font-size="12" font-weight="700" fill="#e5e7eb">Web Crawler</text>
+<text x="234" y="897.4" font-size="11.5" fill="#cfe0ff">No DAU: 1B pages / month</text>
+<text x="464" y="897.4" font-size="11.5" fill="#e3dcff">400/s × 100 KB = 40 MB/s ≈ 0.3 Gbps · ≈ 100 TB/month</text>
+<text x="894" y="890.8" font-size="11.5" fill="#d6f5df">1B pages a month is about 400 pages a second. At 100 KB each that's 40 MB a second, about 0.3 Gbps, and 100 TB a month raw. It is network-bound, so I use async</text>
+<text x="894" y="903.0" font-size="11.5" fill="#d6f5df">fetchers sharded by host for politeness, and compress to cut storage.</text>
+<rect x="24" y="908.0" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="908.0" width="4" height="29.6" rx="0" fill="#f87171"/>
+<circle cx="43" cy="922.8" r="8" fill="#f87171"/>
+<text x="43" y="926.6" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">E</text>
+<text x="56" y="926.4" font-size="10" font-weight="700" fill="#6b7f9e">a24</text>
+<text x="78" y="927.0" font-size="12" font-weight="700" fill="#e5e7eb">Job Scheduler</text>
+<text x="234" y="927.0" font-size="11.5" fill="#cfe0ff">No DAU: 1B jobs / day</text>
+<text x="464" y="920.4" font-size="11.5" fill="#e3dcff">12K/s avg, 60K peak · midnight 18% in 60 s = 3M/s (259×) · 1 TB</text>
+<text x="464" y="932.6" font-size="11.5" fill="#e3dcff">pending</text>
+<text x="894" y="920.4" font-size="11.5" fill="#d6f5df">1B jobs a day is about 12K a second on average, 60K at a 5× peak. But if 18% fire at midnight within 60 seconds, that's 180M over 60 s, 3M a second, about 259× the</text>
+<text x="894" y="932.6" font-size="11.5" fill="#d6f5df">average, so I size for the spike. 1B pending jobs at 1 KB is about 1 TB.</text>
+<rect x="24" y="937.6" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="937.6" width="4" height="29.6" rx="0" fill="#f87171"/>
+<circle cx="43" cy="952.4" r="8" fill="#f87171"/>
+<text x="43" y="956.2" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">E</text>
+<text x="56" y="956.0" font-size="10" font-weight="700" fill="#6b7f9e">a26</text>
+<text x="78" y="956.6" font-size="12" font-weight="700" fill="#e5e7eb">Ad Click Aggregator</text>
+<text x="234" y="956.6" font-size="11.5" fill="#cfe0ff">No DAU: 1B clicks / day</text>
+<text x="464" y="956.6" font-size="11.5" fill="#e3dcff">12K/s avg, 60K peak · 200 B raw = 200 GB/day ≈ 73 TB/yr</text>
+<text x="894" y="950.0" font-size="11.5" fill="#d6f5df">1B clicks a day is about 12K a second, 60K at peak. Raw events at 200 B are 200 GB a day, about 73 TB a year. Aggregates are tiny by comparison, so I stream-process,</text>
+<text x="894" y="962.2" font-size="11.5" fill="#d6f5df">deduplicate for exactly-once counts, and keep raw events cold.</text>
+<rect x="24" y="967.2" width="1872" height="29.6" rx="0" fill="#0e1730"/>
+<rect x="24" y="967.2" width="4" height="29.6" rx="0" fill="#f87171"/>
+<circle cx="43" cy="982.0" r="8" fill="#f87171"/>
+<text x="43" y="985.8" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">E</text>
+<text x="56" y="985.6" font-size="10" font-weight="700" fill="#6b7f9e">a16</text>
+<text x="78" y="986.2" font-size="12" font-weight="700" fill="#e5e7eb">Top-K Views</text>
+<text x="234" y="986.2" font-size="11.5" fill="#cfe0ff">No DAU: 1B views / day</text>
+<text x="464" y="986.2" font-size="11.5" fill="#e3dcff">12K/s (60K peak) · exact 100M items × 16 B ≈ 1.6 GB · sketch: MBs</text>
+<text x="894" y="979.6" font-size="11.5" fill="#d6f5df">1B views a day is about 12K events a second, 60K at peak. Exact counters for 100M items at 16 B each are about 1.6 GB, which fits in memory; a count-min sketch plus a</text>
+<text x="894" y="991.8" font-size="11.5" fill="#d6f5df">heap needs only megabytes if approximate results are acceptable.</text>
+<rect x="24" y="996.8" width="1872" height="29.6" rx="0" fill="#111a2e"/>
+<rect x="24" y="996.8" width="4" height="29.6" rx="0" fill="#f87171"/>
+<circle cx="43" cy="1011.6" r="8" fill="#f87171"/>
+<text x="43" y="1015.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">E</text>
+<text x="56" y="1015.2" font-size="10" font-weight="700" fill="#6b7f9e">a22</text>
+<text x="78" y="1015.8" font-size="12" font-weight="700" fill="#e5e7eb">News Aggregator</text>
+<text x="234" y="1015.8" font-size="11.5" fill="#cfe0ff">No DAU: 1M articles / day</text>
+<text x="464" y="1015.8" font-size="11.5" fill="#e3dcff">≈ 12 articles/s × 100 KB = 100 GB/day · readers use the baseline</text>
+<text x="894" y="1009.2" font-size="11.5" fill="#d6f5df">Ingest is small: 1M articles a day is about 12 a second, at 100 KB that's 100 GB a day. The read side is a normal feed, so I reuse the baseline: 24K QPS average, 120K peak.</text>
+<text x="894" y="1021.4" font-size="11.5" fill="#d6f5df">Freshness and deduplication quality matter more than volume.</text>
+<line x1="224" y1="148" x2="224" y2="1026.4" stroke="#27385c" stroke-width="1.2"/>
+<line x1="454" y1="148" x2="454" y2="1026.4" stroke="#27385c" stroke-width="1.2"/>
+<line x1="884" y1="148" x2="884" y2="1026.4" stroke="#27385c" stroke-width="1.2"/>
+<rect x="24" y="148.0" width="1872" height="878.4" rx="0" fill="none" stroke="#27385c" stroke-width="1.8"/>
+<text x="24" y="1048.4" font-size="12" font-weight="700" fill="#9fb0cc">Brackets:</text>
+<circle cx="96" cy="1044.4" r="8" fill="#3b82f6"/>
+<text x="96" y="1048.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">A</text>
+<text x="110" y="1048.4" font-size="12" fill="#cfd9ee">DAU-driven</text>
+<circle cx="212.326875" cy="1044.4" r="8" fill="#a78bfa"/>
+<text x="212.326875" y="1048.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">B</text>
+<text x="226.326875" y="1048.4" font-size="12" fill="#cfd9ee">QPS × size</text>
+<circle cx="325.576875" cy="1044.4" r="8" fill="#2dd4bf"/>
+<text x="325.576875" y="1048.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">C</text>
+<text x="339.576875" y="1048.4" font-size="12" fill="#cfd9ee">Concurrency / fan-out</text>
+<circle cx="504.24562499999996" cy="1044.4" r="8" fill="#f59e0b"/>
+<text x="504.24562499999996" y="1048.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">D</text>
+<text x="518.245625" y="1048.4" font-size="12" fill="#cfd9ee">Bandwidth / storage</text>
+<circle cx="673.3874999999999" cy="1044.4" r="8" fill="#f87171"/>
+<text x="673.3874999999999" y="1048.4" font-size="10.5" font-weight="700" fill="#0b1220" text-anchor="middle">E</text>
+<text x="687.3874999999999" y="1048.4" font-size="12" fill="#cfd9ee">Pipeline</text>
+<text x="770.3506249999999" y="1048.4" font-size="12" fill="#9fb0cc">Assumptions (drivers, sandbox time, bitrates) are mine: say each one aloud before using it.</text>
+</svg>
