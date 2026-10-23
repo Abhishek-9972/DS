@@ -5,11 +5,26 @@ import java.util.List;
 
 /**
  * https://leetcode.com/problems/word-search-ii/description/
+ *
+ * Pattern: Trie + DFS + Backtracking
+ *
+ * Difficulty: Hard
+ *
+ * Time Complexity:
+ * Trie construction: O(W * L)
+ * Board search: O(M * N * 3^L) worst-case after the first step,
+ *               with Trie pruning reducing unnecessary exploration.
+ *
+ * Space Complexity: O(W * L) for the Trie + O(L) recursion stack.
+ *
+ * W = number of words
+ * L = maximum word length
+ * M = number of rows
+ * N = number of columns
  */
 public class WordSearch2 {
 
     class TrieNode {
-
         TrieNode[] children;
         boolean isEndOfWord;
         String word;
@@ -49,13 +64,17 @@ public class WordSearch2 {
     private void insert(String word) {
 
         TrieNode current = root;
+
         for (char ch : word.toCharArray()) {
             int index = ch - 'a';
+
             if (current.children[index] == null) {
                 current.children[index] = new TrieNode();
             }
+
             current = current.children[index];
         }
+
         current.isEndOfWord = true;
         current.word = word;
     }
@@ -64,7 +83,9 @@ public class WordSearch2 {
                      TrieNode current, List<String> result) {
 
         // Boundary and visited check
-        if (i < 0 || i >= board.length || j < 0 || j >= board[i].length ||board[i][j] == ' ') {
+        if (i < 0 || i >= board.length ||
+                j < 0 || j >= board[i].length ||
+                board[i][j] == ' ') {
             return;
         }
 
@@ -76,25 +97,26 @@ public class WordSearch2 {
             return;
         }
 
-        TrieNode next = current.children[index];
+        // Move to the Trie node matching the current character
+        current = current.children[index];
 
         // Complete word found
-        if (next.isEndOfWord) {
-            result.add(next.word);
+        if (current.isEndOfWord) {
+            result.add(current.word);
 
             // Prevent duplicate result
-            next.isEndOfWord = false;
+            current.isEndOfWord = false;
         }
 
-        // Mark current cell as visited
+        // Mark current board cell as visited
         char temp = board[i][j];
         board[i][j] = ' ';
 
         // Explore four directions
-        dfs(board, i + 1, j, next, result);
-        dfs(board, i - 1, j, next, result);
-        dfs(board, i, j + 1, next, result);
-        dfs(board, i, j - 1, next, result);
+        dfs(board, i + 1, j, current, result);
+        dfs(board, i - 1, j, current, result);
+        dfs(board, i, j + 1, current, result);
+        dfs(board, i, j - 1, current, result);
 
         // Restore cell
         board[i][j] = temp;

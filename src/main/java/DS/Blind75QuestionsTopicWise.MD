@@ -66,7 +66,7 @@ for (int i = 0; i < nums.length - 2; i++) {
 #### [MaximumSumSubArray](Array/Kadane/a02MaximumSubArray/KadaneUsingDP.java)
 - **Example:** `nums = [-2,1,-3,4,-1,2,1,-5,4]` → output `6`.
 - **Explanation:** `[4,-1,2,1]` has the largest sum.
-- **Note:** `dp[i] = Math.max(nums[i], nums[i] + dp[i - 1]);`.
+- **Note:** `dp[0] = 0; for(i=1->n) dp[i] = Math.max(nums[i], nums[i] + dp[i - 1]); max = Math.max(max, dp[i])`.
 
 ### Binary Search
 
