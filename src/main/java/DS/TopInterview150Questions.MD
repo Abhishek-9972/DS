@@ -13,21 +13,21 @@
 1. [**Merge Sorted Array**](https://leetcode.com/problems/merge-sorted-array/) — [Answer](Array/ArrayManipulation/a01MergeSortedArray/MergeSorted.java)
 2. [**Remove Element**](https://leetcode.com/problems/remove-element/) — [Answer](Array/TwoPointers/OppositeDirection/a04RemoveElement/RemoveElement.java)
 3. [**Remove Duplicates from Sorted Array**](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) — [Answer](Array/TwoPointers/OppositeDirection/a03RemoveDuplicatesFromSortedArray/RemoveDuplicates.java)
-4. [**Remove Duplicates from Sorted Array II**](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — ❌ Not found
+4. [**Remove Duplicates from Sorted Array II**](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) — [Answer](Array/TwoPointers/OppositeDirection/a03RemoveDuplicatesFromSortedArray2/RemoveDuplicatesFromSortedArray2.java)
 5. [**Majority Element**](https://leetcode.com/problems/majority-element/) — [Answer](Array/Hashing/a03MajorityElement1/MajorityElement1.java)
 6. [**Rotate Array**](https://leetcode.com/problems/rotate-array/) — [Answer](Array/ArrayManipulation/a02RotateArray/RotateArray.java)
 7. [**Best Time to Buy and Sell Stock**](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) — [Answer](Array/Greedy/a02Stock1/Stock1.java)
 8. [**Best Time to Buy and Sell Stock II**](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/) — [Answer](Array/Greedy/a03Stock2/Stock2.java)
 9. [**Jump Game**](https://leetcode.com/problems/jump-game/) — [Answer](Array/Greedy/a01Jump1/Jump1.java)
 10. [**Jump Game II**](https://leetcode.com/problems/jump-game-ii/) — [Answer](Array/Greedy/a01Jump2/Jump2.java)
-11. [**H-Index**](https://leetcode.com/problems/h-index/) — ❌ Not found
+11. [**H-Index**](https://leetcode.com/problems/h-index/) — [Answer](Array/MISC/a01HIndex/HIndex.java)
 12. [**Insert Delete GetRandom O(1)**](https://leetcode.com/problems/insert-delete-getrandom-o1/) — [Answer](Array/Hashing/a07InsertDeleteRandomO1/RandomizedSet.java)
 13. [**Product of Array Except Self**](https://leetcode.com/problems/product-of-array-except-self/) — [Answer](Array/PrefixSum/a02ProductOfArrayExceptSelf/ProductOfArrayExceptSelf.java)
 14. [**Gas Station**](https://leetcode.com/problems/gas-station/) — [Answer](Array/Greedy/a04GasStation/GasStation.java)
 15. [**Candy**](https://leetcode.com/problems/candy/) — [Answer](Array/Greedy/a05Candy/Candy.java)
 16. [**Trapping Rain Water**](https://leetcode.com/problems/trapping-rain-water/) — [Answer](Array/TwoPointers/OppositeDirection/a10TrappingRainWater/TrappingRainWater.java)
-17. [**Roman to Integer**](https://leetcode.com/problems/roman-to-integer/) — ❌ Not found
-18. [**Integer to Roman**](https://leetcode.com/problems/integer-to-roman/) — ❌ Not found
+17. [**Roman to Integer**](https://leetcode.com/problems/roman-to-integer/) — [Answer](Array/MISC/a02RomanToInteger/RomanToInteger.java)
+18. [**Integer to Roman**](https://leetcode.com/problems/integer-to-roman/) — [Answer](Array/MISC/a03IntegerToRoman/IntegerToRoman.java)
 19. [**Length of Last Word**](https://leetcode.com/problems/length-of-last-word/) — ❌ Not found
 20. [**Longest Common Prefix**](https://leetcode.com/problems/longest-common-prefix/) — ❌ Not found
 21. [**Reverse Words in a String**](https://leetcode.com/problems/reverse-words-in-a-string/) — ❌ Not found
@@ -132,7 +132,7 @@
 ## Graph General
 
 89. [**Number of Islands**](https://leetcode.com/problems/number-of-islands/) — [Answer](Matrix/a05NumberOfIslands/NumberOfIslands.java)
-90. [**Surrounded Regions**](https://leetcode.com/problems/surrounded-regions/) — ❌ Not found
+90. [**Surrounded Regions**](https://leetcode.com/problems/surrounded-regions/) — [Answer](Matrix/a16SurroundedRegions/SurroundedRegions.java)
 91. [**Clone Graph**](https://leetcode.com/problems/clone-graph/) — [Answer](Graph/adjacencyList/a10CloneGraph/CloneGraph.java)
 92. [**Evaluate Division**](https://leetcode.com/problems/evaluate-division/) — ❌ Not found
 93. [**Course Schedule**](https://leetcode.com/problems/course-schedule/) — [Answer](Graph/adjacencyList/a07CourseSchedule/CourseSchedule1.java)
