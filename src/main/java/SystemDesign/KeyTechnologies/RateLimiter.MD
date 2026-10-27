@@ -1,3 +1,5 @@
+![img_9.png](images/RateLimiter/img_9.png)
+
 ![img.png](images/RateLimiter/img.png)
 
 ![img_1.png](images/RateLimiter/img_1.png)
