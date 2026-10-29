@@ -3,14 +3,15 @@ package DS.Array.TwoPointers.OppositeDirection.a03RemoveDuplicatesFromSortedArra
 public class RemoveDuplicatesFromSortedArray2 {
 
     public int removeDuplicates(int[] nums) {
-        int k = 0;
-
-        for (int num : nums) {
-            if (k < 2 || num != nums[k - 2]) {
-                nums[k++] = num;
+        int counter = 0;
+        for (int i = 0; i < nums.length; i++) {
+            while (i + 2 < nums.length && nums[i] == nums[i + 2]) {
+                i++;
             }
+            nums[counter] = nums[i];
+            counter++;
         }
-
-        return k;
+        return counter;
     }
+
 }

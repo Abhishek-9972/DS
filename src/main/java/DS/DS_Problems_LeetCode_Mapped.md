@@ -17,7 +17,7 @@
 - [FirstAndLastPositionInSortedArray 🎯](Array/BinarySearch/a02FirstAndLastPositionInSortedArray/FirstAndLastPositionInSortedArray.java) — [Q](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [SearchInRotatedSortedArray](Array/BinarySearch/a03SearchInRotatedSortedArray/SearchInRotatedSortedArray.java) — [Q](https://leetcode.com/problems/searchinrotatedsortedarray/)
 - [MinimumInSortedArray ✅ 🎯](Array/BinarySearch/a04MinimumInSortedArray/MinimumInSortedArray.java) — [Q](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
-- [MedianOfTwoSortedArray 🎯](Array/BinarySearch/a05MedianOfTwoSortedArray/MedianOfTwoSortedArrays.java) — [Q](https://leetcode.com/problems/median-of-two-sorted-arrays/)
+- [MedianOfTwoSortedArray 🎯 ❌](Array/BinarySearch/a05MedianOfTwoSortedArray/MedianOfTwoSortedArrays.java) — [Q](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
 ### Greedy
 
@@ -35,7 +35,7 @@
 - [MajorityElement1 🎯](Array/Hashing/a03MajorityElement1/MajorityElement1.java) — [Q](https://leetcode.com/problems/majority-element/)
 - [MajorityElement2](Array/Hashing/a04MajorityElement2/MajorityElement2.java) — [Q](https://leetcode.com/problems/majority-element-ii/)
 - [SingleNumber1 🎯](Array/Hashing/a05aSingleNumber1/SingleNumber1.java) — [Q](https://leetcode.com/problems/single-number/)
-- [SingleNumber2 🎯](Array/Hashing/a06SingleNumber2/SingleNumber2.java) — [Q](https://leetcode.com/problems/single-number-ii/)
+- [SingleNumber2 🎯 ❌](Array/Hashing/a06SingleNumber2/SingleNumber2.java) — [Q](https://leetcode.com/problems/single-number-ii/)
 - [InsertDeleteRandomO1 🎯](Array/Hashing/a07InsertDeleteRandomO1/RandomizedSet.java) — [Q](https://leetcode.com/problems/insert-delete-getrandom-o1/)
 - [LongestConsecutiveSequence](Array/Hashing/a08LongestConsecutiveSequence/LongestConsecutiveSequence.java) — [Q](https://leetcode.com/problems/longestconsecutivesequence/)
 - [ContainsDuplicate](Array/Hashing/a09ContainsDuplicate/ContainsDuplicate.java) — [Q](https://leetcode.com/problems/containsduplicate/)
@@ -48,7 +48,7 @@
 - [MaximumSubArray ✅ 🎯](Array/Kadane/a02MaximumSubArray/KadaneUsingDP.java) — [Q](https://leetcode.com/problems/maximum-subarray/)
 - [MaximumCircularSubArray 🎯](Array/Kadane/a03MaximumCircularSubArray/MaximumCircularSubArray.java) — [Q](https://leetcode.com/problems/maximum-sum-circular-subarray/)
 
-### MISC
+### MISC ❌
 
 - [HIndex 🎯](Array/MISC/a01HIndex/HIndex.java) — [Q](https://leetcode.com/problems/h-index/)
 - [RomanToInteger](Array/MISC/a02RomanToInteger/RomanToInteger.java) — [Q](https://leetcode.com/problems/romantointeger/)
@@ -77,7 +77,7 @@
 - [FourSum](Array/TwoPointers/OppositeDirection/a09FourSum/FourSum.java) — [Q](https://leetcode.com/problems/4sum/)
 - [TrappingRainWater](Array/TwoPointers/OppositeDirection/a10TrappingRainWater/TrappingRainWater.java) — [Q](https://leetcode.com/problems/trappingrainwater/)
 
-#### SameDirection
+#### SameDirection ❌
 
 - [BackspaceStringCompare](Array/TwoPointers/sameDirection/a02BackspaceStringCompare/BackspaceStringCompare.java) — [Q](https://leetcode.com/problems/backspacestringcompare/)
 - [BoatsToSavePeople](Array/TwoPointers/sameDirection/a03BoatsToSavePeople/BoatsToSavePeople.java) — [Q](https://leetcode.com/problems/boatstosavepeople/)
