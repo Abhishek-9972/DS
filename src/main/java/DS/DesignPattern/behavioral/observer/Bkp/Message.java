@@ -1,4 +1,4 @@
-package DS.DesignPattern.behavioral.observer;
+package DS.DesignPattern.behavioral.observer.Bkp;
 public class Message
 {
     final String messageContent;

@@ -1,21 +1,68 @@
 package DS.DesignPattern.behavioral.observer;
 
-public class ObserverPattern {
-    public static void main(String[] args) {
-        MessageSubscriberOne s1 = new MessageSubscriberOne();
-        MessageSubscriberTwo s2 = new MessageSubscriberTwo();
-        MessageSubscriberThree s3 = new MessageSubscriberThree();
 
-        MessagePublisher p = new MessagePublisher();
+import java.util.ArrayList;
+import java.util.List;
 
-        p.attach(s1);
-        p.attach(s2);
+// Observer
+interface Subscriber {
+    void notify(String video);
+}
 
-        p.notify(new Message("First Message"));   //s1 and s2 will receive the update
+// Concrete Observer
+class User implements Subscriber {
 
-        p.detach(s1);
-        p.attach(s3);
+    private String name;
 
-        p.notify(new Message("Second Message")); //s2 and s3 will receive the update
+    public User(String name) {
+        this.name = name;
+    }
+
+    public void notify(String video) {
+        System.out.println(name + " received notification: " + video);
     }
 }
+
+// Subject
+class YouTubeChannel {
+
+    private List<Subscriber> subscribers = new ArrayList<>();
+
+    public void subscribe(Subscriber subscriber) {
+        subscribers.add(subscriber);
+    }
+
+    public void unsubscribe(Subscriber subscriber) {
+        subscribers.remove(subscriber);
+    }
+
+    public void uploadVideo(String video) {
+        System.out.println("New video uploaded: " + video);
+
+        for (Subscriber subscriber : subscribers) {
+            subscriber.notify(video);
+        }
+    }
+}
+
+// Client
+public class ObserverPattern {
+
+    public static void main(String[] args) {
+
+        YouTubeChannel channel = new YouTubeChannel();
+
+        Subscriber user1 = new User("Alice");
+        Subscriber user2 = new User("Bob");
+
+        channel.subscribe(user1);
+        channel.subscribe(user2);
+
+        channel.uploadVideo("Java Design Patterns");
+
+        channel.unsubscribe(user1);
+
+        channel.uploadVideo("System Design");
+    }
+}
+
