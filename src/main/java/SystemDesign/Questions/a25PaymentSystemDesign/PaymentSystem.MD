@@ -1,0 +1,8 @@
+![Screenshot 2026-11-11 at 12.40.17 PM.png](Screenshot%202026-11-11%20at%2012.40.17%E2%80%AFPM.png)
+![PaymentSystemDesign.png](PaymentSystemDesign.png)
+![Screenshot 2026-11-11 at 12.45.12 PM.png](Screenshot%202026-11-11%20at%2012.45.12%E2%80%AFPM.png)
+![payment_system_design_4k.png](payment_system_design_4k.png)
+![Screenshot 2026-11-11 at 12.56.44 PM.png](Screenshot%202026-11-11%20at%2012.56.44%E2%80%AFPM.png)
+![Screenshot 2026-11-11 at 12.53.47 PM.png](Screenshot%202026-11-11%20at%2012.53.47%E2%80%AFPM.png)
+![Screenshot 2026-11-11 at 12.43.09 PM.png](Screenshot%202026-11-11%20at%2012.43.09%E2%80%AFPM.png)
+[payment_system_design_explained.md](payment_system_design_explained.md)
