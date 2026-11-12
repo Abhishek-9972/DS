@@ -1,4 +1,4 @@
-package LLD.Chess;
+package LLD.Bkp.Chess;
 
 /**
  * Pair to store the startTime and EndTime of the colleague's shifts

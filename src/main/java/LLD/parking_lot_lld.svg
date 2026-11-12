@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 890" width="1560" height="890" font-family="Helvetica,Arial,sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<style>.m{font-family:Menlo,Consolas,'DejaVu Sans Mono',monospace;font-size:12px;fill:#1e293b}</style>
+<defs>
+<marker id="tri" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto"><path d="M0,0 L13,7 L0,14 z" fill="#fff" stroke="#334155" stroke-width="1.5"/></marker>
+<marker id="dia" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="12" refX="0" refY="6" orient="auto"><path d="M0,6 L8,0 L16,6 L8,12 z" fill="#334155"/></marker>
+<marker id="arr" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L11,6 L0,12" fill="none" stroke="#334155" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1560" height="890" fill="#ffffff"/>
+<text x="780" y="28" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Parking Lot – Low Level Design (Class Diagram)</text>
+<rect x="40" y="80" width="320" height="205" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,112 V84 Q40,80 44,80 H356 Q360,80 360,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="200.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">ParkingLot</text>
+<text x="50" y="131" class="m">-instance: ParkingLot  {static}</text>
+<text x="50" y="148" class="m">-name: String</text>
+<text x="50" y="165" class="m">-floors: List&lt;ParkingFloor&gt;</text>
+<text x="50" y="182" class="m">-entryPanels: List&lt;EntryPanel&gt;</text>
+<text x="50" y="199" class="m">-exitPanels: List&lt;ExitPanel&gt;</text>
+<line x1="40" y1="207" x2="360" y2="207" stroke="#334155"/>
+<text x="50" y="226" class="m">+getInstance(): ParkingLot</text>
+<text x="50" y="243" class="m">+parkVehicle(v: Vehicle): Ticket</text>
+<text x="50" y="260" class="m">+unparkVehicle(t: Ticket): Payment</text>
+<text x="50" y="277" class="m">+addFloor(f: ParkingFloor)</text>
+<rect x="440" y="80" width="320" height="120" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M440,112 V84 Q440,80 444,80 H756 Q760,80 760,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="600.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">ParkingFloor</text>
+<text x="450" y="131" class="m">-floorNumber: int</text>
+<text x="450" y="148" class="m">-spots: List&lt;ParkingSpot&gt;</text>
+<line x1="440" y1="156" x2="760" y2="156" stroke="#334155"/>
+<text x="450" y="175" class="m">+getFreeSpot(t: SpotType): ParkingSpot</text>
+<text x="450" y="192" class="m">+updateDisplay()</text>
+<rect x="840" y="80" width="320" height="103" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M840,112 V84 Q840,80 844,80 H1156 Q1160,80 1160,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1000.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">DisplayBoard</text>
+<text x="850" y="131" class="m">-freeCount: Map&lt;SpotType,int&gt;</text>
+<line x1="840" y1="139" x2="1160" y2="139" stroke="#334155"/>
+<text x="850" y="158" class="m">+update(t: SpotType, n: int)</text>
+<text x="850" y="175" class="m">+show()</text>
+<rect x="1240" y="80" width="280" height="154" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1240,112 V84 Q1240,80 1244,80 H1516 Q1520,80 1520,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1380.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Ticket</text>
+<text x="1250" y="131" class="m">-ticketId: String</text>
+<text x="1250" y="148" class="m">-entryTime: DateTime</text>
+<text x="1250" y="165" class="m">-exitTime: DateTime</text>
+<text x="1250" y="182" class="m">-vehicle: Vehicle</text>
+<text x="1250" y="199" class="m">-status: TicketStatus</text>
+<line x1="1240" y1="207" x2="1520" y2="207" stroke="#334155"/>
+<text x="1250" y="226" class="m">+calculateDuration(): long</text>
+<rect x="40" y="350" width="320" height="117" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,396 V354 Q40,350 44,350 H356 Q360,350 360,354 V396 Z" fill="#ede9fe" stroke="#334155" stroke-width="1.5"/>
+<text x="200.0" y="366" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;abstract&gt;&gt;</text>
+<text x="200.0" y="385" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#0f172a">Vehicle</text>
+<text x="50" y="415" class="m">-licensePlate: String</text>
+<text x="50" y="432" class="m">-type: VehicleType</text>
+<line x1="40" y1="440" x2="360" y2="440" stroke="#334155"/>
+<text x="50" y="459" class="m">+getType(): VehicleType</text>
+<rect x="440" y="350" width="320" height="185" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M440,396 V354 Q440,350 444,350 H756 Q760,350 760,354 V396 Z" fill="#ede9fe" stroke="#334155" stroke-width="1.5"/>
+<text x="600.0" y="366" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;abstract&gt;&gt;</text>
+<text x="600.0" y="385" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#0f172a">ParkingSpot</text>
+<text x="450" y="415" class="m">-spotId: String</text>
+<text x="450" y="432" class="m">-type: SpotType</text>
+<text x="450" y="449" class="m">-isFree: boolean</text>
+<text x="450" y="466" class="m">-vehicle: Vehicle</text>
+<line x1="440" y1="474" x2="760" y2="474" stroke="#334155"/>
+<text x="450" y="493" class="m">+assignVehicle(v: Vehicle)</text>
+<text x="450" y="510" class="m">+removeVehicle()</text>
+<text x="450" y="527" class="m">+isFree(): boolean</text>
+<rect x="840" y="320" width="320" height="73" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M840,366 V324 Q840,320 844,320 H1156 Q1160,320 1160,324 V366 Z" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="1000.0" y="336" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;interface&gt;&gt;</text>
+<text x="1000.0" y="355" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#0f172a">PricingStrategy</text>
+<line x1="840" y1="366" x2="1160" y2="366" stroke="#334155"/>
+<text x="850" y="385" class="m">+calculateFee(t: Ticket): double</text>
+<rect x="1240" y="320" width="280" height="154" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1240,352 V324 Q1240,320 1244,320 H1516 Q1520,320 1520,324 V352 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1380.0" y="340" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Payment</text>
+<text x="1250" y="371" class="m">-paymentId: String</text>
+<text x="1250" y="388" class="m">-amount: double</text>
+<text x="1250" y="405" class="m">-method: PaymentMethod</text>
+<text x="1250" y="422" class="m">-status: PaymentStatus</text>
+<text x="1250" y="439" class="m">-paidAt: DateTime</text>
+<line x1="1240" y1="447" x2="1520" y2="447" stroke="#334155"/>
+<text x="1250" y="466" class="m">+process(): boolean</text>
+<rect x="40" y="532" width="100" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,564 V536 Q40,532 44,532 H136 Q140,532 140,536 V564 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="90.0" y="552" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Car</text>
+<path d="M90.0,532 V502" fill="none" stroke="#334155" stroke-width="1.5"/>
+<rect x="150" y="532" width="100" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M150,564 V536 Q150,532 154,532 H246 Q250,532 250,536 V564 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="200.0" y="552" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Truck</text>
+<path d="M200.0,532 V502" fill="none" stroke="#334155" stroke-width="1.5"/>
+<rect x="260" y="532" width="100" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M260,564 V536 Q260,532 264,532 H356 Q360,532 360,536 V564 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="310.0" y="552" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Motorbike</text>
+<path d="M310.0,532 V502" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M90.0,502 H310.0" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M200.0,502 V467" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#tri)"/>
+<rect x="400" y="600" width="125" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M400,632 V604 Q400,600 404,600 H521 Q525,600 525,604 V632 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="462.5" y="620" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">CompactSpot</text>
+<path d="M462.5,600 V570" fill="none" stroke="#334155" stroke-width="1.5"/>
+<rect x="537" y="600" width="125" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M537,632 V604 Q537,600 541,600 H658 Q662,600 662,604 V632 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="599.5" y="620" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">LargeSpot</text>
+<path d="M599.5,600 V570" fill="none" stroke="#334155" stroke-width="1.5"/>
+<rect x="674" y="600" width="125" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M674,632 V604 Q674,600 678,600 H795 Q799,600 799,604 V632 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="736.5" y="620" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">MotorbikeSpot</text>
+<path d="M736.5,600 V570" fill="none" stroke="#334155" stroke-width="1.5"/>
+<rect x="811" y="600" width="125" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M811,632 V604 Q811,600 815,600 H932 Q936,600 936,604 V632 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="873.5" y="620" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">EVSpot</text>
+<path d="M873.5,600 V570" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M462.5,570 H873.5" fill="none" stroke="#334155" stroke-width="1.5"/>
+<path d="M600.0,570 V535" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#tri)"/>
+<rect x="840" y="458" width="155" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M840,490 V462 Q840,458 844,458 H991 Q995,458 995,462 V490 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="917.5" y="478" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">HourlyPricing</text>
+<path d="M917.5,458 V428" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="1005" y="458" width="155" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1005,490 V462 Q1005,458 1009,458 H1156 Q1160,458 1160,462 V490 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1082.5" y="478" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">FlatRatePricing</text>
+<path d="M1082.5,458 V428" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M917.5,428 H1082.5" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M1000.0,428 V393" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#tri)"/>
+<rect x="40" y="700" width="240" height="86" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,732 V704 Q40,700 44,700 H276 Q280,700 280,704 V732 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="160.0" y="720" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">EntryPanel</text>
+<text x="50" y="751" class="m">-panelId: String</text>
+<line x1="40" y1="759" x2="280" y2="759" stroke="#334155"/>
+<text x="50" y="778" class="m">+issueTicket(v: Vehicle): Ticket</text>
+<rect x="300" y="700" width="240" height="103" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M300,732 V704 Q300,700 304,700 H536 Q540,700 540,704 V732 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="420.0" y="720" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">ExitPanel</text>
+<text x="310" y="751" class="m">-panelId: String</text>
+<line x1="300" y1="759" x2="540" y2="759" stroke="#334155"/>
+<text x="310" y="778" class="m">+scanTicket(t: Ticket)</text>
+<text x="310" y="795" class="m">+processPayment(p: Payment)</text>
+<rect x="580" y="700" width="200" height="107" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M580,746 V704 Q580,700 584,700 H776 Q780,700 780,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="680.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="680.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">VehicleType</text>
+<text x="590" y="765" class="m">CAR</text>
+<text x="590" y="782" class="m">TRUCK</text>
+<text x="590" y="799" class="m">MOTORBIKE</text>
+<rect x="800" y="700" width="200" height="124" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M800,746 V704 Q800,700 804,700 H996 Q1000,700 1000,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="900.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="900.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">SpotType</text>
+<text x="810" y="765" class="m">COMPACT</text>
+<text x="810" y="782" class="m">LARGE</text>
+<text x="810" y="799" class="m">MOTORBIKE</text>
+<text x="810" y="816" class="m">EV</text>
+<rect x="1020" y="700" width="200" height="107" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1020,746 V704 Q1020,700 1024,700 H1216 Q1220,700 1220,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="1120.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="1120.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">TicketStatus</text>
+<text x="1030" y="765" class="m">ACTIVE</text>
+<text x="1030" y="782" class="m">PAID</text>
+<text x="1030" y="799" class="m">LOST</text>
+<rect x="1240" y="700" width="200" height="107" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1240,746 V704 Q1240,700 1244,700 H1436 Q1440,700 1440,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="1340.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="1340.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">PaymentStatus</text>
+<text x="1250" y="765" class="m">PENDING</text>
+<text x="1250" y="782" class="m">COMPLETED</text>
+<text x="1250" y="799" class="m">FAILED</text>
+<path d="M360,150 H440" fill="none" stroke="#334155" stroke-width="1.5" marker-start="url(#dia)"/>
+<text x="364" y="143" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1</text>
+<text x="412" y="143" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1..*</text>
+<path d="M600,200 V350" fill="none" stroke="#334155" stroke-width="1.5" marker-start="url(#dia)"/>
+<text x="606" y="216" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1</text>
+<text x="606" y="342" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1..*</text>
+<path d="M760,130 H840" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="780" y="123" font-size="11" fill="#475569" text-anchor="start" font-style="italic">has</text>
+<path d="M440,420 H360" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="386" y="413" font-size="11" fill="#475569" text-anchor="start" font-style="italic">parks</text>
+<path d="M1240,215 H800 V420 H760" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<text x="1000" y="208" font-size="11" fill="#475569" text-anchor="start" font-style="italic">assigned spot</text>
+<path d="M1380,234 V320" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1386" y="274" font-size="11" fill="#475569" text-anchor="start" font-style="italic">0..1 payment</text>
+<path d="M1240,360 H1160" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<text x="1200" y="352" font-size="11" fill="#475569" text-anchor="middle" font-style="italic">uses</text>
+<path d="M200,80 V55 H1380 V80" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<text x="700" y="49" font-size="11" fill="#475569" text-anchor="middle" font-style="italic">issues</text>
+<text x="40" y="860" font-size="12" fill="#475569">Legend:  ◆─ composition   ─▷ inheritance / implements (dashed = interface)   ─> association   - - > dependency</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkYzQ0ZmFhNC0xNDUxLTQ3NmUtOTNiOC03ZjMyZDk0NDIyODUAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaN+TiQTpy5b19ap0NvbPa6sAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpjOWYwYjcxOS1jNzc4LTQ4MzEtODYwMy04MTUyZDllYTg3ZTJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo4qDpkfowdPKoh740NSVa8wAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggTpOPfMEyBqK0m7IvWduErr1OswOKDna4ow0w9rmiTsykZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaHgIa9lq4ueJK4Vld8CtHfEAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIBDvX0LuYVZcSD65QBC+yybfzi+KwnTK+VTR70AlytmQZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUQ4Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmRjNDRmYWE0LTE0NTEtNDc2ZS05M2I4LTdmMzJkOTQ0MjI4NS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjUxNWNjZmEyLTVkMmUtNDg1YS1hN2I1LTBhMDc4NGMwMDgwOHJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBOk498wTIGorSbsi9Z24SuvU6zA4oOdrijDTD2uaJOzKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggXlPCsJFnte0Oqt5B+zwyMmV0o678nBZkBbu+1OsEs/+iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggSX++SeGyDXJDMpI0Ji+CAsWFO29tTKtGQwhm+MJ8wPh0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFAP6S6l01BQ6XiQl7402VqrO+d0RVYhNfO3r9WnEXILhYM0/FHoz+C69v1gEmhMXQrwOfUMWFsvRDB2mPA5dtU=</c2pa:manifest></metadata></svg>

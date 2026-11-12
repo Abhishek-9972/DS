@@ -317,3 +317,17 @@
 ## Trie
 - [ImplementTrie](Trie/a01ImplementTrie/Trie.java)
 - [DesignAddAndSearchWordsDataStructure](Trie/a02DesignAddAndSearchWordsDataStructure/WordDictionary.java)
+
+### LLD
+
+CircuitBreaker
+![circuit_breaker_lld.svg](../LLD/circuit_breaker_lld.svg)
+
+LibraryManagement
+![library_management_lld.svg](../LLD/library_management_lld.svg)
+
+Parking Lot
+![parking_lot_lld.svg](../LLD/parking_lot_lld.svg)
+
+PaymentSystem
+![payment_system_lld.svg](../LLD/payment_system_lld.svg)

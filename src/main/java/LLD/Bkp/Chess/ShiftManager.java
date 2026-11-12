@@ -1,4 +1,4 @@
-package LLD.Chess;
+package LLD.Bkp.Chess;
 
 import java.util.*;
 

@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1560 890" width="1560" height="890" font-family="Helvetica,Arial,sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<style>.m{font-family:Menlo,Consolas,'DejaVu Sans Mono',monospace;font-size:12px;fill:#1e293b}</style>
+<defs>
+<marker id="tri" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="13" refY="7" orient="auto"><path d="M0,0 L13,7 L0,14 z" fill="#fff" stroke="#334155" stroke-width="1.5"/></marker>
+<marker id="dia" markerUnits="userSpaceOnUse" markerWidth="16" markerHeight="12" refX="0" refY="6" orient="auto"><path d="M0,6 L8,0 L16,6 L8,12 z" fill="#334155"/></marker>
+<marker id="arr" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L11,6 L0,12" fill="none" stroke="#334155" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1560" height="890" fill="#ffffff"/>
+<text x="780" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Payment System – Low Level Design (Class Diagram)</text>
+<rect x="40" y="80" width="320" height="171" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,112 V84 Q40,80 44,80 H356 Q360,80 360,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="200.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">PaymentService</text>
+<text x="50" y="131" class="m">-gateway: PaymentGateway</text>
+<text x="50" y="148" class="m">-fraudDetector: FraudDetector</text>
+<text x="50" y="165" class="m">-observers: List&lt;PaymentObserver&gt;</text>
+<line x1="40" y1="173" x2="360" y2="173" stroke="#334155"/>
+<text x="50" y="192" class="m">+pay(orderId, amt, type): Payment</text>
+<text x="50" y="209" class="m">+refund(id: String, amt: double): Refund</text>
+<text x="50" y="226" class="m">+getStatus(id: String): PaymentStatus</text>
+<text x="50" y="243" class="m">+addObserver(o: PaymentObserver)</text>
+<rect x="440" y="80" width="320" height="205" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M440,112 V84 Q440,80 444,80 H756 Q760,80 760,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="600.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Payment</text>
+<text x="450" y="131" class="m">-paymentId: String</text>
+<text x="450" y="148" class="m">-orderId: String</text>
+<text x="450" y="165" class="m">-userId: String</text>
+<text x="450" y="182" class="m">-amount: double</text>
+<text x="450" y="199" class="m">-type: PaymentType</text>
+<text x="450" y="216" class="m">-status: PaymentStatus</text>
+<text x="450" y="233" class="m">-idempotencyKey: String</text>
+<line x1="440" y1="241" x2="760" y2="241" stroke="#334155"/>
+<text x="450" y="260" class="m">+markSuccess()</text>
+<text x="450" y="277" class="m">+markFailed(reason: String)</text>
+<rect x="840" y="80" width="320" height="154" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M840,112 V84 Q840,80 844,80 H1156 Q1160,80 1160,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1000.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Transaction</text>
+<text x="850" y="131" class="m">-txnId: String</text>
+<text x="850" y="148" class="m">-paymentId: String</text>
+<text x="850" y="165" class="m">-gatewayRef: String</text>
+<text x="850" y="182" class="m">-status: PaymentStatus</text>
+<text x="850" y="199" class="m">-timestamp: DateTime</text>
+<line x1="840" y1="207" x2="1160" y2="207" stroke="#334155"/>
+<text x="850" y="226" class="m">+isSuccessful(): boolean</text>
+<rect x="1240" y="80" width="280" height="154" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1240,112 V84 Q1240,80 1244,80 H1516 Q1520,80 1520,84 V112 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1380.0" y="100" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Refund</text>
+<text x="1250" y="131" class="m">-refundId: String</text>
+<text x="1250" y="148" class="m">-paymentId: String</text>
+<text x="1250" y="165" class="m">-amount: double</text>
+<text x="1250" y="182" class="m">-status: RefundStatus</text>
+<text x="1250" y="199" class="m">-reason: String</text>
+<line x1="1240" y1="207" x2="1520" y2="207" stroke="#334155"/>
+<text x="1250" y="226" class="m">+approve()</text>
+<rect x="40" y="330" width="320" height="73" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,376 V334 Q40,330 44,330 H356 Q360,330 360,334 V376 Z" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="200.0" y="346" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;interface&gt;&gt;</text>
+<text x="200.0" y="365" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#0f172a">PaymentObserver</text>
+<line x1="40" y1="376" x2="360" y2="376" stroke="#334155"/>
+<text x="50" y="395" class="m">+onStatusChange(p: Payment)</text>
+<rect x="440" y="330" width="320" height="73" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M440,376 V334 Q440,330 444,330 H756 Q760,330 760,334 V376 Z" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="600.0" y="346" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;interface&gt;&gt;</text>
+<text x="600.0" y="365" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#0f172a">PaymentMethod</text>
+<line x1="440" y1="376" x2="760" y2="376" stroke="#334155"/>
+<text x="450" y="395" class="m">+pay(p: Payment): Transaction</text>
+<rect x="840" y="330" width="320" height="90" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M840,376 V334 Q840,330 844,330 H1156 Q1160,330 1160,334 V376 Z" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="1000.0" y="346" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;interface&gt;&gt;</text>
+<text x="1000.0" y="365" text-anchor="middle" font-size="14" font-weight="700" font-style="italic" fill="#0f172a">PaymentGateway</text>
+<line x1="840" y1="376" x2="1160" y2="376" stroke="#334155"/>
+<text x="850" y="395" class="m">+charge(p: Payment): Transaction</text>
+<text x="850" y="412" class="m">+refund(t: Transaction): boolean</text>
+<rect x="1240" y="330" width="280" height="120" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1240,362 V334 Q1240,330 1244,330 H1516 Q1520,330 1520,334 V362 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1380.0" y="350" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">Customer</text>
+<text x="1250" y="381" class="m">-userId: String</text>
+<text x="1250" y="398" class="m">-name: String</text>
+<text x="1250" y="415" class="m">-email: String</text>
+<line x1="1240" y1="423" x2="1520" y2="423" stroke="#334155"/>
+<text x="1250" y="442" class="m">+getPayments(): List&lt;Payment&gt;</text>
+<rect x="40" y="468" width="155" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,500 V472 Q40,468 44,468 H191 Q195,468 195,472 V500 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="117.5" y="488" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">EmailNotifier</text>
+<path d="M117.5,468 V438" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="205" y="468" width="155" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M205,500 V472 Q205,468 209,468 H356 Q360,468 360,472 V500 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="282.5" y="488" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">SmsNotifier</text>
+<path d="M282.5,468 V438" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M117.5,438 H282.5" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M200.0,438 V403" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#tri)"/>
+<rect x="375" y="468" width="120" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M375,500 V472 Q375,468 379,468 H491 Q495,468 495,472 V500 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="435.0" y="488" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">CardPayment</text>
+<path d="M435.0,468 V438" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="501" y="468" width="120" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M501,500 V472 Q501,468 505,468 H617 Q621,468 621,472 V500 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="561.0" y="488" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">UpiPayment</text>
+<path d="M561.0,468 V438" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="627" y="468" width="120" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M627,500 V472 Q627,468 631,468 H743 Q747,468 747,472 V500 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="687.0" y="488" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">WalletPayment</text>
+<path d="M687.0,468 V438" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="753" y="468" width="120" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M753,500 V472 Q753,468 757,468 H869 Q873,468 873,472 V500 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="813.0" y="488" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">NetBanking</text>
+<path d="M813.0,468 V438" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M435.0,438 H813.0" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M600.0,438 V403" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#tri)"/>
+<rect x="900" y="485" width="150" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M900,517 V489 Q900,485 904,485 H1046 Q1050,485 1050,489 V517 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="975.0" y="505" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">StripeGateway</text>
+<path d="M975.0,485 V455" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<rect x="1060" y="485" width="150" height="36" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1060,517 V489 Q1060,485 1064,485 H1206 Q1210,485 1210,489 V517 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1135.0" y="505" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">RazorpayGateway</text>
+<path d="M1135.0,485 V455" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M975.0,455 H1135.0" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4"/>
+<path d="M1000.0,455 V420" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#tri)"/>
+<rect x="40" y="700" width="250" height="59" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,732 V704 Q40,700 44,700 H286 Q290,700 290,704 V732 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="165.0" y="720" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">FraudDetector</text>
+<line x1="40" y1="732" x2="290" y2="732" stroke="#334155"/>
+<text x="50" y="751" class="m">+isFraudulent(p: Payment): boolean</text>
+<rect x="340" y="700" width="200" height="141" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M340,746 V704 Q340,700 344,700 H536 Q540,700 540,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="440.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="440.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">PaymentStatus</text>
+<text x="350" y="765" class="m">INITIATED</text>
+<text x="350" y="782" class="m">PENDING</text>
+<text x="350" y="799" class="m">SUCCESS</text>
+<text x="350" y="816" class="m">FAILED</text>
+<text x="350" y="833" class="m">REFUNDED</text>
+<rect x="560" y="700" width="200" height="124" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M560,746 V704 Q560,700 564,700 H756 Q760,700 760,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="660.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="660.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">PaymentType</text>
+<text x="570" y="765" class="m">CARD</text>
+<text x="570" y="782" class="m">UPI</text>
+<text x="570" y="799" class="m">WALLET</text>
+<text x="570" y="816" class="m">NET_BANKING</text>
+<rect x="780" y="700" width="200" height="124" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M780,746 V704 Q780,700 784,700 H976 Q980,700 980,704 V746 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="880.0" y="716" text-anchor="middle" font-size="11" fill="#475569">&lt;&lt;enumeration&gt;&gt;</text>
+<text x="880.0" y="735" text-anchor="middle" font-size="14" font-weight="700" font-style="normal" fill="#0f172a">RefundStatus</text>
+<text x="790" y="765" class="m">REQUESTED</text>
+<text x="790" y="782" class="m">APPROVED</text>
+<text x="790" y="799" class="m">PROCESSED</text>
+<text x="790" y="816" class="m">REJECTED</text>
+<path d="M360,150 H440" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="372" y="143" font-size="11" fill="#475569" text-anchor="start" font-style="italic">creates</text>
+<path d="M760,130 H840" fill="none" stroke="#334155" stroke-width="1.5" marker-start="url(#dia)"/>
+<text x="792" y="123" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1</text>
+<text x="818" y="123" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1..*</text>
+<path d="M760,262 H1380 V234" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1000" y="256" font-size="11" fill="#475569" text-anchor="start" font-style="italic">0..* refunds</text>
+<path d="M600,285 V330" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="606" y="315" font-size="11" fill="#475569" text-anchor="start" font-style="italic">pays via</text>
+<path d="M1000,234 V330" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1006" y="248" font-size="11" fill="#475569" text-anchor="start" font-style="italic">processed by</text>
+<path d="M1280,330 V305 H660 V285" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="700" y="299" font-size="11" fill="#475569" text-anchor="start" font-style="italic">1 customer  →  * payments</text>
+<path d="M200,251 V330" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<text x="206" y="291" font-size="11" fill="#475569" text-anchor="start" font-style="italic">notifies</text>
+<path d="M40,160 H20 V730 H40" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<text transform="translate(14,450) rotate(-90)" font-size="11" fill="#475569" font-style="italic" text-anchor="middle">validates with</text>
+<text x="40" y="870" font-size="12" fill="#475569">Legend:  ◆─ composition   ─▷ implements (dashed) / extends   ─> association   - - > dependency</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1OWYxMTczNS1iM2JiLTQ1MzItODYyOC0yYTczYmNhMzcxYWIAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaBZHYjeM6REd0YSnxWyyGukAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo3MWU5NjEyYy0wNjVmLTRkZjItOThjNC1jODRhMjFiOWQ1NjVscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoWC0dPe4zHskpMd75HNZ6+wAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggWkpxOYlpJoFCddZFgI+PdQyb4aAUkfq4109sSrJC6LSkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaB04CX+d8ge0JCy0oklWo0oAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICKJy2K2ePEvtGa0FG+bC8hyTzstWDRxbtzIOSbx3ZW1ZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GT4kZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjU5ZjExNzM1LWIzYmItNDUzMi04NjI4LTJhNzNiY2EzNzFhYi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmE5NzA1YzM4LWI5MDctNGMzMy1hY2Y1LTgwN2FiNmE3MTBkZnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBaSnE5iWkmgUJ11kWAj491DJvhoBSR+rjXT2xKskLotKJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggLNZ+26YaOPEveheq2i5+xHhhE6SeWJmvr5q9tKbxQQiiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg4YDfht07IPeIpdvq5/Ftp7H+FizkqQbiLSviL0vHDhp0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQBSZYX6Lryq6rkBz2OOn7WTwgm03C55tG3mA/jVT3lTfO6zmBkXDoZTFyoo/zxx5gKGtrbbAQf8QxILpzvSwGb4=</c2pa:manifest></metadata></svg>
