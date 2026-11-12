@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080" font-family="DejaVu Sans, Arial, sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<defs>
+<marker id="ar" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/></marker>
+<marker id="tri" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M1,1 L11,6 L1,11 z" fill="#0b1220" stroke="#cbd5e1" stroke-width="1.5"/></marker>
+</defs>
+<rect width="1920" height="1080" fill="#0b1220"/>
+<text x="960" y="55" text-anchor="middle" font-size="38" font-weight="700" fill="#f8fafc">IP Address Filter — Low Level Design</text>
+<text x="960" y="88" text-anchor="middle" font-size="18" fill="#94a3b8">Allow / Deny requests by client IP using CIDR rules, longest-prefix match (binary trie), LRU decision cache and lock-free reads</text>
+<rect x="40" y="120" width="1000" height="605" rx="14" fill="#111a2e" stroke="#24324d" stroke-width="2"/>
+<text x="60" y="152" font-size="22" font-weight="700" fill="#e2e8f0">Class Design</text>
+<rect x="1060" y="120" width="820" height="605" rx="14" fill="#111a2e" stroke="#24324d" stroke-width="2"/>
+<text x="1080" y="152" font-size="22" font-weight="700" fill="#e2e8f0">Request Flow — how isAllowed(ip) works</text>
+<rect x="40" y="745" width="1060" height="305" rx="14" fill="#111a2e" stroke="#24324d" stroke-width="2"/>
+<text x="60" y="777" font-size="22" font-weight="700" fill="#e2e8f0">Rule Update Flow (admin changes rules without blocking readers)</text>
+<rect x="1120" y="745" width="760" height="305" rx="14" fill="#111a2e" stroke="#24324d" stroke-width="2"/>
+<text x="1140" y="777" font-size="22" font-weight="700" fill="#e2e8f0">Key Design Decisions</text>
+<text x="1020" y="145" text-anchor="end" font-size="14" fill="#94a3b8">solid arrow = uses     dashed ▷ = implements</text>
+<rect x="60" y="165" width="290" height="110" rx="8" fill="#16213a" stroke="#fb923c" stroke-width="2.5"/>
+<path d="M60,197 L60,173 Q60,165 68,165 L342,165 Q350,165 350,173 L350,197 z" fill="#fb923c" fill-opacity="0.28"/>
+<line x1="60" y1="197" x2="350" y2="197" stroke="#fb923c" stroke-width="1.5"/>
+<text x="205.0" y="187" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">IPFilterMiddleware</text>
+<text x="74" y="219" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ handle(req, next)</text>
+<text x="74" y="239" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- extractClientIp(req)</text>
+<text x="74" y="259" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">  X-Forwarded-For / remote</text>
+<rect x="395" y="165" width="290" height="110" rx="8" fill="#16213a" stroke="#a78bfa" stroke-width="2.5"/>
+<path d="M395,197 L395,173 Q395,165 403,165 L677,165 Q685,165 685,173 L685,197 z" fill="#a78bfa" fill-opacity="0.28"/>
+<line x1="395" y1="197" x2="685" y2="197" stroke="#a78bfa" stroke-width="1.5"/>
+<text x="540.0" y="187" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">«interface» IPFilter</text>
+<text x="409" y="219" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ isAllowed(ip): Decision</text>
+<text x="409" y="239" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ addRule(rule)</text>
+<text x="409" y="259" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ removeRule(id)</text>
+<rect x="730" y="165" width="290" height="110" rx="8" fill="#16213a" stroke="#94a3b8" stroke-width="2.5"/>
+<path d="M730,197 L730,173 Q730,165 738,165 L1012,165 Q1020,165 1020,173 L1020,197 z" fill="#94a3b8" fill-opacity="0.28"/>
+<line x1="730" y1="197" x2="1020" y2="197" stroke="#94a3b8" stroke-width="1.5"/>
+<text x="875.0" y="187" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">«enum» Decision</text>
+<text x="744" y="219" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">ALLOW</text>
+<text x="744" y="239" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">DENY</text>
+<text x="744" y="259" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">NO_MATCH → default policy</text>
+<rect x="60" y="320" width="290" height="170" rx="8" fill="#16213a" stroke="#fbbf24" stroke-width="2.5"/>
+<path d="M60,352 L60,328 Q60,320 68,320 L342,320 Q350,320 350,328 L350,352 z" fill="#fbbf24" fill-opacity="0.28"/>
+<line x1="60" y1="352" x2="350" y2="352" stroke="#fbbf24" stroke-width="1.5"/>
+<text x="205.0" y="342" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">DecisionCache (LRU+TTL)</text>
+<text x="74" y="374" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- map&lt;ip, Decision&gt;</text>
+<text x="74" y="394" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- capacity, ttl</text>
+<text x="74" y="414" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ get(ip)</text>
+<text x="74" y="434" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ put(ip, decision)</text>
+<text x="74" y="454" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ invalidateAll()</text>
+<rect x="395" y="320" width="290" height="170" rx="8" fill="#16213a" stroke="#60a5fa" stroke-width="2.5"/>
+<path d="M395,352 L395,328 Q395,320 403,320 L677,320 Q685,320 685,328 L685,352 z" fill="#60a5fa" fill-opacity="0.28"/>
+<line x1="395" y1="352" x2="685" y2="352" stroke="#60a5fa" stroke-width="1.5"/>
+<text x="540.0" y="342" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">IPFilterService</text>
+<text x="409" y="374" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- repo: RuleRepository</text>
+<text x="409" y="394" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- cache: DecisionCache</text>
+<text x="409" y="414" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- matcher: IPMatcher</text>
+<text x="409" y="434" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- defaultPolicy: Decision</text>
+<text x="409" y="454" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ isAllowed(ip)</text>
+<text x="409" y="474" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ addRule / removeRule</text>
+<rect x="730" y="320" width="290" height="170" rx="8" fill="#16213a" stroke="#34d399" stroke-width="2.5"/>
+<path d="M730,352 L730,328 Q730,320 738,320 L1012,320 Q1020,320 1020,328 L1020,352 z" fill="#34d399" fill-opacity="0.28"/>
+<line x1="730" y1="352" x2="1020" y2="352" stroke="#34d399" stroke-width="1.5"/>
+<text x="875.0" y="342" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">RuleRepository</text>
+<text x="744" y="374" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- rules: Map&lt;id, Rule&gt;</text>
+<text x="744" y="394" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ save(rule)</text>
+<text x="744" y="414" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ delete(id)</text>
+<text x="744" y="434" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ findAll(): List&lt;Rule&gt;</text>
+<text x="744" y="454" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ version(): long</text>
+<text x="744" y="474" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">(in-memory + DB/config)</text>
+<rect x="60" y="535" width="290" height="170" rx="8" fill="#16213a" stroke="#f472b6" stroke-width="2.5"/>
+<path d="M60,567 L60,543 Q60,535 68,535 L342,535 Q350,535 350,543 L350,567 z" fill="#f472b6" fill-opacity="0.28"/>
+<line x1="60" y1="567" x2="350" y2="567" stroke="#f472b6" stroke-width="1.5"/>
+<text x="205.0" y="557" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">BinaryTrieMatcher</text>
+<text x="74" y="589" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- root: TrieNode (bit 0/1)</text>
+<text x="74" y="609" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ build(rules)</text>
+<text x="74" y="629" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ match(ip): Rule?</text>
+<text x="74" y="649" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">IPv4: 32 levels</text>
+<text x="74" y="669" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">IPv6: 128 levels</text>
+<text x="74" y="689" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">Lookup: O(L), L = bits</text>
+<rect x="395" y="535" width="290" height="170" rx="8" fill="#16213a" stroke="#f472b6" stroke-width="2.5"/>
+<path d="M395,567 L395,543 Q395,535 403,535 L677,535 Q685,535 685,543 L685,567 z" fill="#f472b6" fill-opacity="0.28"/>
+<line x1="395" y1="567" x2="685" y2="567" stroke="#f472b6" stroke-width="1.5"/>
+<text x="540.0" y="557" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">«interface» IPMatcher</text>
+<text x="409" y="589" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ build(rules)</text>
+<text x="409" y="609" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">+ match(ip): Rule?</text>
+<text x="409" y="629" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1"></text>
+<text x="409" y="649" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">Strategy pattern: swap in</text>
+<text x="409" y="669" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">Exact / Range / GeoIP matcher</text>
+<rect x="730" y="535" width="290" height="170" rx="8" fill="#16213a" stroke="#2dd4bf" stroke-width="2.5"/>
+<path d="M730,567 L730,543 Q730,535 738,535 L1012,535 Q1020,535 1020,543 L1020,567 z" fill="#2dd4bf" fill-opacity="0.28"/>
+<line x1="730" y1="567" x2="1020" y2="567" stroke="#2dd4bf" stroke-width="1.5"/>
+<text x="875.0" y="557" text-anchor="middle" font-size="16" font-weight="700" fill="#f1f5f9">Rule</text>
+<text x="744" y="589" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- id</text>
+<text x="744" y="609" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- cidr: "10.0.0.0/8"</text>
+<text x="744" y="629" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- action: ALLOW | DENY</text>
+<text x="744" y="649" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- priority: int</text>
+<text x="744" y="669" font-size="14" font-family="DejaVu Sans Mono, monospace" fill="#cbd5e1">- enabled: bool</text>
+<line x1="350" y1="220" x2="395" y2="220" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="540" y1="320" x2="540" y2="275" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#tri)"/>
+<line x1="395" y1="405" x2="350" y2="405" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="685" y1="405" x2="730" y2="405" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="540" y1="490" x2="540" y2="535" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="350" y1="620" x2="395" y2="620" stroke="#cbd5e1" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#tri)"/>
+<line x1="685" y1="620" x2="730" y2="620" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<line x1="875" y1="490" x2="875" y2="535" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<circle cx="1097" cy="217" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="223" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">1</text>
+<text x="1132" y="213" font-size="19" font-weight="700" fill="#f1f5f9">Request arrives</text>
+<text x="1132" y="238" font-size="15" fill="#aab6c9">Middleware extracts client IP (X-Forwarded-For only from trusted proxy, else remote addr).</text>
+<line x1="1097" y1="235" x2="1097" y2="265" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="283" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="289" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">2</text>
+<text x="1132" y="279" font-size="19" font-weight="700" fill="#f1f5f9">Parse &amp; normalize IP</text>
+<text x="1132" y="304" font-size="15" fill="#aab6c9">Convert IPv4 / IPv6 text to a 32 / 128-bit value. Invalid format → reject (400).</text>
+<line x1="1097" y1="301" x2="1097" y2="331" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="349" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="355" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">3</text>
+<text x="1132" y="345" font-size="19" font-weight="700" fill="#f1f5f9">DecisionCache lookup</text>
+<text x="1132" y="370" font-size="15" fill="#aab6c9">Hit → return cached ALLOW / DENY immediately and skip matching (hot IPs are O(1)).</text>
+<line x1="1097" y1="367" x2="1097" y2="397" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="415" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="421" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">4</text>
+<text x="1132" y="411" font-size="19" font-weight="700" fill="#f1f5f9">Cache miss → trie match</text>
+<text x="1132" y="436" font-size="15" fill="#aab6c9">matcher.match(ip) walks the binary trie bit by bit and collects matching CIDR rules.</text>
+<line x1="1097" y1="433" x2="1097" y2="463" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="481" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="487" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">5</text>
+<text x="1132" y="477" font-size="19" font-weight="700" fill="#f1f5f9">Resolve conflicts</text>
+<text x="1132" y="502" font-size="15" fill="#aab6c9">Longest prefix (most specific) wins; tie → higher priority; tie → DENY beats ALLOW.</text>
+<line x1="1097" y1="499" x2="1097" y2="529" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="547" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="553" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">6</text>
+<text x="1132" y="543" font-size="19" font-weight="700" fill="#f1f5f9">No rule matched?</text>
+<text x="1132" y="568" font-size="15" fill="#aab6c9">Apply default policy: allowlist mode → DENY, blocklist mode → ALLOW.</text>
+<line x1="1097" y1="565" x2="1097" y2="595" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="613" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="619" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">7</text>
+<text x="1132" y="609" font-size="19" font-weight="700" fill="#f1f5f9">Cache + audit log</text>
+<text x="1132" y="634" font-size="15" fill="#aab6c9">Store decision in cache; log (ip, ruleId, decision, timestamp) for audit / metrics.</text>
+<line x1="1097" y1="631" x2="1097" y2="661" stroke="#475569" stroke-width="2"/>
+<circle cx="1097" cy="679" r="18" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2"/>
+<text x="1097" y="685" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">8</text>
+<text x="1132" y="675" font-size="19" font-weight="700" fill="#f1f5f9">Final response</text>
+<text x="1132" y="700" font-size="15" fill="#aab6c9">ALLOW → pass to next handler / backend.   DENY → 403 Forbidden.</text>
+<rect x="60" y="800" width="185" height="100" rx="10" fill="#16213a" stroke="#60a5fa" stroke-width="2"/>
+<text x="152" y="832" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9">Admin API</text>
+<text x="152" y="858" text-anchor="middle" font-size="13.5" fill="#aab6c9">add / update / delete</text>
+<text x="152" y="877" text-anchor="middle" font-size="13.5" fill="#aab6c9">rule</text>
+<line x1="245" y1="850" x2="265" y2="850" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="265" y="800" width="185" height="100" rx="10" fill="#16213a" stroke="#60a5fa" stroke-width="2"/>
+<text x="357" y="832" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9">Validate</text>
+<text x="357" y="858" text-anchor="middle" font-size="13.5" fill="#aab6c9">parse CIDR, check</text>
+<text x="357" y="877" text-anchor="middle" font-size="13.5" fill="#aab6c9">action, priority</text>
+<line x1="450" y1="850" x2="470" y2="850" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="470" y="800" width="185" height="100" rx="10" fill="#16213a" stroke="#60a5fa" stroke-width="2"/>
+<text x="562" y="832" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9">Repo.save</text>
+<text x="562" y="858" text-anchor="middle" font-size="13.5" fill="#aab6c9">persist rule,</text>
+<text x="562" y="877" text-anchor="middle" font-size="13.5" fill="#aab6c9">version++</text>
+<line x1="655" y1="850" x2="675" y2="850" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="675" y="800" width="185" height="100" rx="10" fill="#16213a" stroke="#60a5fa" stroke-width="2"/>
+<text x="767" y="832" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9">Build new Trie</text>
+<text x="767" y="858" text-anchor="middle" font-size="13.5" fill="#aab6c9">copy-on-write snapshot</text>
+<text x="767" y="877" text-anchor="middle" font-size="13.5" fill="#aab6c9">from all rules</text>
+<line x1="860" y1="850" x2="880" y2="850" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+<rect x="880" y="800" width="185" height="100" rx="10" fill="#16213a" stroke="#60a5fa" stroke-width="2"/>
+<text x="972" y="832" text-anchor="middle" font-size="17" font-weight="700" fill="#f1f5f9">Atomic swap</text>
+<text x="972" y="858" text-anchor="middle" font-size="13.5" fill="#aab6c9">replace trie ref +</text>
+<text x="972" y="877" text-anchor="middle" font-size="13.5" fill="#aab6c9">cache.invalidateAll()</text>
+<text x="60" y="945" font-size="15.5" fill="#cbd5e1">Readers never block: they use the current immutable trie snapshot; writers build a new trie and swap the reference atomically.</text>
+<text x="60" y="979" font-size="15.5" fill="#cbd5e1">Example: 10.0.0.0/8 DENY + 10.1.0.0/16 ALLOW  →  10.1.5.9 is ALLOWED (/16 is more specific), 10.9.9.9 is DENIED.</text>
+<text x="60" y="1013" font-size="15.5" fill="#cbd5e1">Multi-node setup: nodes poll repo.version() or listen to pub/sub, then rebuild their local trie.</text>
+<circle cx="1148" cy="795" r="5" fill="#34d399"/>
+<text x="1165" y="800" font-size="16" fill="#cbd5e1">Strategy pattern: IPMatcher is pluggable (trie, range list, GeoIP).</text>
+<circle cx="1148" cy="837" r="5" fill="#34d399"/>
+<text x="1165" y="842" font-size="16" fill="#cbd5e1">Binary trie gives longest-prefix match in O(32) / O(128), independent of rule count.</text>
+<circle cx="1148" cy="879" r="5" fill="#34d399"/>
+<text x="1165" y="884" font-size="16" fill="#cbd5e1">Copy-on-write snapshot: lock-free reads, safe concurrent updates.</text>
+<circle cx="1148" cy="921" r="5" fill="#34d399"/>
+<text x="1165" y="926" font-size="16" fill="#cbd5e1">LRU cache with TTL absorbs repeated IPs; cleared on every rule change.</text>
+<circle cx="1148" cy="963" r="5" fill="#34d399"/>
+<text x="1165" y="968" font-size="16" fill="#cbd5e1">Trust X-Forwarded-For only from known proxies (prevents IP spoofing).</text>
+<circle cx="1148" cy="1005" r="5" fill="#34d399"/>
+<text x="1165" y="1010" font-size="16" fill="#cbd5e1">Fail-safe: define default policy and fail-open / fail-closed behaviour.</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTo1NjZhN2QwOC0wN2JkLTRkMTktODlkZC0xNDQyOWUzN2IwZTMAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaGlClK/IB8kQZgpIgM6gWQUAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo0ODY1YzU5Ni04NWI2LTQ5MWMtYWZlMi1hMGYzZjY3ZTc4YzhscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNohCy7PpGsoSyCKvbeINBYnAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggPfIwG1zaWEDXGynbahdT+kPZSprepwVxgyt2tWY2eeukZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaEFnlbSWFTmuMEfGAQ97jR0AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIFtEWlVp62kaz1rJm0ZNlrUKPi+LtjiJfUcNT+2zxTmDZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GUyuZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjU2NmE3ZDA4LTA3YmQtNGQxOS04OWRkLTE0NDI5ZTM3YjBlMy9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjgwNTBhNmEwLTBhZDctNDk4Ny1iZTg4LWViNTllMGQ4ZDQxOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA98jAbXNpYQNcbKdtqF1P6Q9lKmt6nBXGDK3a1ZjZ566JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggrcaj3ubMadxFJXHnr42ZCU0flD8RwXULZylNhvNO1e6iY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggfj6U6u2px/QiMgkG0UQy534hbS4ZJvDGpKQF6TkUm2R0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQE3K7Ty2peS4Iymbon9I9dlxf/ugsI5PHBQ3aJy4JAOp1aQGEusKsxnNSgDADIPMBKlX1ofwsBxeY3nVYzZHIY8=</c2pa:manifest></metadata></svg>

@@ -331,3 +331,6 @@ Parking Lot
 
 PaymentSystem
 ![payment_system_lld.svg](../LLD/payment_system_lld.svg)
+
+IP Address Filter
+![ip_address_filter_lld.svg](../LLD/ip_address_filter_lld.svg)
