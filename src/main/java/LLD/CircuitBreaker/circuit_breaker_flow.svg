@@ -1,0 +1,359 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 1560 1704" width="1560" height="1704" font-family="Helvetica,Arial,sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<style>.m{font-family:Menlo,Consolas,'DejaVu Sans Mono',monospace;font-size:12px;fill:#1e293b;white-space:pre}</style>
+<defs><marker id="arr" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto"><path d="M0,0 L11,6 L0,12" fill="none" stroke="#334155" stroke-width="1.5"/></marker></defs>
+<rect width="1560" height="1704" fill="#ffffff"/>
+<text x="780" y="34" text-anchor="middle" font-size="22" font-weight="700" fill="#0f172a">Circuit Breaker – End-to-End Flow (worked example)</text>
+<text x="780" y="58" text-anchor="middle" font-size="12" fill="#475569">Example: ServiceClient calls PaymentService   |   config: windowSize=10, failureThreshold=50%, successThreshold=2, openTimeoutMs=30000, halfOpenMaxCalls=3</text>
+<circle cx="54" cy="98" r="14" fill="#0f172a"/>
+<text x="54" y="103" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">A</text>
+<text x="80" y="104" text-anchor="start" font-size="18" font-weight="700" fill="#0f172a">SETUP – creating the circuit breaker (once, at application start)</text>
+<rect x="40" y="124" width="270" height="170" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,154 V128 Q40,124 44,124 H306 Q310,124 310,128 V154 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="175.0" y="144.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">1. ServiceClient starts</text>
+<text x="50" y="176" text-anchor="start" class="m">new ServiceClient()</text>
+<text x="50" y="192" text-anchor="start" class="m">CircuitBreakerRegistry</text>
+<text x="50" y="208" text-anchor="start" class="m">  .getInstance()</text>
+<text x="50" y="224" text-anchor="start" class="m">breakers = { }  // empty</text>
+<text x="50" y="248" text-anchor="start" font-size="12" font-style="italic" fill="#475569">Singleton: one registry per app</text>
+<path d="M310,209.0 H340" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="340" y="124" width="270" height="170" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M340,154 V128 Q340,124 344,124 H606 Q610,124 610,128 V154 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="475.0" y="144.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">2. Build the config</text>
+<text x="350" y="176" text-anchor="start" class="m">CircuitBreakerConfig.builder()</text>
+<text x="350" y="192" text-anchor="start" class="m">  .windowSize(10)</text>
+<text x="350" y="208" text-anchor="start" class="m">  .failureThreshold(50) // %</text>
+<text x="350" y="224" text-anchor="start" class="m">  .successThreshold(2)</text>
+<text x="350" y="240" text-anchor="start" class="m">  .openTimeoutMs(30000)</text>
+<text x="350" y="256" text-anchor="start" class="m">  .halfOpenMaxCalls(3).build()</text>
+<path d="M610,209.0 H640" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="640" y="124" width="270" height="170" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M640,154 V128 Q640,124 644,124 H906 Q910,124 910,128 V154 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="775.0" y="144.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">3. getOrCreate(name, cfg)</text>
+<text x="650" y="176" text-anchor="start" class="m">registry.getOrCreate(</text>
+<text x="650" y="192" text-anchor="start" class="m">  "payment-service", cfg)</text>
+<text x="650" y="216" text-anchor="start" font-size="12" font-style="italic" fill="#475569">-&gt; looks up the breakers map</text>
+<text x="650" y="232" text-anchor="start" font-size="12" font-style="italic" fill="#475569">-&gt; not found, so creates one</text>
+<text x="650" y="248" text-anchor="start" font-size="12" font-style="italic" fill="#475569">-&gt; later calls return same object</text>
+<path d="M910,209.0 H940" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="940" y="124" width="270" height="170" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M940,154 V128 Q940,124 944,124 H1206 Q1210,124 1210,128 V154 Z" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="1075.0" y="144.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">4. new CircuitBreaker(...)</text>
+<text x="950" y="176" text-anchor="start" class="m">state    = new ClosedState()</text>
+<text x="950" y="192" text-anchor="start" class="m">metrics  = new SlidingWindow(10)</text>
+<text x="950" y="208" text-anchor="start" class="m">fallback = new CachedFallback()</text>
+<text x="950" y="224" text-anchor="start" class="m">listeners= [Log, Alert]</text>
+<text x="950" y="240" text-anchor="start" class="m">lastFailureTime = 0</text>
+<path d="M1210,209.0 H1240" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="1240" y="124" width="270" height="170" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1240,154 V128 Q1240,124 1244,124 H1506 Q1510,124 1510,128 V154 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="1375.0" y="144.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">5. Stored and ready</text>
+<text x="1250" y="176" text-anchor="start" class="m">breakers.put(</text>
+<text x="1250" y="192" text-anchor="start" class="m">  "payment-service", cb)</text>
+<text x="1250" y="216" text-anchor="start" font-size="12" font-style="italic" fill="#475569">State  : CLOSED</text>
+<text x="1250" y="232" text-anchor="start" font-size="12" font-style="italic" fill="#475569">Window : [ ]  (empty)</text>
+<text x="1250" y="248" text-anchor="start" font-size="12" font-style="italic" fill="#475569">ServiceClient.breaker = cb</text>
+<line x1="40" y1="332" x2="1520" y2="332" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<circle cx="54" cy="358" r="14" fill="#0f172a"/>
+<text x="54" y="363" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">B</text>
+<text x="80" y="364" text-anchor="start" font-size="18" font-weight="700" fill="#0f172a">INVOCATION – what happens inside every callRemote()</text>
+<rect x="40" y="400" width="200" height="84" rx="4" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="50" y="420" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">ServiceClient</text>
+<text x="50" y="438" text-anchor="start" class="m">callRemote()</text>
+<text x="50" y="454" text-anchor="start" class="m">breaker.execute(() -&gt;</text>
+<text x="50" y="470" text-anchor="start" class="m">  http.post(payment))</text>
+<path d="M240,442 H270" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="270" y="400" width="200" height="84" rx="4" fill="#dbeafe" stroke="#334155" stroke-width="1.5"/>
+<text x="280" y="420" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">CircuitBreaker</text>
+<text x="280" y="438" text-anchor="start" class="m">execute(call)</text>
+<text x="280" y="454" text-anchor="start" class="m">asks current state:</text>
+<text x="280" y="470" text-anchor="start" class="m">state.allowRequest()</text>
+<path d="M470,442 H540" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="540,442 640,387 740,442 640,497" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="640" y="440" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">allowRequest()</text>
+<text x="640" y="456" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">returns true ?</text>
+<path d="M740,442 H790" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="765" y="434" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">yes</text>
+<rect x="790" y="400" width="200" height="84" rx="4" fill="#f1f5f9" stroke="#334155" stroke-width="1.5"/>
+<text x="800" y="420" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">Run the real call</text>
+<text x="800" y="438" text-anchor="start" class="m">supplier.get()</text>
+<text x="800" y="454" text-anchor="start" class="m">-&gt; PaymentService</text>
+<text x="800" y="470" text-anchor="start" class="m">   (remote HTTP)</text>
+<path d="M990,442 H1045" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<polygon points="1045,442 1140,387 1235,442 1140,497" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="1140" y="440" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">remote call</text>
+<text x="1140" y="456" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">succeeded ?</text>
+<path d="M1235,442 H1290" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1262" y="434" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">yes</text>
+<rect x="1290" y="400" width="230" height="84" rx="4" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="1300" y="420" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">SUCCESS path</text>
+<text x="1300" y="438" text-anchor="start" class="m">state.onSuccess(cb)</text>
+<text x="1300" y="454" text-anchor="start" class="m">window.recordSuccess()</text>
+<text x="1300" y="470" text-anchor="start" class="m">return result to caller</text>
+<path d="M1140,497 V530" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1150" y="520" text-anchor="start" font-size="11" font-style="italic" fill="#475569">no</text>
+<rect x="990" y="530" width="300" height="176" rx="4" fill="#fee2e2" stroke="#334155" stroke-width="1.5"/>
+<text x="1000" y="550" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">FAILURE path – onFailure(e)</text>
+<text x="1000" y="570" text-anchor="start" class="m">window.recordFailure()</text>
+<text x="1000" y="586" text-anchor="start" class="m">rate = window.failureRate()</text>
+<text x="1000" y="602" text-anchor="start" class="m">if rate &gt;= 50%:</text>
+<text x="1000" y="618" text-anchor="start" class="m">  transitionTo(OPEN)</text>
+<text x="1000" y="634" text-anchor="start" class="m">  lastFailureTime = now()</text>
+<text x="1000" y="650" text-anchor="start" class="m">  notify listeners</text>
+<text x="1000" y="666" text-anchor="start" class="m">else: stay CLOSED</text>
+<text x="1000" y="692" text-anchor="start" font-size="12" font-style="italic" fill="#475569">then fallback.handle(e) -&gt; caller</text>
+<path d="M640,497 V530" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="650" y="520" text-anchor="start" font-size="11" font-style="italic" fill="#475569">no (OPEN)</text>
+<rect x="525" y="530" width="230" height="84" rx="4" fill="#fee2e2" stroke="#334155" stroke-width="1.5"/>
+<text x="535" y="550" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">Reject fast</text>
+<text x="535" y="568" text-anchor="start" class="m">throw new</text>
+<text x="535" y="584" text-anchor="start" class="m">  CircuitOpenException(name)</text>
+<text x="535" y="600" text-anchor="start" class="m">no remote call is made</text>
+<path d="M525,572 H480" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<rect x="270" y="530" width="210" height="84" rx="4" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="280" y="550" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">fallback.handle(e)</text>
+<text x="280" y="568" text-anchor="start" class="m">CachedFallback returns</text>
+<text x="280" y="584" text-anchor="start" class="m">last good response, or</text>
+<text x="280" y="600" text-anchor="start" class="m">DefaultFallback value</text>
+<text x="270" y="632" text-anchor="start" font-size="11" font-style="italic" fill="#475569">-&gt; returned to ServiceClient: caller gets an answer, not an outage</text>
+<text x="40" y="722" text-anchor="start" font-size="12" fill="#334155">allowRequest() by state:   CLOSED = always true   |   OPEN = false until openTimeoutMs elapsed (then moves to HALF_OPEN)   |   HALF_OPEN = true only for the first halfOpenMaxCalls (3) probe calls</text>
+<line x1="40" y1="782" x2="1520" y2="782" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<circle cx="54" cy="808" r="14" fill="#0f172a"/>
+<text x="54" y="813" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">C</text>
+<text x="80" y="814" text-anchor="start" font-size="18" font-weight="700" fill="#0f172a">SLIDING WINDOW – the last 10 results live in a Deque&lt;Boolean&gt; (FIFO)</text>
+<text x="40" y="852" text-anchor="start" font-size="11" font-weight="700" fill="#475569">event</text>
+<text x="380" y="852" text-anchor="start" font-size="11" font-weight="700" fill="#475569">◀ oldest</text>
+<text x="580" y="852" text-anchor="middle" font-size="11" font-weight="700" fill="#475569">window (size = 10)</text>
+<text x="778" y="852" text-anchor="end" font-size="11" font-weight="700" fill="#475569">newest ▶</text>
+<text x="810" y="852" text-anchor="start" font-size="11" font-weight="700" fill="#475569">out / in</text>
+<text x="1000" y="852" text-anchor="start" font-size="11" font-weight="700" fill="#475569">failureRate()   (tick = 50% threshold)</text>
+<text x="40" y="883" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">call #10 returns OK</text>
+<text x="40" y="899" text-anchor="start" font-size="11" fill="#475569">window has just filled up</text>
+<rect x="380" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="399" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="420" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="439" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="460" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="479" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="500" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="519" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="540" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="559" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="580" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="599" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="620" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="639" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="660" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="679" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="700" y="868" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="719" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="740" y="868" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="759" y="892" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<text x="810" y="891" text-anchor="start" font-size="13" fill="#475569">—</text>
+<text x="1000" y="882" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">1 F / 10 = 10 %</text>
+<rect x="1000" y="890" width="200" height="10" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+<rect x="1000" y="890" width="20" height="10" rx="3" fill="#22c55e" stroke="#22c55e" stroke-width="0"/>
+<line x1="1100" y1="886" x2="1100" y2="904" stroke="#0f172a" stroke-width="2"/>
+<text x="1215" y="899" text-anchor="start" font-size="12" fill="#166534">below 50 %  -&gt; stays CLOSED</text>
+<text x="40" y="943" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">call #11 FAILS</text>
+<text x="40" y="959" text-anchor="start" font-size="11" fill="#475569">evict oldest S, add F</text>
+<rect x="380" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="399" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="420" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="439" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="460" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="479" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="500" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="519" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="540" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="559" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="580" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="599" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="620" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="639" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="660" y="928" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="679" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="700" y="928" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="719" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="740" y="928" width="38" height="36" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2.5"/>
+<text x="759" y="952" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<text x="810" y="951" text-anchor="start" font-size="11" fill="#475569">out</text>
+<rect x="834" y="931" width="30" height="30" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="849" y="952" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">S</text>
+<text x="876" y="951" text-anchor="start" font-size="11" fill="#475569">in</text>
+<rect x="892" y="931" width="30" height="30" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2"/>
+<text x="907" y="952" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">F</text>
+<text x="1000" y="942" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">2 F / 10 = 20 %</text>
+<rect x="1000" y="950" width="200" height="10" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+<rect x="1000" y="950" width="40" height="10" rx="3" fill="#22c55e" stroke="#22c55e" stroke-width="0"/>
+<line x1="1100" y1="946" x2="1100" y2="964" stroke="#0f172a" stroke-width="2"/>
+<text x="1215" y="959" text-anchor="start" font-size="12" fill="#166534">below 50 %  -&gt; stays CLOSED</text>
+<text x="40" y="1003" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">call #12 FAILS</text>
+<text x="40" y="1019" text-anchor="start" font-size="11" fill="#475569">evict oldest S, add F</text>
+<rect x="380" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="399" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="420" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="439" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="460" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="479" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="500" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="519" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="540" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="559" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="580" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="599" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="620" y="988" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="639" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="660" y="988" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="679" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="700" y="988" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="719" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="740" y="988" width="38" height="36" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2.5"/>
+<text x="759" y="1012" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<text x="810" y="1011" text-anchor="start" font-size="11" fill="#475569">out</text>
+<rect x="834" y="991" width="30" height="30" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="849" y="1012" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">S</text>
+<text x="876" y="1011" text-anchor="start" font-size="11" fill="#475569">in</text>
+<rect x="892" y="991" width="30" height="30" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2"/>
+<text x="907" y="1012" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">F</text>
+<text x="1000" y="1002" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">3 F / 10 = 30 %</text>
+<rect x="1000" y="1010" width="200" height="10" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+<rect x="1000" y="1010" width="60" height="10" rx="3" fill="#f59e0b" stroke="#f59e0b" stroke-width="0"/>
+<line x1="1100" y1="1006" x2="1100" y2="1024" stroke="#0f172a" stroke-width="2"/>
+<text x="1215" y="1019" text-anchor="start" font-size="12" fill="#166534">below 50 %  -&gt; stays CLOSED</text>
+<text x="40" y="1063" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">call #13 FAILS</text>
+<text x="40" y="1079" text-anchor="start" font-size="11" fill="#475569">evict oldest S, add F</text>
+<rect x="380" y="1048" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="399" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="420" y="1048" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="439" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="460" y="1048" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="479" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="500" y="1048" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="519" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="540" y="1048" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="559" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="580" y="1048" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="599" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="620" y="1048" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="639" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="660" y="1048" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="679" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="700" y="1048" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="719" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="740" y="1048" width="38" height="36" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2.5"/>
+<text x="759" y="1072" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<text x="810" y="1071" text-anchor="start" font-size="11" fill="#475569">out</text>
+<rect x="834" y="1051" width="30" height="30" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="849" y="1072" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">S</text>
+<text x="876" y="1071" text-anchor="start" font-size="11" fill="#475569">in</text>
+<rect x="892" y="1051" width="30" height="30" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2"/>
+<text x="907" y="1072" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">F</text>
+<text x="1000" y="1062" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">4 F / 10 = 40 %</text>
+<rect x="1000" y="1070" width="200" height="10" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+<rect x="1000" y="1070" width="80" height="10" rx="3" fill="#f59e0b" stroke="#f59e0b" stroke-width="0"/>
+<line x1="1100" y1="1066" x2="1100" y2="1084" stroke="#0f172a" stroke-width="2"/>
+<text x="1215" y="1079" text-anchor="start" font-size="12" fill="#166534">below 50 %  -&gt; stays CLOSED</text>
+<rect x="34" y="1102" width="1492" height="48" rx="6" fill="#fff1f2" stroke="#ef4444" stroke-width="1.5"/>
+<text x="40" y="1123" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">call #14 FAILS</text>
+<text x="40" y="1139" text-anchor="start" font-size="11" fill="#475569">evict oldest S, add F  -&gt; TRIP!</text>
+<rect x="380" y="1108" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="399" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="420" y="1108" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="439" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="460" y="1108" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="479" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="500" y="1108" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="519" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="540" y="1108" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="559" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="580" y="1108" width="38" height="36" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="599" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">S</text>
+<rect x="620" y="1108" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="639" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="660" y="1108" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="679" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="700" y="1108" width="38" height="36" rx="3" fill="#fecaca" stroke="#64748b" stroke-width="1"/>
+<text x="719" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<rect x="740" y="1108" width="38" height="36" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2.5"/>
+<text x="759" y="1132" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">F</text>
+<text x="810" y="1131" text-anchor="start" font-size="11" fill="#475569">out</text>
+<rect x="834" y="1111" width="30" height="30" rx="3" fill="#bbf7d0" stroke="#64748b" stroke-width="1"/>
+<text x="849" y="1132" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">S</text>
+<text x="876" y="1131" text-anchor="start" font-size="11" fill="#475569">in</text>
+<rect x="892" y="1111" width="30" height="30" rx="3" fill="#fecaca" stroke="#0f172a" stroke-width="2"/>
+<text x="907" y="1132" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">F</text>
+<text x="1000" y="1122" text-anchor="start" font-size="13" font-weight="700" fill="#0f172a">5 F / 10 = 50 %</text>
+<rect x="1000" y="1130" width="200" height="10" rx="3" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+<rect x="1000" y="1130" width="100" height="10" rx="3" fill="#ef4444" stroke="#ef4444" stroke-width="0"/>
+<line x1="1100" y1="1126" x2="1100" y2="1144" stroke="#0f172a" stroke-width="2"/>
+<text x="1215" y="1139" text-anchor="start" font-size="13" font-weight="700" fill="#b91c1c">&gt;= 50 %  -&gt; TRIP: CLOSED -&gt; OPEN</text>
+<rect x="40" y="1166" width="1480" height="84" rx="6" fill="#f8fafc" stroke="#94a3b8" stroke-width="1"/>
+<text x="54" y="1188" text-anchor="start" class="m">recordSuccess() / recordFailure():  if (results.size() == windowSize) results.pollFirst();  results.addLast(true | false);</text>
+<text x="54" y="1208" text-anchor="start" class="m">failureRate() = count(false) / results.size() * 100      (only judged once the window is full, so 1-2 early failures cannot trip it)</text>
+<text x="54" y="1228" text-anchor="start" class="m">reset() = results.clear()      (called when HALF_OPEN -&gt; CLOSED, so old failures never count against a recovered service)</text>
+<line x1="40" y1="1262" x2="1520" y2="1262" stroke="#cbd5e1" stroke-dasharray="4 4"/>
+<circle cx="54" cy="1288" r="14" fill="#0f172a"/>
+<text x="54" y="1293" text-anchor="middle" font-size="14" font-weight="700" fill="#ffffff">D</text>
+<text x="80" y="1294" text-anchor="start" font-size="18" font-weight="700" fill="#0f172a">BREAKING AND RECOVERY – state timeline for the same example</text>
+<rect x="40" y="1362" width="360" height="50" rx="14" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="220.0" y="1384" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">CLOSED</text>
+<text x="220.0" y="1401" text-anchor="middle" font-size="11" fill="#334155">requests flow, results recorded</text>
+<rect x="430" y="1362" width="360" height="50" rx="14" fill="#fee2e2" stroke="#334155" stroke-width="1.5"/>
+<text x="610.0" y="1384" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">OPEN</text>
+<text x="610.0" y="1401" text-anchor="middle" font-size="11" fill="#334155">fail fast, no remote calls</text>
+<rect x="820" y="1362" width="360" height="50" rx="14" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="1000.0" y="1384" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">HALF_OPEN</text>
+<text x="1000.0" y="1401" text-anchor="middle" font-size="11" fill="#334155">max 3 probe calls allowed</text>
+<rect x="1210" y="1362" width="310" height="50" rx="14" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="1365.0" y="1384" text-anchor="middle" font-size="16" font-weight="700" fill="#0f172a">CLOSED</text>
+<text x="1365.0" y="1401" text-anchor="middle" font-size="11" fill="#334155">window reset, normal again</text>
+<path d="M400,1387 H430" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="415.0" y="1354" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">rate &gt;= 50%</text>
+<path d="M790,1387 H820" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="805.0" y="1354" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">30 s elapsed</text>
+<path d="M1180,1387 H1210" fill="none" stroke="#334155" stroke-width="1.5" marker-end="url(#arr)"/>
+<text x="1195.0" y="1354" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">2 probes OK</text>
+<path d="M1000,1362 C950,1314 660,1314 610,1362" fill="none" stroke="#334155" stroke-width="1.5" stroke-dasharray="6 4" marker-end="url(#arr)"/>
+<text x="805" y="1318" text-anchor="middle" font-size="11" font-style="italic" fill="#475569">any probe fails -&gt; back to OPEN (timer restarts)</text>
+<text x="220.0" y="1434" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">calls #1 ... #14</text>
+<text x="610.0" y="1434" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">10:00:00  -&gt;  10:00:30</text>
+<text x="1000.0" y="1434" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">10:00:30  -&gt;  ~10:00:31</text>
+<text x="1365.0" y="1434" text-anchor="middle" font-size="12" font-weight="700" fill="#334155">from 10:00:31 onward</text>
+<rect x="40" y="1454" width="360" height="190" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M40,1484 V1458 Q40,1454 44,1454 H396 Q400,1454 400,1458 V1484 Z" fill="#fee2e2" stroke="#334155" stroke-width="1.5"/>
+<text x="220.0" y="1474.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">At the trip</text>
+<text x="52" y="1508" text-anchor="start" font-size="12" fill="#1e293b">call #14 fails -&gt; onFailure(e)</text>
+<text x="52" y="1528" text-anchor="start" font-size="12" fill="#1e293b">window: 5 F / 10 = 50% &gt;= failureThreshold</text>
+<text x="52" y="1548" text-anchor="start" font-size="12" fill="#1e293b">transitionTo(OPEN):</text>
+<text x="52" y="1568" text-anchor="start" font-size="12" fill="#1e293b">   lastFailureTime = 10:00:00</text>
+<text x="52" y="1588" text-anchor="start" font-size="12" fill="#1e293b">   state = new OpenState()</text>
+<text x="52" y="1608" text-anchor="start" font-size="12" fill="#1e293b">   LogListener logs CLOSED -&gt; OPEN</text>
+<text x="52" y="1628" text-anchor="start" font-size="12" fill="#1e293b">   AlertListener pages on-call</text>
+<rect x="430" y="1454" width="360" height="190" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M430,1484 V1458 Q430,1454 434,1454 H786 Q790,1454 790,1458 V1484 Z" fill="#fee2e2" stroke="#334155" stroke-width="1.5"/>
+<text x="610.0" y="1474.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">While OPEN (the breaker is "broken")</text>
+<text x="442" y="1508" text-anchor="start" font-size="12" fill="#1e293b">every callRemote() -&gt; OpenState.allowRequest()</text>
+<text x="442" y="1528" text-anchor="start" font-size="12" fill="#1e293b">   now - lastFailureTime &lt; 30000 -&gt; false</text>
+<text x="442" y="1548" text-anchor="start" font-size="12" fill="#1e293b">execute() throws CircuitOpenException</text>
+<text x="442" y="1568" text-anchor="start" font-size="12" fill="#1e293b">fallback.handle(e) -&gt; cached response</text>
+<text x="442" y="1588" text-anchor="start" font-size="12" fill="#1e293b">PaymentService now gets ZERO traffic, so it</text>
+<text x="442" y="1608" text-anchor="start" font-size="12" fill="#1e293b">can recover; callers fail in ~0 ms, no pile-up</text>
+<rect x="820" y="1454" width="360" height="190" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M820,1484 V1458 Q820,1454 824,1454 H1176 Q1180,1454 1180,1458 V1484 Z" fill="#fef3c7" stroke="#334155" stroke-width="1.5"/>
+<text x="1000.0" y="1474.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">First call after 30 s</text>
+<text x="832" y="1508" text-anchor="start" font-size="12" fill="#1e293b">allowRequest(): now - lastFailureTime &gt;= 30000</text>
+<text x="832" y="1528" text-anchor="start" font-size="12" fill="#1e293b">   transitionTo(HALF_OPEN)</text>
+<text x="832" y="1548" text-anchor="start" font-size="12" fill="#1e293b">only the first 3 calls (halfOpenMaxCalls) go</text>
+<text x="832" y="1568" text-anchor="start" font-size="12" fill="#1e293b">through as probes; extra calls -&gt; fallback</text>
+<text x="832" y="1588" text-anchor="start" font-size="12" fill="#1e293b">probe fails?  -&gt; OPEN again, timer restarts</text>
+<text x="832" y="1608" text-anchor="start" font-size="12" fill="#1e293b">probes succeed?  -&gt; counted toward CLOSED</text>
+<rect x="1210" y="1454" width="310" height="190" rx="4" fill="#fff" stroke="#334155" stroke-width="1.5"/>
+<path d="M1210,1484 V1458 Q1210,1454 1214,1454 H1516 Q1520,1454 1520,1458 V1484 Z" fill="#dcfce7" stroke="#334155" stroke-width="1.5"/>
+<text x="1365.0" y="1474.0" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Recovery</text>
+<text x="1222" y="1508" text-anchor="start" font-size="12" fill="#1e293b">2 probe successes (successThreshold = 2)</text>
+<text x="1222" y="1528" text-anchor="start" font-size="12" fill="#1e293b">transitionTo(CLOSED):</text>
+<text x="1222" y="1548" text-anchor="start" font-size="12" fill="#1e293b">   window.reset() -&gt; [ ]</text>
+<text x="1222" y="1568" text-anchor="start" font-size="12" fill="#1e293b">   listeners: HALF_OPEN -&gt; CLOSED</text>
+<text x="1222" y="1588" text-anchor="start" font-size="12" fill="#1e293b">normal traffic resumes, counting starts fresh</text>
+<text x="40" y="1678" text-anchor="start" font-size="12" fill="#475569">Legend:  S = success,  F = failure   |   green = CLOSED,  red = OPEN,  amber = HALF_OPEN   |   method names match the class diagram (CircuitBreaker, CircuitState, SlidingWindow, FallbackHandler, StateChangeListener)</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTozMzljZDhhMy0xYjQyLTQyMjktYjZiZi01NjM5ZTBjNDExZWEAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaLioSCDajGlHAv7O1GOVKRYAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDphMGE1ZGJiZC01YTE1LTQwYTktODFkYi03NGE3M2I5ZGY5YzBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo0f3E1BXy8fwv4fPdLHNWrwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggNXKOxqAv28Gu1Iu5FhOo/dTSUSkDjnHj0+c27yiJuhGkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaCiYCfEsVJJYk9aWeo9CX54AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYICAAiSQl/aRQZvPo0BW+ROlnglrPgVLSw3kQbVXIX9NyZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GZUjZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjMzOWNkOGEzLTFiNDItNDIyOS1iNmJmLTU2MzllMGM0MTFlYS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmUxNGYyYTM4LWVlNTgtNDRhYy05NTBhLTQzZjExZGM0YmIwOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCA1co7GoC/bwa7Ui7kWE6j91NJRKQOOcePT5zbvKIm6EaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggMy+mColtrh6gqvN6FlWdzB91XYdLBCJIwPZBQWAhvYyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggpgCCJo4JfLaA7UuV0PsmQ5UG7k69VbcME4n6aB7YJhx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQCgpqmpLlglVzdSWNqcrBQiKc2dy8tnIIaMAI+ZqPqa5op76VV0MfU6fIJgJIMd9Ft1XHAxpHdeT9mdP4GzYWaw=</c2pa:manifest></metadata></svg>

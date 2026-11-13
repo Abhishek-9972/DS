@@ -321,7 +321,7 @@
 ### LLD
 
 CircuitBreaker
-![circuit_breaker_lld.svg](../LLD/circuit_breaker_lld.svg)
+![circuit_breaker_lld.svg](../LLD/CircuitBreaker/circuit_breaker_lld.svg)
 
 LibraryManagement
 ![library_management_lld.svg](../LLD/library_management_lld.svg)
