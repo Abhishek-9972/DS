@@ -1,0 +1,18 @@
+DataStorage - WAL -> MemTable -> SSTable(SortedString Table) -> Compaction (Merge SSTable) -> Bloom Filter -> ConsistentHashing -> Quoram (Strong R+W>N vs Eventual Consistency R=1, W=1) 
+Conflict Resolution (VectorClocks), Gossip Protocol, Merkle Tree
+
+![img.png](completeFlow/img.png)
+![img_1.png](completeFlow/img_1.png)
+![img_2.png](completeFlow/img_2.png)
+![img_3.png](completeFlow/img_3.png)
+![img_4.png](completeFlow/img_4.png)
+![img_5.png](completeFlow/img_5.png)
+![img_6.png](completeFlow/img_6.png)
+![img_7.png](completeFlow/img_7.png)
+![img_8.png](completeFlow/img_8.png)
+![img_9.png](completeFlow/img_9.png)
+![img_10.png](completeFlow/img_10.png)
+![img_11.png](completeFlow/img_11.png)
+![img_12.png](completeFlow/img_12.png)
+![img_13.png](completeFlow/img_13.png)
+![img_14.png](completeFlow/img_14.png)
