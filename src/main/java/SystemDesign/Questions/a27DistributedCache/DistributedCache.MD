@@ -1,3 +1,6 @@
+IO Multiplexing
+IOMultiplexer picks active clients -> Adds to queue -> From queue pick one by one
+
 ![img.png](flow/img.png)
 ![img_1.png](flow/img_1.png)
 ![img_2.png](flow/img_2.png)
